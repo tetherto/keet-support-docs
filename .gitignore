@@ -22,13 +22,8 @@ out
 .DS_Store
 .vscode
 
-# Import pipeline artifacts
-scripts/media-manifest.json
-
-# Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+# Local reports and notes (not committed)
+.local/
 
 next-env.d.ts
+tsconfig.tsbuildinfo

@@ -14,7 +14,8 @@
     "types:check": "tsx node_modules/fumadocs-mdx/dist/bin.js && next typegen && tsc --noEmit",
     "postinstall": "tsx node_modules/fumadocs-mdx/dist/bin.js",
     "lint": "eslint",
-    "check:internal-links": "tsx scripts/check-internal-links.ts"
+    "check:internal-links": "tsx scripts/check-internal-links.ts",
+    "check:heading-hierarchy": "tsx scripts/check-heading-hierarchy.ts"
   },
   "dependencies": {
     "@takumi-rs/image-response": "^1.0.0-rc.14",

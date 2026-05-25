@@ -70,9 +70,9 @@ export function extractLinks(content: string): {
   // Example: <img src="/images/logo.png" /> → captures "/images/logo.png"
   const srcAttrRegex = /src=["']([^"']+)["']/g;
 
-  // Matches markdown images: ![alt](url)
-  // Example: ![Logo](/images/logo.png) → captures "/images/logo.png"
-  const imgRegex = /!\[.*?\]\(([^)]+)\)/g;
+  // Matches markdown images: ![alt](url) or ![alt](url "title")
+  // URL is the first token so titles may contain parentheses.
+  const imgRegex = /!\[.*?\]\(\s*(\S+?)(?:\s+["'][^"']*["'])?\s*\)/g;
 
   // Matches JSX object property: src: "/path" or src: '/path'
   // Example: { src: "/images/logo.png", alt: "Logo" } → captures "/images/logo.png"
@@ -97,7 +97,10 @@ export function extractLinks(content: string): {
     let match;
     while ((match = regex.exec(content)) !== null) {
       // Strip optional markdown title: url "title" or url 'title'
-      const rawLink = match[1].trim().replace(/\s+["'][^"']*["']\s*$/, '');
+      const rawLink = match[1]
+        .trim()
+        .replace(/\s+"(?:[^"\\]|\\.)*"\s*$/, '')
+        .replace(/\s+'(?:[^'\\]|\\.)*'\s*$/, '');
 
       if (!rawLink || rawLink.startsWith('mailto:')) continue;
 

@@ -23,6 +23,12 @@
       "@/*": [
         "./src/*"
       ],
+      "@fumadocs/docs-sidebar": [
+        "./node_modules/fumadocs-ui/dist/layouts/docs/sidebar"
+      ],
+      "@fumadocs/sidebar-base": [
+        "./node_modules/fumadocs-ui/dist/components/sidebar/base"
+      ],
       "fumadocs-mdx:collections/*": [
         ".source/*"
       ]

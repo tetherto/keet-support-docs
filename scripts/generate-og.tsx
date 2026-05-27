@@ -10,11 +10,11 @@ import {
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const COLORS = {
-  background: '#0a0a0a',
-  foreground: '#fafafa',
-  muted: '#a3a3a3',
-  primary: '#bbde5c',
-  divider: '#262626',
+  background: '#020202',
+  foreground: '#fefefe',
+  muted: '#99cace',
+  primary: '#26d2e8',
+  divider: '#1a2a2e',
 };
 
 function buildKeetOgTemplate(
@@ -31,7 +31,7 @@ function buildKeetOgTemplate(
           flexDirection: 'column',
           backgroundColor: COLORS.background,
           backgroundImage:
-            'radial-gradient(ellipse at top right, rgba(187,222,92,0.12), transparent 60%)',
+            'radial-gradient(ellipse at top right, rgba(38,210,232,0.15), transparent 60%)',
           padding: '80px',
           fontFamily: 'Poppins',
           color: COLORS.foreground,

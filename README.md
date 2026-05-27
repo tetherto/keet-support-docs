@@ -1,6 +1,6 @@
 # Keet Support Docs
 
-Static documentation site for [Keet](https://keet.io), built with [Fumadocs](https://fumadocs.dev) and migrated from [support.keet.io](https://support.keet.io/).
+Static documentation site for [Keet](https://keet.io), built with [Fumadocs](https://fumadocs.dev).
 
 ## Setup
 
@@ -14,14 +14,6 @@ npm install
 cp -R ../pear-docs/node_modules .
 
 npm run postinstall
-npx playwright install chromium
-```
-
-## Import content from GitBook
-
-```bash
-npm run import:gitbook
-npm run import:media
 ```
 
 ## Development
@@ -45,5 +37,5 @@ Static export is written to `out/`.
 
 | Script | Description |
 |--------|-------------|
-| `import:gitbook` | Download pages from support.keet.io sitemap and write `content/*.mdx` |
-| `import:media` | Resolve and download GitBook images/videos into `public/files/` |
+| `check:internal-links` | Validate internal links in `content/*.mdx` |
+| `build:og` | Generate Open Graph images |

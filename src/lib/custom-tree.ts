@@ -1,10 +1,17 @@
 import type { Node } from 'fumadocs-core/page-tree';
+import { sectionIcons } from '@/lib/gitbook-icons';
 
 export const customTree: Node[] = [
-  { type: 'page', name: 'General Overview', url: '/' },
+  {
+    type: 'page',
+    name: 'General Overview',
+    url: '/',
+    icon: sectionIcons.overview,
+  },
   {
     type: 'folder',
     name: 'Installation & Setup',
+    icon: sectionIcons.installation,
     index: {
       type: 'page',
       name: 'Installation & Setup',
@@ -21,52 +28,68 @@ export const customTree: Node[] = [
   {
     type: 'folder',
     name: 'Keet Groups',
+    icon: sectionIcons.groups,
     index: { type: 'page', name: 'Keet Groups', url: '/keet-groups' },
     children: [
-      { type: 'page', name: 'Joining Groups', url: '/keet-groups/joining-groups' },
-      { type: 'page', name: 'Create a Group', url: '/keet-groups/create-a-group' },
-      { type: 'page', name: 'Invite Peers', url: '/keet-groups/invite-peers' },
-      { type: 'page', name: 'Group Member Roles', url: '/keet-groups/group-member-roles' },
-      { type: 'page', name: 'Group Moderation', url: '/keet-groups/group-moderation' },
-      { type: 'page', name: 'Admin Responsibilities', url: '/keet-groups/admin-responsibilities' },
-      { type: 'page', name: 'Leave Group', url: '/keet-groups/leave-group' },
-      { type: 'page', name: 'Groups to Join', url: '/keet-groups/groups-to-join' },
+      { type: 'page', name: 'Joining Groups 🛋️', url: '/keet-groups/joining-groups' },
+      { type: 'page', name: 'Create a Group 📲', url: '/keet-groups/create-a-group' },
+      { type: 'page', name: 'Invite Peers 🙋', url: '/keet-groups/invite-peers' },
+      { type: 'page', name: 'Group Member Roles 🥷', url: '/keet-groups/group-member-roles' },
+      { type: 'page', name: 'Group Moderation ⚖️', url: '/keet-groups/group-moderation' },
+      { type: 'page', name: 'Admin Responsibilities 👑', url: '/keet-groups/admin-responsibilities' },
+      { type: 'page', name: 'Leave Group🚪', url: '/keet-groups/leave-group' },
+      { type: 'page', name: 'Groups to Join 🧩', url: '/keet-groups/groups-to-join' },
     ],
   },
   {
     type: 'folder',
     name: 'File Sharing and Messages',
+    icon: sectionIcons.files,
     index: {
       type: 'page',
       name: 'File Sharing and Messages',
       url: '/file-sharing-and-messages',
     },
     children: [
-      { type: 'page', name: 'Messaging on Keet', url: '/file-sharing-and-messages/messaging-on-keet' },
-      { type: 'page', name: 'Personal Group', url: '/file-sharing-and-messages/personal-group' },
-      { type: 'page', name: 'Sharing Files and Media', url: '/file-sharing-and-messages/sharing-files-and-media' },
-      { type: 'page', name: 'Search Messages', url: '/file-sharing-and-messages/search-messages' },
-      { type: 'page', name: 'Clear Cache', url: '/file-sharing-and-messages/clear-cache' },
-      { type: 'page', name: 'Deleting Files and Messages', url: '/file-sharing-and-messages/deleting-files-and-messages' },
-      { type: 'page', name: 'Location Sharing', url: '/file-sharing-and-messages/location-sharing' },
+      { type: 'page', name: 'Messaging on Keet ✉️', url: '/file-sharing-and-messages/messaging-on-keet' },
+      { type: 'page', name: 'Personal Group 📂', url: '/file-sharing-and-messages/personal-group' },
+      {
+        type: 'page',
+        name: 'Sharing Files and Media 🗃️',
+        url: '/file-sharing-and-messages/sharing-files-and-media',
+      },
+      { type: 'page', name: 'Search Messages 🔎', url: '/file-sharing-and-messages/search-messages' },
+      { type: 'page', name: 'Clear Cache 🧹', url: '/file-sharing-and-messages/clear-cache' },
+      {
+        type: 'page',
+        name: 'Deleting Files and Messages 🗑️',
+        url: '/file-sharing-and-messages/deleting-files-and-messages',
+      },
+      { type: 'page', name: 'Location Sharing 🌍', url: '/file-sharing-and-messages/location-sharing' },
     ],
   },
   {
     type: 'folder',
     name: 'Voice and Video Calls',
+    icon: sectionIcons.voice,
     index: {
       type: 'page',
       name: 'Voice and Video Calls',
       url: '/voice-and-video-calls',
     },
     children: [
-      { type: 'page', name: 'Voice calls', url: '/voice-and-video-calls/voice-calls' },
-      { type: 'page', name: 'Video Calls & Share Screen', url: '/voice-and-video-calls/video-calls-and-share-screen' },
+      { type: 'page', name: 'Voice calls 📞', url: '/voice-and-video-calls/voice-calls' },
+      {
+        type: 'page',
+        name: 'Video Calls & Share Screen 🎬',
+        url: '/voice-and-video-calls/video-calls-and-share-screen',
+      },
     ],
   },
   {
     type: 'folder',
     name: 'Technical Support & Troubleshooting',
+    icon: sectionIcons.support,
     index: {
       type: 'page',
       name: 'Technical Support & Troubleshooting',
@@ -84,6 +107,16 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Languages', url: '/technical-support-and-troubleshooting/languages' },
     ],
   },
-  { type: 'page', name: 'Security & Privacy', url: '/security-and-privacy' },
-  { type: 'page', name: 'Community & Support', url: '/community-and-support' },
+  {
+    type: 'page',
+    name: 'Security & Privacy',
+    url: '/security-and-privacy',
+    icon: sectionIcons.security,
+  },
+  {
+    type: 'page',
+    name: 'Community & Support',
+    url: '/community-and-support',
+    icon: sectionIcons.community,
+  },
 ];

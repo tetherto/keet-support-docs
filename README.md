@@ -4,17 +4,17 @@ Static documentation site for [Keet](https://keet.io), built with [Fumadocs](htt
 
 ## Setup
 
-`@tetherto/docs-seo-*` packages are published to GitHub Packages. Authenticate with a GitHub token that has `read:packages`, or copy `node_modules` from a working [pear-docs](https://github.com/tetherto/pear-apps-docs-migration) checkout:
+`@tetherto/docs-seo-*` packages are published to GitHub Packages. The repo includes `.npmrc` scoped to `@tetherto`; set a token before installing:
 
 ```bash
-# Option A: install (requires GitHub Packages auth in ~/.npmrc)
+cp .env.example .env
+# Add a GitHub classic PAT with read:packages to GITHUB_TOKEN in .env, then:
+export $(grep -v '^#' .env | xargs)   # or: source .env if your shell supports it
 npm install
-
-# Option B: reuse pear-docs dependencies locally
-cp -R ../pear-docs/node_modules .
-
 npm run postinstall
 ```
+
+If you cannot use GitHub Packages locally, copy `node_modules` from a working [pear-docs](https://github.com/tetherto/pear-apps-docs-migration) checkout instead of running `npm install`.
 
 ## Development
 

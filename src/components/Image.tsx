@@ -1,4 +1,5 @@
-import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import { cn } from '@/lib/cn';
+import { DocsImage } from '@/components/docs-image';
 
 interface ImageProps {
   src: string;
@@ -22,16 +23,16 @@ export function Image({
   alt,
   size = 'full',
   className = '',
-  width = 800,
-  height = 600,
+  width,
+  height,
 }: ImageProps) {
   return (
-    <ImageZoom
+    <DocsImage
       src={src}
       alt={alt}
       width={width}
       height={height}
-      className={`rounded-lg ${sizes[size]} ${className}`}
+      className={cn(sizes[size], className)}
     />
   );
 }

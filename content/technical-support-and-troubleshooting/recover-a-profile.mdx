@@ -1,0 +1,191 @@
+---
+title: "Recover a Profile"
+description: "Learn how to view and secure your recovery phrase in Keet, and how to recover your profile on a new device using your recovery phrase or an encrypted backup file."
+docType: faq
+schemaType: TechArticle
+---
+
+## What is a recovery phrase?
+
+In Keet, the recovery phrase is a human-readable backup of 24 random words that lets you restore your profile if you lose your device or reinstall the app. It is a 24-word code that works as a password.
+You should **securely store** your recovery phrase after the profile setup is complete and not share it with anyone else.
+
+For an extra layer of protection, you can also [back up your profile](/installation-and-setup/back-up-your-profile) to an encrypted file that is unlocked with a password you choose.
+
+## How to view the recovery phrase in Keet?
+
+<Callout type="warn">
+The recovery phrase can only be viewed on your original device if you selected the '**Quick setup**' option during [profile creation](/installation-and-setup/setup).
+</Callout>
+
+Open Keet on the device you created the profile (mobile or desktop). 
+Go to '**Profile and Settings**' / '**Settings**' / '**Privacy and Security**' / '**Recovery Phrase**'.
+
+![Go to 'Profile and Settings' / 'Settings' / 'Privacy and Security' / 'Recovery Phrase'.](/images/technical-support-and-troubleshooting/recover-a-profile/profile-settings-privacy-security-recovery.png "Recover a Profile")
+
+Read the security information and, if applicable, check the box to confirm. 
+After that, click '**View phrase**'.
+
+![After that, click 'View phrase'.](/images/technical-support-and-troubleshooting/recover-a-profile/after-view-phrase-2.png "Recover a Profile")
+
+Write down or copy directly from the app and store it in a safe place.
+
+After viewing and copying the seed phrase, click '**Done**'.
+
+## How can I regain access to my profile if I lose my device?
+
+If you lose your device, you can use another linked device (if any) or recover your profile from scratch.
+
+### Link to existing identity
+
+If you have other devices linked with the same Keet profile, set up a new device by following the [linking device](/installation-and-setup/link-devices) guide.
+
+### Recover profile
+
+If no other devices are linked to your Keet profile, recover it using your 24-word recovery phrase or an [encrypted backup file](/installation-and-setup/back-up-your-profile). Follow the steps below.
+
+
+On the '**I'm a current user**' screen, choose '**Recover profile**', [instead of '**Link device**' (which is for adding a device to a profile you still have access to)](#link-to-existing-identity).
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![On the 'I'm a current user' screen, choose 'Recover profile'.](/images/technical-support-and-troubleshooting/recover-a-profile/im-a-current-user-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![On the 'I'm a current user' screen, choose 'Recover profile'.](/images/technical-support-and-troubleshooting/recover-a-profile/im-a-current-user-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+<Callout type="warn">
+**Important notice:** Recovering with the 24-word recovery phrase creates a new identity instance, so **proceed only if you have lost access to your profile on all devices**.
+</Callout>
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![Read the 'Important notice' before recovering your profile.](/images/technical-support-and-troubleshooting/recover-a-profile/recover-profile-important-notice-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![Read the 'Important notice' before recovering your profile.](/images/technical-support-and-troubleshooting/recover-a-profile/recover-profile-important-notice-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+#### Recover with your recovery phrase
+
+Enter or paste your 24-word recovery phrase, separating each word with a single space, then select '**Recover profile**'.
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![Enter or paste your 24-word recovery phrase.](/images/technical-support-and-troubleshooting/recover-a-profile/input-recovery-phrase-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![Enter or paste your 24-word recovery phrase.](/images/technical-support-and-troubleshooting/recover-a-profile/input-recovery-phrase-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+As you type, Keet numbers each word so you can check your progress.
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![Keet numbers each word of the recovery phrase as you type.](/images/technical-support-and-troubleshooting/recover-a-profile/typing-recovery-phrase-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![Keet numbers each word of the recovery phrase as you type.](/images/technical-support-and-troubleshooting/recover-a-profile/typing-recovery-phrase-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+#### Recover with your backup file
+
+1. Choose '**Recover with backup file**'.
+2. Attach your encrypted backup file from your device or cloud storage.
+3. Enter the **decryption password** you set when creating it.
+4. Select '**Recover profile**'.
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![Attach your encrypted backup file and enter the decryption password.](/images/technical-support-and-troubleshooting/recover-a-profile/add-file-and-input-password-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![Attach your encrypted backup file and enter the decryption password.](/images/technical-support-and-troubleshooting/recover-a-profile/add-file-and-input-password-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+When recovery succeeds, Keet shows a '**Successful recovery**' message and your chats and profile are restored.
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![A 'Successful recovery' message confirms your chats and profile are restored.](/images/technical-support-and-troubleshooting/recover-a-profile/successful-recovery-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![A 'Successful recovery' message confirms your chats and profile are restored.](/images/technical-support-and-troubleshooting/recover-a-profile/successful-recovery-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+### Recovery troubleshooting
+
+If recovery fails, Keet tells you what went wrong so you can try again.
+
+**Wrong recovery phrase** - if the 24 words don't match, the phrase field shows an error. Double-check the words and their order.
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![Keet highlights the recovery phrase field if the words don't match.](/images/technical-support-and-troubleshooting/recover-a-profile/wrong-recovery-phrase-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![Keet highlights the recovery phrase field if the words don't match.](/images/technical-support-and-troubleshooting/recover-a-profile/wrong-recovery-phrase-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+**Wrong backup file or password** - if the file or decryption password is incorrect, Keet shows a '**Recovery failed**' message. Make sure you attached the correct backup file and entered the matching password.
+
+<Tabs items={["Mobile", "Desktop"]}>
+<Tab value="Mobile">
+
+![A 'Recovery failed' message appears when the file or password is incorrect.](/images/technical-support-and-troubleshooting/recover-a-profile/recover-with-backup-file-mobile.png "Recover a Profile")
+
+</Tab>
+<Tab value="Desktop">
+
+![A 'Recovery failed' message appears when the file or password is incorrect.](/images/technical-support-and-troubleshooting/recover-a-profile/recover-with-backup-file-desktop.png "Recover a Profile")
+
+</Tab>
+</Tabs>
+
+## Can I have multiple recovery phrases for my profile?
+
+No, each profile is associated with a unique recovery phrase. You cannot have multiple recovery phrases for one account.
+
+## Is it possible to change my seed phrase or get a new one?
+
+No, you cannot change the recovery phrase for your account. Each profile is associated with a unique seed phrase, you cannot generate a new 24-word phrase for the same Keet account.
+
+## Can I generate a recovery phrase offline?
+
+Yes, you can generate the recovery phrase and set up your profile offline.

@@ -112,8 +112,15 @@
   --color-fd-success: hsl(187, 78%, 53%);
 }
 
+/* Wider sidebar so long labels (e.g. "Deleting Files and Messages 🗑️")
+   wrap without the trailing emoji overflowing. Override both the grid
+   container (column width) and the placeholder/aside (visual width). */
+#nd-docs-layout {
+  --fd-sidebar-width: 300px !important;
+}
+
 [data-sidebar-placeholder] {
-  --fd-sidebar-width: 260px !important;
+  --fd-sidebar-width: 300px !important;
 }
 
 #nd-sidebar [data-search-full],

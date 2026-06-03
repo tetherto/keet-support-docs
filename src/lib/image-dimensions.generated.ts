@@ -184,6 +184,38 @@ export const imageDimensions = {
     "width": 590,
     "height": 366
   },
+  "/images/installation-and-setup/back-up-your-profile/backup-file-exported-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/installation-and-setup/back-up-your-profile/backup-file-exported-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/back-up-your-profile/create-backup-file-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/installation-and-setup/back-up-your-profile/create-backup-file-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/back-up-your-profile/export-backup-file-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/installation-and-setup/back-up-your-profile/export-backup-file-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/back-up-your-profile/export-backup-file-save-dialog-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/installation-and-setup/back-up-your-profile/export-backup-file-save-dialog-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/installation-and-setup/installation/android-google-play-listing.png": {
     "width": 524,
     "height": 185
@@ -199,26 +231,6 @@ export const imageDimensions = {
   "/images/installation-and-setup/installation/windows-installer-download.png": {
     "width": 690,
     "height": 304
-  },
-  "/images/installation-and-setup/keet-username/change-username-app-moment-users-4.png": {
-    "width": 820,
-    "height": 580
-  },
-  "/images/installation-and-setup/keet-username/discoverable-so-other-users-search-3.png": {
-    "width": 523,
-    "height": 338
-  },
-  "/images/installation-and-setup/keet-username/keet-identity-tied-unique-seed-5.png": {
-    "width": 1200,
-    "height": 630
-  },
-  "/images/installation-and-setup/keet-username/must-unique-within-system-2.png": {
-    "width": 656,
-    "height": 491
-  },
-  "/images/installation-and-setup/keet-username/set-username-any-device-do.png": {
-    "width": 716,
-    "height": 649
   },
   "/images/installation-and-setup/link-devices/add-device-generate-pairing-link-2.jpg": {
     "height": 608,
@@ -540,25 +552,77 @@ export const imageDimensions = {
     "width": 426,
     "height": 240
   },
-  "/images/technical-support-and-troubleshooting/profile-recovery/after-view-phrase-2.png": {
+  "/images/technical-support-and-troubleshooting/recover-a-profile/add-file-and-input-password-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/add-file-and-input-password-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/after-view-phrase-2.png": {
     "width": 637,
     "height": 882
   },
-  "/images/technical-support-and-troubleshooting/profile-recovery/backup-recovery-phrase-recover-profile-5.png": {
-    "width": 702,
-    "height": 1176
+  "/images/technical-support-and-troubleshooting/recover-a-profile/im-a-current-user-desktop.png": {
+    "width": 1224,
+    "height": 810
   },
-  "/images/technical-support-and-troubleshooting/profile-recovery/install-keet-new-device-already-4.png": {
-    "width": 702,
-    "height": 1176
+  "/images/technical-support-and-troubleshooting/recover-a-profile/im-a-current-user-mobile.png": {
+    "width": 393,
+    "height": 852
   },
-  "/images/technical-support-and-troubleshooting/profile-recovery/lose-device-another-linked-device-3.png": {
-    "width": 702,
-    "height": 1175
+  "/images/technical-support-and-troubleshooting/recover-a-profile/input-recovery-phrase-desktop.png": {
+    "width": 1224,
+    "height": 810
   },
-  "/images/technical-support-and-troubleshooting/profile-recovery/profile-settings-privacy-security-recovery.png": {
+  "/images/technical-support-and-troubleshooting/recover-a-profile/input-recovery-phrase-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/profile-settings-privacy-security-recovery.png": {
     "width": 520,
     "height": 560
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/recover-profile-important-notice-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/recover-profile-important-notice-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/recover-with-backup-file-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/recover-with-backup-file-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/successful-recovery-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/successful-recovery-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/typing-recovery-phrase-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/typing-recovery-phrase-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/wrong-recovery-phrase-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/technical-support-and-troubleshooting/recover-a-profile/wrong-recovery-phrase-mobile.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/technical-support-and-troubleshooting/sound-issues/check-correct-audio-device-selected-6.jpg": {
     "height": 427,

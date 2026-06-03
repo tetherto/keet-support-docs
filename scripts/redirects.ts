@@ -15,6 +15,10 @@ export function buildRedirects(): Redirect[] {
       from: withSlash('/general-overview'),
       to: withSlash('/'),
     },
+    {
+      from: withSlash('/technical-support-and-troubleshooting/profile-recovery'),
+      to: withSlash('/technical-support-and-troubleshooting/recover-a-profile'),
+    },
   ];
 }
 

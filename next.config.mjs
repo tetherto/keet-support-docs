@@ -28,6 +28,11 @@ const config = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/technical-support-and-troubleshooting/profile-recovery',
+        destination: '/technical-support-and-troubleshooting/recover-a-profile',
+        permanent: true,
+      },
     ];
   },
 };

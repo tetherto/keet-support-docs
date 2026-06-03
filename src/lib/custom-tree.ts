@@ -20,6 +20,7 @@ export const customTree: Node[] = [
     children: [
       { type: 'page', name: 'Installation', url: '/installation-and-setup/installation' },
       { type: 'page', name: 'Setup', url: '/installation-and-setup/setup' },
+      { type: 'page', name: 'Back Up Your Profile', url: '/installation-and-setup/back-up-your-profile' },
       { type: 'page', name: 'App Permissions', url: '/installation-and-setup/app-permissions' },
       { type: 'page', name: 'Link Devices', url: '/installation-and-setup/link-devices' },
       { type: 'page', name: 'Keet Username', url: '/installation-and-setup/keet-username' },
@@ -97,7 +98,7 @@ export const customTree: Node[] = [
     },
     children: [
       { type: 'page', name: 'Notifications', url: '/technical-support-and-troubleshooting/notifications' },
-      { type: 'page', name: 'Profile Recovery', url: '/technical-support-and-troubleshooting/profile-recovery' },
+      { type: 'page', name: 'Recover a Profile', url: '/technical-support-and-troubleshooting/recover-a-profile' },
       { type: 'page', name: 'Delete Profile', url: '/technical-support-and-troubleshooting/delete-profile' },
       { type: 'page', name: 'Keet App issues', url: '/technical-support-and-troubleshooting/keet-app-issues' },
       { type: 'page', name: 'Sound issues', url: '/technical-support-and-troubleshooting/sound-issues' },

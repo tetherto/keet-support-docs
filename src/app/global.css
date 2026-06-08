@@ -60,9 +60,11 @@
   font-weight: 400;
 }
 
-/* GitBook sidebar: small regular labels; active = cyan, not bold */
-.dark #nd-sidebar a,
-.dark #nd-sidebar button {
+/* GitBook sidebar: small regular labels; active = cyan, not bold.
+   Scope to the nav scroll area so header/footer controls (theme toggle, etc.)
+   keep their intrinsic size. */
+.dark #nd-sidebar [data-radix-scroll-area-viewport] a,
+.dark #nd-sidebar [data-radix-scroll-area-viewport] button {
   width: 100%;
   min-width: 0;
   max-width: 100%;
@@ -80,8 +82,8 @@
   color: var(--color-fd-primary) !important;
 }
 
-.dark #nd-sidebar a:hover,
-.dark #nd-sidebar button:hover {
+.dark #nd-sidebar [data-radix-scroll-area-viewport] a:hover,
+.dark #nd-sidebar [data-radix-scroll-area-viewport] button:hover {
   background-color: hsla(0, 0%, 100%, 0.06) !important;
 }
 

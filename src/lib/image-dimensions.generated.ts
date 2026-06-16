@@ -24,6 +24,30 @@ export const imageDimensions = {
     "height": 1328,
     "width": 648
   },
+  "/images/file-sharing-and-messages/contact-book/add-contact-from-profile-3.jpg": {
+    "height": 867,
+    "width": 648
+  },
+  "/images/file-sharing-and-messages/contact-book/contact-book-private-list-saved-users-2.jpg": {
+    "height": 867,
+    "width": 648
+  },
+  "/images/file-sharing-and-messages/contact-book/contact-book-private-list-saved-users.png": {
+    "width": 648,
+    "height": 867
+  },
+  "/images/file-sharing-and-messages/contact-book/removing-contacts-profile-contacts-5.jpg": {
+    "height": 1328,
+    "width": 648
+  },
+  "/images/file-sharing-and-messages/contact-book/removing-contacts-profile-contacts-6.jpg": {
+    "height": 1328,
+    "width": 648
+  },
+  "/images/file-sharing-and-messages/contact-book/search-contacts-display-name-username-4.jpg": {
+    "height": 867,
+    "width": 648
+  },
   "/images/file-sharing-and-messages/deleting-files-and-messages/desktop-clear-cache-6.png": {
     "width": 540,
     "height": 337

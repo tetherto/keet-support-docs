@@ -16,14 +16,11 @@ const navTitle = (
 );
 
 export function baseOptions(): BaseLayoutProps {
-  const githubUrl = `https://github.com/${gitConfig.user}/${gitConfig.repo}`;
-
   return {
     nav: {
       title: navTitle,
       component: <DocsTopHeader title={navTitle} />,
     },
-    githubUrl,
     searchToggle: {
       components: {
         // `null` does not work — Fumadocs uses `??` and falls back to LargeSearchToggle

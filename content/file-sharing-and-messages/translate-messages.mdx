@@ -1,0 +1,170 @@
+---
+title: "Translate Messages 🌐"
+description: "Translate received text messages directly inside the chat, with the translation kept private to you."
+docType: faq
+schemaType: TechArticle
+---
+
+The **Translate** action lets you read received text messages in your own language without leaving the chat. Translation happens locally on your device — the original message is never changed, and the translated text is only visible to you. It is not stored in core or synced to other peers.
+
+<Callout type="info">
+Message translation is available from **Keet 4.16.0**. 🌐
+</Callout>
+
+<Callout type="info">
+For V1, only directly supported language pairs are included. Non-English → non-English translation is out of scope for now. 🌍
+</Callout>
+
+## Open the Translate action
+
+Open the action menu on the message you want to translate and select **Translate**.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Hover over a received text message, click the three dots '**[...]**' / select '**Translate**'.
+
+![Click the three dots / select 'Translate'.](/images/translate/desktop/translate-message-others.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Long-press a received text message / tap '**Translate**'.
+
+![Long-press the message / tap 'Translate'.](/images/translate/mobile/translate-message-others.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+**Translate** is not shown for messages that cannot be translated, such as files, media-only messages, empty messages, or unsupported message types.
+
+## Choose your languages
+
+Keet detects the message language automatically and sets your **target language** to your app/device language when it's supported. You can change either language before translating.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Open the **Translation language** options before translating.
+
+![Keet detects the source language and lets you choose the target language.](/images/translate/desktop/translate-modal.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Open the **Translation language** sheet before translating.
+
+![Keet detects the source language and lets you choose the target language.](/images/translate/mobile/translate-modal.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+### Change the source language
+
+If detection is wrong, change the **From** language before translating.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Open the **From** dropdown and pick the correct source language.
+
+![Change the detected source language.](/images/translate/desktop/translate-from.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Open the **From** picker and pick the correct source language.
+
+![Change the detected source language.](/images/translate/mobile/translate-from.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+### Change the target language
+
+You can also change the **To** language from the same options.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Open the **To** dropdown and pick your preferred target language.
+
+![Choose a different target language.](/images/translate/desktop/translate-to.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Open the **To** picker and pick your preferred target language.
+
+![Choose a different target language.](/images/translate/mobile/translate-to.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+## Download the language pair (first time only)
+
+<Callout type="warn">
+If language detection, downloading, or translation fails, Keet shows a clear error and keeps the original message visible. If the selected language pair is unsupported, you'll see an unsupported language message instead. ⚠️
+</Callout>
+
+If the source → target language pair isn't already on your device, Keet downloads it once. This may take a moment and is only needed the first time you use that pair.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Keet downloads the language pair once — this may take a moment.](/images/translate/desktop/translation-downloading.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![Keet downloads the language pair once — this may take a moment.](/images/translate/mobile/translation-downloading.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="info">
+Downloaded language pairs are remembered on your device, so the same pair won't need to be downloaded again. ⬇️
+</Callout>
+
+## Read the translation
+
+Once the language pair is ready, the translated text appears inside the original message bubble.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+![The translated text appears inside the original message bubble.](/images/translate/desktop/messages-translated.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![The translated text appears inside the original message bubble.](/images/translate/mobile/messages-translated.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+## Change or revert a translation
+
+A translation icon appears on translated messages. Tap or click it to open **Translation options**, where you can:
+
+* **Show the original** message again
+* **Change the target translation language**
+* **Translate again** using the selected language
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Open the action menu on a translated message to switch between '**Show original**' and '**Change translation language**'.
+
+![Translation options on a translated message.](/images/translate/desktop/translation-options.png "Translate Messages 🌐 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Open the action menu on a translated message to switch between '**Show original**' and '**Change translation language**'.
+
+![Translation options on a translated message.](/images/translate/mobile/translation-options.png "Translate Messages 🌐 · Mobile")
+
+</Tab>
+</Tabs>
+
+The original message is always kept, so you can show it again at any time.

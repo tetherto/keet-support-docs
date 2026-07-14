@@ -1,6 +1,6 @@
 # Keet Support Docs
 
-Static documentation site for [Keet](https://keet.io), built with [Fumadocs](https://fumadocs.dev).
+[This repository](https://github.com/tetherto/keet-support-docs) holds the static documentation site for [Keet](https://keet.io), built with [Fumadocs](https://fumadocs.dev).
 
 ## Setup
 

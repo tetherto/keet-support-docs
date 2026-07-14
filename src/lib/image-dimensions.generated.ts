@@ -704,6 +704,62 @@ export const imageDimensions = {
     "width": 428,
     "height": 796
   },
+  "/images/translate/desktop/messages-translated.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/translate/desktop/translate-from.png": {
+    "width": 1225,
+    "height": 1131
+  },
+  "/images/translate/desktop/translate-message-others.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/translate/desktop/translate-modal.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/translate/desktop/translate-to.png": {
+    "width": 1225,
+    "height": 1219
+  },
+  "/images/translate/desktop/translation-downloading.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/translate/desktop/translation-options.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/translate/mobile/messages-translated.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/translate/mobile/translate-from.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/translate/mobile/translate-message-others.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/translate/mobile/translate-modal.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/translate/mobile/translate-to.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/translate/mobile/translation-downloading.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/translate/mobile/translation-options.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/voice-and-video-calls/video-calls-and-share-screen/screenshot.png": {
     "width": 1294,
     "height": 767

@@ -61,6 +61,7 @@ export const customTree: Node[] = [
         url: '/file-sharing-and-messages/sharing-files-and-media',
       },
       { type: 'page', name: 'Search Messages 🔎', url: '/file-sharing-and-messages/search-messages' },
+      { type: 'page', name: 'Translate Messages 🌐', url: '/file-sharing-and-messages/translate-messages' },
       { type: 'page', name: 'Clear Cache 🧹', url: '/file-sharing-and-messages/clear-cache' },
       {
         type: 'page',

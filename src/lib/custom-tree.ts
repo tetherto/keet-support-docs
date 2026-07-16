@@ -111,10 +111,18 @@ export const customTree: Node[] = [
     ],
   },
   {
-    type: 'page',
+    type: 'folder',
     name: 'Security & Privacy',
-    url: '/security-and-privacy',
     icon: sectionIcons.security,
+    index: {
+      type: 'page',
+      name: 'Security & Privacy',
+      url: '/security-and-privacy',
+    },
+    children: [
+      { type: 'page', name: 'FAQs 💬', url: '/security-and-privacy/faq' },
+      { type: 'page', name: 'Blind Peering 🔒', url: '/security-and-privacy/blind-peering' },
+    ],
   },
   {
     type: 'page',

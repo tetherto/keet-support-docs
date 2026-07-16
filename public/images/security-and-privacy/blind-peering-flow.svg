@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-label="Flow of a blind-peered message. You encrypt the message on your device and send it. Blind peers hold the encrypted, unreadable message while your friend is offline. When your friend reconnects, they sync the message and decrypt it.">
+  <title>How blind peering delivers an offline message</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --border: #dce1e8;
+      --panel: #ffffff;
+      --panel-border: #e2e7ee;
+      --fg: #1f2937;
+      --muted: #5b6675;
+      --line: #8a94a3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12161c;
+        --border: #2a323d;
+        --panel: #1a2029;
+        --panel-border: #2b333e;
+        --fg: #e7ebf1;
+        --muted: #9aa5b4;
+        --line: #7d8794;
+      }
+    }
+    text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  </style>
+
+  <defs>
+    <marker id="bp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="var(--line)" />
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="718" height="258" rx="16" fill="var(--bg)" stroke="var(--border)" />
+
+  <!-- You -->
+  <rect x="28" y="92" width="140" height="90" rx="14" fill="var(--panel)" stroke="var(--panel-border)" />
+  <text x="98" y="130" text-anchor="middle" font-size="18" font-weight="600" fill="var(--fg)">You</text>
+  <text x="98" y="152" text-anchor="middle" font-size="12" fill="var(--muted)">encrypt on device</text>
+
+  <!-- Blind peers (stacked to imply many) -->
+  <rect x="310" y="64" width="150" height="132" rx="14" fill="var(--panel)" stroke="var(--panel-border)" opacity="0.55" />
+  <rect x="301" y="73" width="150" height="132" rx="14" fill="var(--panel)" stroke="var(--panel-border)" opacity="0.78" />
+  <rect x="292" y="82" width="150" height="132" rx="14" fill="var(--panel)" stroke="var(--panel-border)" />
+  <text x="367" y="114" text-anchor="middle" font-size="16" font-weight="600" fill="var(--fg)">Blind peers</text>
+  <text x="367" y="136" text-anchor="middle" font-size="11.5" fill="var(--muted)">hold it while your</text>
+  <text x="367" y="152" text-anchor="middle" font-size="11.5" fill="var(--muted)">friend is offline</text>
+  <path d="M362,176 v-4 a5,5 0 0 1 10,0 v4" fill="none" stroke="#12b886" stroke-width="2" />
+  <rect x="358" y="176" width="18" height="13" rx="2.5" fill="#12b886" />
+  <circle cx="367" cy="182" r="1.7" fill="var(--panel)" />
+
+  <!-- Your friend -->
+  <rect x="552" y="92" width="140" height="90" rx="14" fill="var(--panel)" stroke="var(--panel-border)" />
+  <text x="622" y="130" text-anchor="middle" font-size="18" font-weight="600" fill="var(--fg)">Your friend</text>
+  <text x="622" y="152" text-anchor="middle" font-size="12" fill="var(--muted)">decrypts &amp; reads</text>
+
+  <!-- Arrows -->
+  <line x1="172" y1="137" x2="288" y2="137" stroke="var(--line)" stroke-width="2" marker-end="url(#bp-arrow)" />
+  <text x="230" y="123" text-anchor="middle" font-size="11" fill="var(--muted)">sealed &amp; encrypted</text>
+
+  <line x1="446" y1="137" x2="548" y2="137" stroke="var(--line)" stroke-width="2" marker-end="url(#bp-arrow)" />
+  <text x="497" y="123" text-anchor="middle" font-size="11" fill="var(--muted)">synced when back online</text>
+</svg>

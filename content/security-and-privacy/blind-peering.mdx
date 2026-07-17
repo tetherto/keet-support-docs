@@ -17,7 +17,7 @@ That only works if someone holding a copy is online. Most phones and laptops are
 
 A **blind peer** is a peer on the network that is simply **more available than most devices** — it stays online so a room's data stays reachable.
 
-When you send a message, a blind peer keeps a copy. When other members of the room come online — even long after you've gone offline — they sync the latest messages from whoever holds them, including the blind peer.
+With a blind peer keeping a copy of the room, your message no longer depends on your own device staying online. Other members catch up whenever they next connect — even long after you've gone offline — by syncing from whoever holds the newest messages, including the blind peer.
 
 ![Blind peering: you, a blind peer, and your friend each hold a copy of the encrypted room and sync whenever you're online together. The blind peer is always online but has no key — only members can read the room.](/images/security-and-privacy/blind-peering-flow.svg "Blind Peering")
 
@@ -25,7 +25,7 @@ When you send a message, a blind peer keeps a copy. When other members of the ro
 
 No — that's why it's called *blind*.
 
-A Keet room is **encrypted**, and only the people in the room have the keys — the keys never leave the members' devices. A blind peer stores the room's data in its encrypted form and has no key to unlock it: it can't read your messages, files, or names. It helps keep the room available — it can never see inside it.
+A Keet room is **encrypted**, and only the people in the room have the keys. A blind peer stores the room's data in its encrypted form and has no key to unlock it: it can't read your messages, files, or names. It helps keep the room available — it can never see inside it.
 
 <Callout type="info">
 It doesn't matter who runs a blind peer — the room stays just as unreadable either way. You don't have to trust the operator; the encryption does that work. 🔒
@@ -41,7 +41,7 @@ A blind peer keeps one more copy of that notebook in a **library that never clos
 
 ### Nothing is in transit
 
-Once you hit send, your message isn't traveling anywhere — it's simply **part of the room**, and the room exists as copies on the devices that hold it. When your friend comes online, their device updates its own copy from whichever copy is reachable. A blind peer's job is just to make sure an up-to-date copy is **always reachable**.
+Once you hit send, your message isn't traveling anywhere — it's simply **part of the room**, and the room exists as copies on the devices that hold it. When your friend comes online, their device updates its own copy from whichever copy is reachable. A blind peer's job is simply to keep an up-to-date copy **reachable at all hours**.
 
 ### More copies, more availability
 

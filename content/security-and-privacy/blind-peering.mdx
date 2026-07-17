@@ -1,57 +1,34 @@
 ---
-title: "Blind Peering: putting the \"server\" in serverless 🔒"
-description: "How Keet delivers a message to someone who's offline without any company server storing your chats."
+title: "Blind Peering 🔒"
+description: "How a Keet room stays in sync when its members aren't online at the same time — encrypted copies kept by always-on peers that can't read them."
 docType: faq
 schemaType: TechArticle
 ---
 
-Keet is [**serverless**](/#how-does-keet-work-without-central-servers) — there's no company server sitting in the middle, storing your chats. So a fair question is: **if I send a message and the other person is offline, where does it go?**
+Keet has [no central servers](/#how-does-keet-work-without-central-servers) — a room lives on the devices of the people in it. That raises a fair question: **if I send a message while the other person is offline, and then I go offline too, how does it ever arrive?**
 
-The answer is **blind peering**, and it's how Keet quietly puts the *"server"* back in *serverless*. Some peer still does the one job a server used to do — stay online and hold your message until the other person is back — except no company owns it and it can never read what it's holding.
+## The problem
 
-## The problem, in one sentence
+To sync a room, someone holding a copy of it has to be online. Most phones and laptops aren't online all the time — so two people who are never online at the same moment would never catch up on each other's messages.
 
-For a message to arrive, *someone* has to be online to pass it along. But the person you're messaging is offline — and a moment later, you might go offline too. So who holds the message in the meantime?
+## The solution: blind peers
 
-## The simple version
+A **blind peer** is a peer on the network that is simply **more available than most devices** — it stays online so a room's data stays reachable.
 
-Think of your message as a **sealed envelope, written in a code only the person you're messaging can read**.
+When you send a message, a blind peer keeps a copy. When other members of the room come online — even long after you've gone offline — they sync the latest messages from whoever holds them, including the blind peer.
 
-To reach your friend, that envelope gets passed to other people already connected to the network — think of them as **couriers**. A courier will happily **hold onto the envelope** while your friend is away and **keep passing it along** until it arrives. Because the envelope is sealed and coded, **no courier can read what's inside** — they only know to carry it and hand it on.
+![How blind peering works: your message is stored in encrypted form by an always-on blind peer, and your friend syncs it when they come online. The blind peer cannot decrypt anything it stores.](/images/security-and-privacy/blind-peering-flow.svg "Blind Peering")
 
-In Keet, those couriers are **blind peers** (sometimes called *blind relays*). They're just other computers on the network that agree to hold your message and pass it along.
+## But can't that peer read my messages?
 
-## Why is it called "blind"?
+No — that's why it's called *blind*.
 
-Because the helper is **blind to what's inside**.
-
-Your message is [**end-to-end encrypted**](/#is-keet-encrypted) *before* it ever leaves your device. The blind peer only ever sees a scrambled, locked blob of data. It knows *"hold this and forward it,"* but it can **never read your message, your name, or who it's for** in a way it can understand.
+A Keet room is **encrypted**, and only the people in the room have the keys. A blind peer stores the room's data in its encrypted form and has no key to unlock it: it can't read your messages, files, or names. It helps keep the room available — it can never see inside it.
 
 <Callout type="info">
-A blind peer isn't a company server. It's just another peer on the peer-to-peer network — anyone can run one, and no single company owns or controls your messages. 🌐
-</Callout>
-
-## Putting it together
-
-So when you message someone who's offline — and then go offline yourself before they're back — here's what happens:
-
-1. You wrote a message. It was **encrypted on your device**.
-2. Because your friend was offline, the encrypted message was **held by one or more blind peers** on the network.
-3. You went offline — but that's fine, because **you were no longer the only one holding it**.
-4. When your friend reconnected, they **synced the encrypted message from a blind peer** and their device unlocked it.
-
-Those four steps look like this end to end:
-
-![How blind peering delivers an offline message: you encrypt and send it (steps 1–2), blind peers hold the encrypted message while your friend is offline (step 3), then your friend syncs and decrypts it when back online (step 4).](/images/security-and-privacy/blind-peering-flow.svg "Blind Peering flow")
-
-So the message *was* stored somewhere — but only ever as **locked, unreadable data on other peers**, never as readable text on a company server. 🔐
-
-<Callout type="warn">
-No plain-text copy of your message exists anywhere outside you and the person you're talking to. The blind peer only ever holds the encrypted version. ⚠️
+A blind peer isn't a company server. It's just another peer on the network — anyone can run one. 🌐
 </Callout>
 
 ## Want the deep technical version?
 
-This page is the friendly summary. Under the hood, blind peering is really about **data availability** on Keet's peer-to-peer stack (Hypercore and Hyperswarm): a blind peer is a dedicated replicator that **stores and serves your encrypted data without ever decrypting it** — giving you server-like availability without a server.
-
-For the full technical explanation, see [Availability and blind peering](https://docs.pears.com/explanation/availability-and-blind-peering/) 🍐 in the Pear documentation.
+See [Availability and blind peering](https://docs.pears.com/explanation/availability-and-blind-peering/) 🍐 in the Pear documentation.

@@ -11,7 +11,7 @@ Keet has [no central servers](/#how-does-keet-work-without-central-servers) — 
 
 Everyone in a room keeps their own copy of its messages. Catching up is a matter of **syncing**: when two members are online at the same time, their devices swap whatever the other one is missing.
 
-That only works if someone holding a copy is online. Most phones and laptops aren't online all the time — so two people who are never online at the same moment would never catch up on each other's messages.
+That only works if someone holding a copy is online. Most phones and laptops aren't online all the time — so if you and a friend are never online at the same moment, and no other member is around to bridge the gap, you'd never catch up on each other's messages.
 
 ## The solution: blind peers
 
@@ -39,9 +39,9 @@ A blind peer keeps one more copy of that notebook in a **library that never clos
 
 ## Going a layer deeper
 
-### Nothing is in transit
+### Nothing waits in between
 
-Once you hit send, your message isn't traveling anywhere — it's simply **part of the room**, and the room exists as copies on the devices that hold it. When your friend comes online, their device updates its own copy from whichever copy is reachable. A blind peer's job is simply to keep an up-to-date copy **reachable at all hours**.
+Once you hit send, your message becomes **part of the room** — and the room exists as copies on the devices that hold it. Messages do travel between devices whenever copies sync, but there's no queue of undelivered messages sitting somewhere in between — only **copies of the room catching up with each other** whenever they can. When your friend comes online, their device updates its own copy from whichever copy is reachable. A blind peer's job is simply to keep an up-to-date copy **reachable at all hours**.
 
 ### More copies, more availability
 

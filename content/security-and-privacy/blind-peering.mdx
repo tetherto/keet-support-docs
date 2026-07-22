@@ -1,0 +1,58 @@
+---
+title: "Blind Peering 🔒"
+description: "How a Keet room stays in sync when its members aren't online at the same time — encrypted copies kept by always-on peers that can't read them."
+docType: faq
+schemaType: TechArticle
+---
+
+Keet has [no central servers](/#how-does-keet-work-without-central-servers) — a room lives on the devices of the people in it. That raises a fair question: **if I send a message while the other person is offline, and then I go offline too, how does it ever arrive?**
+
+## The problem
+
+Everyone in a room keeps their own copy of its messages. Catching up is a matter of **syncing**: when two members are online at the same time, their devices swap whatever the other one is missing.
+
+That only works if someone holding a copy is online. Most phones and laptops aren't online all the time — so if you and a friend are never online at the same moment, and no other member is around to bridge the gap, you'd never catch up on each other's messages.
+
+## The solution: blind peers
+
+A **blind peer** is a peer on the network that is simply **more available than most devices** — it stays online so a room's data stays reachable.
+
+With a blind peer keeping a copy of the room, your message no longer depends on your own device staying online. Other members catch up whenever they next connect — even long after you've gone offline — by syncing from whoever holds the newest messages, including the blind peer.
+
+![Blind peering: you, a blind peer, and your friend each hold a copy of the encrypted room and sync whenever you're online together. The blind peer is always online but has no key — only members can read the room.](/images/security-and-privacy/blind-peering-flow.svg "Blind Peering")
+
+## But can't that peer read my messages?
+
+No — that's why it's called *blind*.
+
+A Keet room is **encrypted**, and only the people in the room have the keys. A blind peer stores the room's data in its encrypted form and has no key to unlock it: it can't read your messages, files, or names. It helps keep the room available — it can never see inside it.
+
+<Callout type="info">
+It doesn't matter who runs a blind peer — the room stays just as unreadable either way. You don't have to trust the operator; the encryption does that work. 🔒
+</Callout>
+
+## A picture to keep in mind
+
+Think of a room as a **shared notebook written in a code** that only its members can read. Every member keeps their own copy, and whenever two members are online together, they copy each other's newest entries.
+
+A blind peer keeps one more copy of that notebook in a **library that never closes**: members can drop in at any hour and copy out the newest entries. And because the notebook is written in code, the librarian can't read a word of it.
+
+## Going a layer deeper
+
+### Nothing waits in between
+
+Once you hit send, your message becomes **part of the room** — and the room exists as copies on the devices that hold it. Messages do travel between devices whenever copies sync, but there's no queue of undelivered messages sitting somewhere in between — only **copies of the room catching up with each other** whenever they can. When your friend comes online, their device updates its own copy from whichever copy is reachable. A blind peer's job is simply to keep an up-to-date copy **reachable at all hours**.
+
+### More copies, more availability
+
+A room isn't tied to a single blind peer. Any member who happens to be online helps others catch up, and a room can use several blind peers at once. More copies simply mean more chances to sync — no single copy is a point of failure.
+
+### What a blind peer can and can't do
+
+It **can** store a room's encrypted data, stay online, and serve it to members who come to sync.
+
+It **can't** decrypt any of it — and it can't add or change messages either: only the members of a room can write to it.
+
+## Want the deep technical version?
+
+The Pear documentation explains what's under the hood — how rooms are stored, how peers replicate them, and how blind peering compares to plain seeding. Start with [Availability and blind peering](https://docs.pears.com/explanation/availability-and-blind-peering/) 🍐.

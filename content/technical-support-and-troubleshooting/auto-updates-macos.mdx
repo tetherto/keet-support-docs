@@ -1,0 +1,59 @@
+---
+title: "Auto-Updates on macOS"
+description: "Why Keet can get stuck on a 'Shutting down' screen when it tries to update on macOS, and how to keep auto-updates working on standard (non-admin) accounts."
+docType: faq
+schemaType: TechArticle
+---
+
+Keet Desktop keeps itself up to date automatically: when a new version is ready, it prepares the update in the background and applies it the next time the app restarts. On macOS, that final step can quietly fail if Keet is installed somewhere your account isn't allowed to modify.
+
+## Signs you're affected
+
+You might be running into this if:
+
+* Keet stays on a **"Shutting down"** screen and never finishes restarting, or
+* Keet keeps asking for an **administrator password** whenever it tries to update.
+
+This usually shows up on a **standard (non-admin) account** — for example, a child's account, a work-managed Mac, or any account that shares a computer with a separate administrator.
+
+## Why this happens
+
+To install an update, Keet has to replace its own application file. When Keet lives in the Mac's main `/Applications` folder, only an **administrator** is allowed to change what's in there.
+
+So when someone without admin rights runs Keet from `/Applications`, the update downloads fine but can't be written into place. That's what leaves the app hanging on "Shutting down" or asking for an admin password it can't get past.
+
+<Callout type="info">
+This is specific to **macOS**, and it comes down to *file permissions on the install location* — not anything about your Keet profile or your rooms. Your data isn't affected, and moving the app (below) won't touch it.
+</Callout>
+
+## How to fix it
+
+Move Keet to a location your own account controls. The most reliable choice is your **personal Applications folder**, inside your home folder:
+
+1. **Quit Keet** completely (Keet ▸ Quit, or <kbd>⌘</kbd> + <kbd>Q</kbd>).
+2. Open **Finder** and go to your home folder (Go ▸ Home, or <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>).
+3. If you don't already have one, create a folder there named **Applications** — its full path is `/Users/UserName/Applications`, where `UserName` is your macOS account name.
+4. Drag **Keet** out of the main `/Applications` folder and into your `/Users/UserName/Applications` folder.
+5. Open Keet from its new location.
+
+From now on, updates apply on their own — no admin password required.
+
+<Callout type="info">
+Prefer somewhere simpler? Your **Desktop**, or any other folder inside your home directory, works just as well. The only requirement is that *your* account can write to it.
+</Callout>
+
+## If you'd rather keep Keet in /Applications
+
+If you want Keet to stay in the shared `/Applications` folder, then an **administrator** has to be the one to update it — either by entering the admin password when Keet asks for it, or by opening Keet from an administrator account and letting it update there.
+
+<Callout type="warn">
+The whole point of a non-admin account is that the person using it doesn't have the admin password. If that's your situation (a child's account, say), don't wait on the password prompt — move Keet into a folder you control, as described above, so it can keep itself up to date on its own.
+</Callout>
+
+## Setting up Keet for someone else
+
+If you're installing Keet on another person's account — a kid's account, for instance — put it in **their** personal Applications folder (or another folder in their home directory) rather than the shared `/Applications` folder. That way their copy of Keet can update itself without needing you to step in every time.
+
+For more on installing Keet across platforms, see [Installation](/installation-and-setup/installation).
+
+If Keet still won't update, please email us at `support@holepunch.to`

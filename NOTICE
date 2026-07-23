@@ -1,0 +1,35 @@
+Keet Support Docs
+Copyright 2026 Tether
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+--------------------------------------------------------------------------------
+Third-party notices
+--------------------------------------------------------------------------------
+
+Font Awesome icons
+  The sidebar icon path data in src/lib/gitbook-icons.tsx is derived from
+  Font Awesome (https://fontawesome.com). Font Awesome Free icons are licensed
+  under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+
+Poppins
+  Used to render Open Graph preview images (see scripts/generate-og.tsx), via
+  the @fontsource/poppins package.
+  Copyright 2020 The Poppins Project Authors
+  (https://github.com/itfoundry/Poppins).
+  Licensed under the SIL Open Font License, Version 1.1
+  (https://openfontlicense.org/).
+
+Bundled runtime software
+  The generated static site includes open-source libraries -- among them React,
+  Next.js, and Fumadocs -- distributed under the MIT License, together with
+  other dependencies under permissive licenses (MIT, ISC, BSD, Apache-2.0).
+  Their license texts ship inside the respective packages under node_modules/.
+
+--------------------------------------------------------------------------------
+Trademarks
+--------------------------------------------------------------------------------
+
+"Keet" and the Keet logo are trademarks of their respective owners. The
+Apache-2.0 license does not grant permission to use them.

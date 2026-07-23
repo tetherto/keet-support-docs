@@ -39,3 +39,17 @@ Static export is written to `out/`.
 |--------|-------------|
 | `check:internal-links` | Validate internal links in `content/*.mdx` |
 | `build:og` | Generate Open Graph images |
+
+## License
+
+Code in this repository is licensed under the [Apache License 2.0](LICENSE). The
+documentation content (Markdown/MDX under `content/` and images under `public/`)
+is covered by the same license unless noted otherwise.
+
+Third-party material is attributed in [NOTICE](NOTICE) — notably Font Awesome
+icons (CC BY 4.0) and the Poppins font (SIL OFL 1.1).
+
+"Keet" and the Keet logo are trademarks of their respective owners; this license
+does not grant any right to use them.
+
+See [CONTRIBUTING](CONTRIBUTING.md) for how to propose changes.

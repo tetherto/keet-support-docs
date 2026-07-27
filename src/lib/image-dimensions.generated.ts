@@ -256,6 +256,38 @@ export const imageDimensions = {
     "width": 590,
     "height": 366
   },
+  "/images/file-sharing-and-messages/snooze-notifications/desktop/choose-how-long-snooze-duration-3.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/desktop/go-profile-select-notifications-sounds.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/desktop/notifications-shows-active-snooze-remaining-4.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/desktop/toggle-snooze-all-notifications-duration-2.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/mobile/choose-how-long-snooze-duration-7.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/mobile/go-profile-tap-notifications-5.png": {
+    "width": 393,
+    "height": 929
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/mobile/notifications-shows-active-snooze-remaining-8.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/snooze-notifications/mobile/tap-snooze-all-notifications-menu-6.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/installation-and-setup/back-up-your-profile/backup-file-exported-desktop.png": {
     "width": 1224,
     "height": 810

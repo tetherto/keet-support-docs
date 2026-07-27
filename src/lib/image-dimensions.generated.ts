@@ -48,6 +48,54 @@ export const imageDimensions = {
     "height": 867,
     "width": 648
   },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/contact-indicator-in-dm-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/contact-indicator-in-dm-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-notification-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-notification-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-review-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-review-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-not-saved-contact-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-not-saved-contact-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-saved-contact-desktop.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-saved-contact-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/trust-label-in-group-desktop.png": {
+    "width": 1224,
+    "height": 874
+  },
+  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/trust-label-in-group-mobile.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/deleting-files-and-messages/desktop/clear-cache-6.png": {
     "width": 540,
     "height": 337

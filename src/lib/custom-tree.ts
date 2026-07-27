@@ -53,8 +53,9 @@ export const customTree: Node[] = [
     },
     children: [
       { type: 'page', name: 'Messaging on Keet ✉️', url: '/file-sharing-and-messages/messaging-on-keet' },
-      { type: 'page', name: 'Personal Group 📂', url: '/file-sharing-and-messages/personal-group' },  
+      { type: 'page', name: 'Personal Group 📂', url: '/file-sharing-and-messages/personal-group' },
       { type: 'page', name: 'Contact Book 📓', url: '/file-sharing-and-messages/contact-book' },
+      { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',

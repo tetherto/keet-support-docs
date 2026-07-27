@@ -21,7 +21,6 @@ out
 # OS / IDE
 .DS_Store
 .vscode
-.claude
 
 # Local reports and notes (not committed)
 .local/

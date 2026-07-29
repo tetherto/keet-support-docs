@@ -1,0 +1,142 @@
+---
+title: "Convert Incompatible Videos 🎞️"
+description: "When a video may not play on all devices, Keet offers to convert it to a compatible version before you send it."
+docType: faq
+schemaType: TechArticle
+---
+
+## Why does Keet say a video may not play on all devices?
+
+Some videos are recorded with a codec (commonly **H.265 / HEVC**) that isn't supported on every device or operating system. If a peer's device can't decode that codec, the video simply won't play for them.
+
+Keet can't fix this on the receiving end, so instead it offers to convert the video to a widely compatible format **before you send it** - as long as your own device can play the video.
+
+<Callout type="info">
+Conversion happens on your device before sending. Peers who already support the original codec aren't affected either way. 🎞️
+</Callout>
+
+## Convert a video before sending
+
+When you attach a video Keet has detected as potentially incompatible, a banner appears warning that the video may not play on all devices.
+
+### One incompatible video
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Attach the video, then select '**Convert video**' in the banner to create a compatible version.
+
+![The banner warns the video may not play on all devices, with a 'Convert video' button.](/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png "Convert Incompatible Videos 🎞️ · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Select the video, then tap '**Convert video**' in the banner to create a compatible version.
+
+![The banner warns the video may not play on all devices, with a 'Convert video' button.](/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png "Convert Incompatible Videos 🎞️ · Mobile")
+
+</Tab>
+</Tabs>
+
+### Multiple incompatible videos
+
+If you attach several videos at once, affected ones are marked with a warning badge, and the banner covers all of them together.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Select '**Convert videos**' to convert every flagged video at once.
+
+![Some videos may not play on all devices - flagged thumbnails and a 'Convert videos' button.](/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png "Convert Incompatible Videos 🎞️ · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Tap '**Convert videos**' to convert every flagged video at once.
+
+![Some videos may not play on all devices - flagged thumbnails and a 'Convert videos' button.](/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png "Convert Incompatible Videos 🎞️ · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="info">
+Don't want to convert? Dismiss the banner [X] and the video sends unaltered - peers whose devices support the original codec will still be able to play it normally.
+</Callout>
+
+## While the video is converting
+
+Keet shows a progress bar while it creates the compatible version. Larger or longer videos take longer to convert. Select '**Cancel**' to stop.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Creating compatible versions - progress bar with a Cancel button.](/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png "Convert Incompatible Videos 🎞️ · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![Creating compatible versions - progress bar with a Cancel button.](/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png "Convert Incompatible Videos 🎞️ · Mobile")
+
+</Tab>
+</Tabs>
+
+## After conversion finishes
+
+Once conversion succeeds, Keet confirms it and the compatible version is what gets sent.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Compatible version successfully created.](/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png "Convert Incompatible Videos 🎞️ · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![Compatible version successfully created.](/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png "Convert Incompatible Videos 🎞️ · Mobile")
+
+</Tab>
+</Tabs>
+
+If conversion fails, Keet tells you which videos are ready and lets you retry the failed one or send it as is.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Select '**Retry**' to try converting again, or dismiss the message to send the video unconverted.
+
+![Couldn't convert 1 video - the other video is ready, with a Retry option.](/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png "Convert Incompatible Videos 🎞️ · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Tap '**Retry**' to try converting again, or dismiss the message to send the video unconverted.
+
+![Couldn't convert 1 video - the other video is ready, with a Retry option.](/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png "Convert Incompatible Videos 🎞️ · Mobile")
+
+</Tab>
+</Tabs>
+
+## When a video is too large to convert
+
+Some videos are too large for Keet to convert. When that happens, Keet lets you know, and you can send the video as is or compress it outside Keet and try again.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![This video is too large to be converted - send as is, or compress and try again.](/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png "Convert Incompatible Videos 🎞️ · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![This video is too large to be converted - send as is, or compress and try again.](/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png "Convert Incompatible Videos 🎞️ · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="warn">
+Sending a video without converting it doesn't break anything - it's simply not guaranteed to play on every peer's device. ⚠️
+</Callout>
+
+<Callout type="info">
+Having trouble playing a video someone sent you? See [Video issues](/technical-support-and-troubleshooting/video-issues).
+</Callout>

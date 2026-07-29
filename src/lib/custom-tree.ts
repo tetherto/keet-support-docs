@@ -61,6 +61,11 @@ export const customTree: Node[] = [
         name: 'Sharing Files and Media 🗃️',
         url: '/file-sharing-and-messages/sharing-files-and-media',
       },
+      {
+        type: 'page',
+        name: 'Convert Incompatible Videos 🎞️',
+        url: '/file-sharing-and-messages/convert-incompatible-videos',
+      },
       { type: 'page', name: 'Search Messages 🔎', url: '/file-sharing-and-messages/search-messages' },
       { type: 'page', name: 'Translate Messages 🌐', url: '/file-sharing-and-messages/translate-messages' },
       { type: 'page', name: 'Clear Cache 🧹', url: '/file-sharing-and-messages/clear-cache' },
@@ -70,7 +75,6 @@ export const customTree: Node[] = [
         url: '/file-sharing-and-messages/deleting-files-and-messages',
       },
       { type: 'page', name: 'Location Sharing 🌍', url: '/file-sharing-and-messages/location-sharing' },
-      { type: 'page', name: 'Convert Incompatible Videos 🎞️', url: '/file-sharing-and-messages/video-transcoding' },
     ],
   },
   {

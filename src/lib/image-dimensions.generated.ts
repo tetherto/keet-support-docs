@@ -48,6 +48,54 @@ export const imageDimensions = {
     "height": 867,
     "width": 648
   },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/deleting-files-and-messages/desktop/clear-cache-6.png": {
     "width": 540,
     "height": 337
@@ -237,54 +285,6 @@ export const imageDimensions = {
     "height": 852
   },
   "/images/file-sharing-and-messages/snooze-notifications/mobile/tap-snooze-all-notifications-menu-6.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/video-transcoding/desktop/attach-multiple-videos-shows-may-not-play-banner-2.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/video-transcoding/desktop/attach-video-shows-may-not-play-banner-1.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/video-transcoding/desktop/attach-video-too-large-to-convert.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/video-transcoding/desktop/convert-video-compatible-version-created-4.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/video-transcoding/desktop/convert-video-couldnt-convert-retry.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/video-transcoding/desktop/convert-video-creating-compatible-versions-3.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/video-transcoding/mobile/attach-multiple-videos-shows-may-not-play-banner-2.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/video-transcoding/mobile/attach-video-shows-may-not-play-banner-1.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/video-transcoding/mobile/attach-video-too-large-to-convert.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/video-transcoding/mobile/convert-video-compatible-version-created-4.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/video-transcoding/mobile/convert-video-couldnt-convert-retry.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/video-transcoding/mobile/convert-video-creating-compatible-versions-3.png": {
     "width": 393,
     "height": 852
   },

@@ -48,51 +48,51 @@ export const imageDimensions = {
     "height": 867,
     "width": 648
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/contact-indicator-in-dm-desktop.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/contact-indicator-in-dm.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/contact-indicator-in-dm-mobile.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-notification-desktop.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/dm-request-notification.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-notification-mobile.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-review-desktop.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/dm-request-review.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/dm-request-review-mobile.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-not-saved-contact-desktop.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/profile-card-not-saved-contact.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-not-saved-contact-mobile.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-saved-contact-desktop.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/profile-card-saved-contact.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/profile-card-saved-contact-mobile.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/trust-label-in-group-desktop.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/trust-label-in-group.png": {
     "width": 1224,
     "height": 874
   },
-  "/images/file-sharing-and-messages/contact-book/user-is-in-contacts/trust-label-in-group-mobile.png": {
+  "/images/file-sharing-and-messages/contact-indicators/mobile/contact-indicator-in-dm.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/dm-request-notification.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/dm-request-review.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/profile-card-not-saved-contact.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/profile-card-saved-contact.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/trust-label-in-group.png": {
     "width": 393,
     "height": 852
   },

@@ -84,6 +84,46 @@ export const imageDimensions = {
     "height": 601,
     "width": 702
   },
+  "/images/file-sharing-and-messages/language-packs/desktop/delete-language-pack-confirm.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/language-packs-empty-state.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/language-packs-list-installed-pairs-3.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/language-translations-select-language-packs-2.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/settings-select-language-and-translations-1.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/delete-language-pack-confirm.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/language-packs-empty-state.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/language-packs-list-installed-pairs-3.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/language-translations-tap-language-packs-2.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/settings-tap-language-and-translations-1.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/location-sharing/current-location-will-appear-chat-3.png": {
     "width": 788,
     "height": 621

@@ -84,43 +84,43 @@ export const imageDimensions = {
     "height": 601,
     "width": 702
   },
-  "/images/file-sharing-and-messages/language-packs/desktop/delete-language-pack-confirm.png": {
+  "/images/file-sharing-and-messages/language-packs/desktop/delete-confirm.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/language-packs/desktop/language-packs-empty-state.png": {
+  "/images/file-sharing-and-messages/language-packs/desktop/message-translation-language-packs.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/language-packs/desktop/language-packs-list-installed-pairs-3.png": {
+  "/images/file-sharing-and-messages/language-packs/desktop/packs-empty.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/language-packs/desktop/language-translations-select-language-packs-2.png": {
+  "/images/file-sharing-and-messages/language-packs/desktop/packs-list.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/language-packs/desktop/settings-select-language-and-translations-1.png": {
+  "/images/file-sharing-and-messages/language-packs/desktop/settings-language-and-translations.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/language-packs/mobile/delete-language-pack-confirm.png": {
+  "/images/file-sharing-and-messages/language-packs/mobile/delete-confirm.png": {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/language-packs/mobile/language-packs-empty-state.png": {
+  "/images/file-sharing-and-messages/language-packs/mobile/message-translation-language-packs.png": {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/language-packs/mobile/language-packs-list-installed-pairs-3.png": {
+  "/images/file-sharing-and-messages/language-packs/mobile/packs-empty.png": {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/language-packs/mobile/language-translations-tap-language-packs-2.png": {
+  "/images/file-sharing-and-messages/language-packs/mobile/packs-list.png": {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/language-packs/mobile/settings-tap-language-and-translations-1.png": {
+  "/images/file-sharing-and-messages/language-packs/mobile/settings-language-and-translations.png": {
     "width": 393,
     "height": 852
   },

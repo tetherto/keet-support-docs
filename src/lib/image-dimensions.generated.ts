@@ -240,6 +240,54 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
+  "/images/file-sharing-and-messages/video-transcoding/desktop/attach-multiple-videos-shows-may-not-play-banner-2.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/video-transcoding/desktop/attach-video-shows-may-not-play-banner-1.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/video-transcoding/desktop/attach-video-too-large-to-convert.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/video-transcoding/desktop/convert-video-compatible-version-created-4.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/video-transcoding/desktop/convert-video-couldnt-convert-retry.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/video-transcoding/desktop/convert-video-creating-compatible-versions-3.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/video-transcoding/mobile/attach-multiple-videos-shows-may-not-play-banner-2.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/video-transcoding/mobile/attach-video-shows-may-not-play-banner-1.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/video-transcoding/mobile/attach-video-too-large-to-convert.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/video-transcoding/mobile/convert-video-compatible-version-created-4.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/video-transcoding/mobile/convert-video-couldnt-convert-retry.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/video-transcoding/mobile/convert-video-creating-compatible-versions-3.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/installation-and-setup/back-up-your-profile/backup-file-exported-desktop.png": {
     "width": 1224,
     "height": 810

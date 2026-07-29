@@ -70,6 +70,7 @@ export const customTree: Node[] = [
         url: '/file-sharing-and-messages/deleting-files-and-messages',
       },
       { type: 'page', name: 'Location Sharing 🌍', url: '/file-sharing-and-messages/location-sharing' },
+      { type: 'page', name: 'Convert Incompatible Videos 🎞️', url: '/file-sharing-and-messages/video-transcoding' },
     ],
   },
   {

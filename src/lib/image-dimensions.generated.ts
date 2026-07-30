@@ -93,6 +93,51 @@ export const imageDimensions = {
     "height": 852
   },
   "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
+  "/images/file-sharing-and-messages/contact-indicators/desktop/contact-indicator-in-dm.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-indicators/desktop/dm-request-notification.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-indicators/desktop/dm-request-review.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-indicators/desktop/profile-card-not-saved-contact.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-indicators/desktop/profile-card-saved-contact.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/contact-indicators/desktop/trust-label-in-group.png": {
+    "width": 1224,
+    "height": 874
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/contact-indicator-in-dm.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/dm-request-notification.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/dm-request-review.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/profile-card-not-saved-contact.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/profile-card-saved-contact.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/contact-indicators/mobile/trust-label-in-group.png": {
     "width": 393,
     "height": 852
   },
@@ -131,6 +176,46 @@ export const imageDimensions = {
   "/images/file-sharing-and-messages/deleting-files-and-messages/mobile/removed-message-will-shown-chat-5.jpg": {
     "height": 601,
     "width": 702
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/delete-confirm.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/message-translation-language-packs.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/packs-empty.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/packs-list.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/settings-language-and-translations.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/delete-confirm.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/message-translation-language-packs.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/packs-empty.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/packs-list.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/settings-language-and-translations.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/file-sharing-and-messages/location-sharing/current-location-will-appear-chat-3.png": {
     "width": 788,

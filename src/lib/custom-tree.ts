@@ -55,6 +55,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Messaging on Keet ✉️', url: '/file-sharing-and-messages/messaging-on-keet' },
       { type: 'page', name: 'Personal Group 📂', url: '/file-sharing-and-messages/personal-group' },
       { type: 'page', name: 'Contact Book 📓', url: '/file-sharing-and-messages/contact-book' },
+      { type: 'page', name: 'Contact Indicators 🛡️', url: '/file-sharing-and-messages/contact-indicators' },
       { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
       {
         type: 'page',
@@ -68,6 +69,7 @@ export const customTree: Node[] = [
       },
       { type: 'page', name: 'Search Messages 🔎', url: '/file-sharing-and-messages/search-messages' },
       { type: 'page', name: 'Translate Messages 🌐', url: '/file-sharing-and-messages/translate-messages' },
+      { type: 'page', name: 'Language Packs 📦', url: '/file-sharing-and-messages/language-packs' },
       { type: 'page', name: 'Clear Cache 🧹', url: '/file-sharing-and-messages/clear-cache' },
       {
         type: 'page',

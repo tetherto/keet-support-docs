@@ -132,6 +132,46 @@ export const imageDimensions = {
     "height": 601,
     "width": 702
   },
+  "/images/file-sharing-and-messages/language-packs/desktop/delete-confirm.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/message-translation-language-packs.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/packs-empty.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/packs-list.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/desktop/settings-language-and-translations.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/delete-confirm.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/message-translation-language-packs.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/packs-empty.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/packs-list.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/language-packs/mobile/settings-language-and-translations.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/location-sharing/current-location-will-appear-chat-3.png": {
     "width": 788,
     "height": 621

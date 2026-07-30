@@ -160,6 +160,58 @@ export const imageDimensions = {
     "width": 590,
     "height": 532
   },
+  "/images/file-sharing-and-messages/mute-a-chat/desktop/chat-list-muted-icon.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/desktop/chat-options-mute-duration.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/desktop/chat-options-unmute.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/desktop/room-info-muted-until.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/desktop/room-info-notifications-toggle-duration.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/chat-list-muted-icon.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/long-press-chat-options.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/long-press-mute-duration.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/long-press-unmute.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/room-info-muted-until.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/room-info-notifications-toggle-duration.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/swipe-mute-action.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/mute-a-chat/mobile/swipe-unmute-action.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/personal-group/add-details-new-chat-screenshot-3.png": {
     "width": 585,
     "height": 841
@@ -623,10 +675,6 @@ export const imageDimensions = {
   "/images/technical-support-and-troubleshooting/notifications/mobile/here-toggle-app-sounds-sending-2.jpg": {
     "height": 517,
     "width": 648
-  },
-  "/images/technical-support-and-troubleshooting/notifications/not-yet-but-feature-may-8.webp": {
-    "width": 426,
-    "height": 240
   },
   "/images/technical-support-and-troubleshooting/recover-a-profile/add-file-and-input-password-desktop.png": {
     "width": 1224,

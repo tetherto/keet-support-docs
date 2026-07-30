@@ -48,6 +48,51 @@ export const imageDimensions = {
     "height": 867,
     "width": 648
   },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
   "/images/file-sharing-and-messages/contact-indicators/desktop/contact-indicator-in-dm.png": {
     "width": 1224,
     "height": 810

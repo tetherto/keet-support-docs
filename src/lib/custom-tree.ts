@@ -62,6 +62,11 @@ export const customTree: Node[] = [
         name: 'Sharing Files and Media 🗃️',
         url: '/file-sharing-and-messages/sharing-files-and-media',
       },
+      {
+        type: 'page',
+        name: 'Convert Incompatible Videos 🎞️',
+        url: '/file-sharing-and-messages/convert-incompatible-videos',
+      },
       { type: 'page', name: 'Search Messages 🔎', url: '/file-sharing-and-messages/search-messages' },
       { type: 'page', name: 'Translate Messages 🌐', url: '/file-sharing-and-messages/translate-messages' },
       { type: 'page', name: 'Language Packs 📦', url: '/file-sharing-and-messages/language-packs' },

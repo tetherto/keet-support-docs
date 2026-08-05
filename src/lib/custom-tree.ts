@@ -57,6 +57,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Contact Book 📓', url: '/file-sharing-and-messages/contact-book' },
       { type: 'page', name: 'Contact Indicators 🛡️', url: '/file-sharing-and-messages/contact-indicators' },
       { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
+      { type: 'page', name: 'Mute a Chat 🔕', url: '/file-sharing-and-messages/mute-a-chat' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',

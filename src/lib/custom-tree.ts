@@ -131,6 +131,7 @@ export const customTree: Node[] = [
     children: [
       { type: 'page', name: 'FAQs 💬', url: '/security-and-privacy/faq' },
       { type: 'page', name: 'Blind Peering 🔒', url: '/security-and-privacy/blind-peering' },
+      { type: 'page', name: 'Private Mode 🙈', url: '/security-and-privacy/private-mode' },
     ],
   },
   {

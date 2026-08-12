@@ -48,51 +48,6 @@ export const imageDimensions = {
     "height": 867,
     "width": 648
   },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
   "/images/file-sharing-and-messages/contact-indicators/desktop/contact-indicator-in-dm.png": {
     "width": 1224,
     "height": 810
@@ -138,6 +93,54 @@ export const imageDimensions = {
     "height": 852
   },
   "/images/file-sharing-and-messages/contact-indicators/mobile/trust-label-in-group.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
     "width": 393,
     "height": 852
   },
@@ -688,6 +691,50 @@ export const imageDimensions = {
   "/images/security-and-privacy/group-options-user-member-list.png": {
     "width": 518,
     "height": 640
+  },
+  "/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/message-revealed-inline.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/private-mode-on-confirmation.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/profile-panel-toggle.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/turn-off-confirmation-modal.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/mobile/masked-room.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/private-mode-on-masked-list.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/profile-toggle.png": {
+    "width": 393,
+    "height": 1128
+  },
+  "/images/security-and-privacy/private-mode/mobile/turn-off-confirmation-modal.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/view-message-always-reveal.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/view-message-manual-reveal.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/security-and-privacy/report-message-report-please-note-3.png": {
     "width": 372,

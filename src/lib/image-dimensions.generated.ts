@@ -48,51 +48,6 @@ export const imageDimensions = {
     "height": 867,
     "width": 648
   },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
   "/images/file-sharing-and-messages/contact-indicators/desktop/contact-indicator-in-dm.png": {
     "width": 1224,
     "height": 810
@@ -138,6 +93,54 @@ export const imageDimensions = {
     "height": 852
   },
   "/images/file-sharing-and-messages/contact-indicators/mobile/trust-label-in-group.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-multiple-videos.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/banner-single-video.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-failed-retry.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/conversion-success.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/converting-progress.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/desktop/video-too-large.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-multiple-videos.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/banner-single-video.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-failed-retry.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/conversion-success.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/converting-progress.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/convert-incompatible-videos/mobile/video-too-large.png": {
     "width": 393,
     "height": 852
   },
@@ -420,6 +423,30 @@ export const imageDimensions = {
   "/images/installation-and-setup/installation/windows-installer-download.png": {
     "width": 690,
     "height": 304
+  },
+  "/images/installation-and-setup/invite-links/desktop-download-linux.jpg": {
+    "height": 477,
+    "width": 720
+  },
+  "/images/installation-and-setup/invite-links/desktop-download-macos.jpg": {
+    "height": 417,
+    "width": 720
+  },
+  "/images/installation-and-setup/invite-links/desktop-download-windows.jpg": {
+    "height": 417,
+    "width": 720
+  },
+  "/images/installation-and-setup/invite-links/desktop-join-page.jpg": {
+    "height": 413,
+    "width": 720
+  },
+  "/images/installation-and-setup/invite-links/mobile-download-page.jpg": {
+    "height": 969,
+    "width": 360
+  },
+  "/images/installation-and-setup/invite-links/mobile-join-page.jpg": {
+    "height": 975,
+    "width": 360
   },
   "/images/installation-and-setup/keet-username/change-username.png": {
     "width": 820,

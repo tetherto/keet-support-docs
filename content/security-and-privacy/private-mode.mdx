@@ -1,6 +1,6 @@
 ---
 title: "Private Mode 🙈"
-description: "Toggle 'Private Mode' from Profile to mask chat names, avatars, and message previews on-screen, then reveal any single message when you need to check it."
+description: "Toggle 'Private Mode' from Profile to mask chat names, avatars, and message previews on-screen, then reveal any single message inline when you need to check it."
 docType: faq
 schemaType: TechArticle
 ---
@@ -85,9 +85,18 @@ With Private Mode on, Keet hides anything that could identify who you're talking
 
 Need to actually read a message without leaving Private Mode? You can reveal it on its own, without unmasking the rest of the chat.
 
-<Callout type="warn">
-Revealing a single message is currently available on mobile only — desktop support is coming soon.
-</Callout>
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+1. Hover (or, using a keyboard, focus) a masked message to show a '**Reveal**' link:
+
+   ![Hovering a masked message shows a Reveal link next to it.](/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png "Private Mode 🙈 · Desktop")
+2. Click '**Reveal**' to show that message's real sender and text inline. A '**Hide**' link appears in its place to mask it again:
+
+   ![A revealed message shows its real sender, avatar, and text inline, with a Hide link to mask it again.](/images/security-and-privacy/private-mode/desktop/message-revealed-inline.png "Private Mode 🙈 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
 
 1. Tap a masked message to open it in a '**View message**' sheet, set to '**Manual reveal**' by default — it shows the real message once, then masks it again once you back out:
 
@@ -96,15 +105,27 @@ Revealing a single message is currently available on mobile only — desktop sup
 
    ![Switching the View message sheet to Always reveal keeps that message unmasked going forward.](/images/security-and-privacy/private-mode/mobile/view-message-always-reveal.png "Private Mode 🙈 · Mobile")
 
+</Tab>
+</Tabs>
+
 <Callout type="info">
 Revealing a message only affects that message — the rest of the chat, and the rest of your chat list, stay masked.
 </Callout>
 
 ## Turn off Private Mode from inside a chat
 
-<Callout type="warn">
-Turning Private Mode off from inside a chat is currently available on mobile only — desktop support is coming soon.
-</Callout>
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+1. Click '**Turn off private mode**' at the top of any chat:
+
+   ![The Turn off private mode banner sits at the top of the chat while Private Mode is on.](/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png "Private Mode 🙈 · Desktop")
+2. Confirm in the '**Turn off private mode?**' dialog. '**Cancel**' keeps Private Mode on; '**Turn off**' restores normal view everywhere:
+
+   ![A confirmation dialog asks you to confirm before turning Private Mode off.](/images/security-and-privacy/private-mode/desktop/turn-off-confirmation-modal.png "Private Mode 🙈 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
 
 1. Tap '**Turn off private mode**' at the top of any chat:
 
@@ -113,11 +134,14 @@ Turning Private Mode off from inside a chat is currently available on mobile onl
 
    ![A confirmation sheet asks you to confirm before turning Private Mode off.](/images/security-and-privacy/private-mode/mobile/turn-off-confirmation-modal.png "Private Mode 🙈 · Mobile")
 
-You can also turn Private Mode off from '**Profile**' at any time, the same way you turned it on — that works on both desktop and mobile.
+</Tab>
+</Tabs>
+
+You can also turn Private Mode off from '**Profile**' at any time, the same way you turned it on.
 
 ## Keyboard and screen reader support
 
-The '**Private Mode**' toggle in Profile works without a mouse: '**Tab**' (or '**Shift+Tab**' to go back) moves focus to it, and '**Enter**' or '**Space**' turns it on or off. Keyboard support for revealing a message and turning Private Mode off from inside a chat will be documented once desktop support ships.
+Every Private Mode control works without a mouse: '**Tab**' (or '**Shift+Tab**' to go back) moves focus between the toggle, the '**Reveal**' and '**Hide**' links, and the '**Cancel**' / '**Turn off**' buttons in the confirmation dialog — then '**Enter**' or '**Space**' activates whichever one is focused.
 
 <Callout type="info">
 Screen readers don't announce a hidden message's real content — they read the same placeholder text sighted users see, until that message is revealed.

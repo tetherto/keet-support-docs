@@ -696,11 +696,19 @@ export const imageDimensions = {
     "width": 1224,
     "height": 810
   },
+  "/images/security-and-privacy/private-mode/desktop/message-revealed-inline.png": {
+    "width": 1224,
+    "height": 810
+  },
   "/images/security-and-privacy/private-mode/desktop/private-mode-on-confirmation.png": {
     "width": 1224,
     "height": 810
   },
   "/images/security-and-privacy/private-mode/desktop/profile-panel-toggle.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/turn-off-confirmation-modal.png": {
     "width": 1224,
     "height": 810
   },

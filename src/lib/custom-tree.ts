@@ -19,6 +19,7 @@ export const customTree: Node[] = [
     },
     children: [
       { type: 'page', name: 'Installation', url: '/installation-and-setup/installation' },
+      { type: 'page', name: 'Invite Links', url: '/installation-and-setup/invite-links' },
       { type: 'page', name: 'Setup', url: '/installation-and-setup/setup' },
       { type: 'page', name: 'Back Up Your Profile', url: '/installation-and-setup/back-up-your-profile' },
       { type: 'page', name: 'App Permissions', url: '/installation-and-setup/app-permissions' },

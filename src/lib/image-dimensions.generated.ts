@@ -716,6 +716,42 @@ export const imageDimensions = {
     "width": 518,
     "height": 640
   },
+  "/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/private-mode-on-confirmation.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/desktop/profile-panel-toggle.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/security-and-privacy/private-mode/mobile/masked-room.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/private-mode-on-masked-list.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/profile-toggle.png": {
+    "width": 393,
+    "height": 1128
+  },
+  "/images/security-and-privacy/private-mode/mobile/turn-off-confirmation-modal.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/view-message-always-reveal.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/security-and-privacy/private-mode/mobile/view-message-manual-reveal.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/security-and-privacy/report-message-report-please-note-3.png": {
     "width": 372,
     "height": 256

@@ -112,6 +112,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Recover a Profile', url: '/technical-support-and-troubleshooting/recover-a-profile' },
       { type: 'page', name: 'Delete Profile', url: '/technical-support-and-troubleshooting/delete-profile' },
       { type: 'page', name: 'Keet App issues', url: '/technical-support-and-troubleshooting/keet-app-issues' },
+      { type: 'page', name: 'Slow Groups After Updating', url: '/technical-support-and-troubleshooting/slow-groups-after-updating' },
       { type: 'page', name: 'Auto-Updates on macOS', url: '/technical-support-and-troubleshooting/auto-updates-macos' },
       { type: 'page', name: 'Sound issues', url: '/technical-support-and-troubleshooting/sound-issues' },
       { type: 'page', name: 'Video issues', url: '/technical-support-and-troubleshooting/video-issues' },

@@ -8,7 +8,7 @@ It worked, it shipped, and it taught us where the seams were. Autobase is still 
 
 [**autobee**](https://github.com/holepunchto/autobee) is a rebuilt open source peer-to-peer collaboration engine shipping in Keet 4.22.0.
 
-## The engine is a rewrite
+## The shape that stayed the same
 
 The idea stays the same: your own log and everyone's logs merged deterministically into one view. What changed is how peers arrive at the order.
 
@@ -32,11 +32,13 @@ flowchart LR
 | | Autobase | Autobee |
 |---|---|---|
 | **Deciding final order** | Consensus over a designated indexer set. A node is locked in once a majority of indexers have referenced it and a majority have then referenced those references — autobase calls this a double quorum — and by its own design rules that quorum has to lead any rival quorum by two degrees, or the two could still swap places. | One fixed rule, the same on every peer. Order comes from a writer's weight — which has to be granted, not claimed — under the causal links each entry carries, with the writer's own clock stamp, then its key, breaking ties. Every input to that decision — the links, the stamp, the grant citation the weight resolves from — is written into the entry at the moment it is appended. |
-| **Waiting on other peers** | Messages show up immediately, but their order only locks in once a majority of indexers keep confirming it — until then, messages are still ordered and shown; they can just get reshuffled. | Nothing about the ordering is put to a vote. (One majority does survive, and only during the move off autobase: to find the newest legacy system core, autobee polls the old room's indexers and takes the majority answer.) A writer does need one writer already standing at that weight or above to sign off before its weight counts — and that sign-off is just another entry in the log. |
+| **Waiting on other peers** | Messages show up immediately, but their order only locks in once a majority of indexers keep confirming it — until then, messages are still ordered and shown; they can just get reshuffled. | Nothing about the ordering is put to a vote. A writer does need one writer already standing at that weight or above to sign off before its weight counts — and that sign-off is just another entry in the log. |
 | **Trusting the view** | Each view is a multi-signature Hypercore whose signers are the current indexer set. Indexers embed per-view signatures in their own logs; every peer collects and assembles them. | No quorum signature on the view — no signed length to wait for and no signatures to collect from anyone. Any peer with the room key rebuilds the view itself. A peer that instead adopts someone else's view leans on knowing who that peer is. |
 | **Background traffic** | Every indexer runs its own timer: it checks in every ten to twenty seconds and writes a block with no message in it whenever that would help the group agree. Those blocks are also how an indexer publishes its signatures. So the more indexers, the more of them in the log. | No timer. What the protocol needs rides along on entries you were already writing — though the version Keet ships still adds the occasional empty block around membership changes or to acknowledge another peer's optimistic write. |
 | **Changing the writer set** | Adding or removing an indexer changes a view's signers, which changes its key — and migrates the whole base. | Writers carry a weight. A raise is a normal in-contract operation, nothing gets re-keyed, but it needs a grant from a writer already standing at that weight or above. The new standing counts from the writer's next entry, when it cites the grant, not the moment the grant lands.|
 | **Joining a room with history** | Jump to the last checkpoint the indexers signed, if the joiner can reach one — otherwise download every writer's log and re-run `apply` over the whole history. | Boot straight onto the head the invite names. If catching up later, adopt a head that a trusted peer already vouched for, stamped into that peer's own log. |
+
+The rest of this article takes the rows of that table one at a time, and says what each one buys you.
 
 ## Why we think big rooms will open faster
 
@@ -88,66 +90,75 @@ And either way it needs another device online to hand the state over; with nobod
 
 Messages can still shuffle when a device catches up on something it hadn't seen. That hasn't changed, and the new engine counts those reorders as a first-class statistic.
 
-## How a room moves over
+## Why order no longer waits on a vote
 
-The mechanics of the move are worth spelling out, because they explain most of what you see.
-A room converts once per device, the first time that device opens a room it had already used. In this case, autobee keys off the pre-autobee boot state sitting in local storage.
-A room this device never opened simply syncs.
+Under autobase, an entry's place in the room was not settled by the entry itself. It was settled afterwards, by other people: a majority of the indexer set had to reference it, and then a majority had to reference those references. Autobase calls that a double quorum, and its design rules require the winning quorum to lead any rival by two degrees — one degree isn't enough, because two quorums that close could still swap places. Until that lead exists, the tip is provisional. It is shown, it is ordered, and it can still be reshuffled.
 
-### When there is something to convert
+Autobee settles order from the entry alone. Every input to the decision is already inside the entry when it is appended: the causal links back to what its writer had seen, the writer's own clock stamp, and the citation for the grant its weight resolves from. Ordering is then one fixed rule, run identically on every peer — weight first, then the clock stamp, then the writer's key as a last tiebreak. There is no round of confirmations to wait for, because there is nothing left to confirm.
 
-#### 1. Read the old boot record
+```mermaid
+flowchart TD
+    subgraph ABO["Autobase: order decided after the fact"]
+        direction TB
+        b1["Entry appended"] --> b2["Indexers reference it"]
+        b2 --> b3{"Majority referenced it,<br/>then majority referenced<br/>those references?"}
+        b3 -- not yet --> b4["Shown, but still<br/>reorderable"]
+        b4 --> b2
+        b3 -- yes --> b5["Frozen"]
+    end
+    subgraph AEO["Autobee: order carried by the entry"]
+        direction TB
+        e1["Entry appended, carrying<br/>causal links, clock stamp,<br/>grant citation"] --> e2["Every peer runs the same rule:<br/>weight, then stamp, then key"]
+        e2 --> e3["Same order on every peer"]
+    end
+```
 
-Migration takes the boot pointer and the room's encryption key out of autobase's local storage, then clears them. That is what makes the move one-way: once a room is converted, there is no pointer left to go back to.
+*Autobase's order is a fact about the room's indexers; autobee's is a fact about the entry.*
 
-#### 2. Find the newest legacy state
+One thing this does not buy: an entry you have never seen still slots in when it arrives, and everything after it moves down. Rules can be evaluated the moment an entry lands, but they cannot be evaluated on an entry that hasn't arrived yet. What goes away is the second source of movement — the one where nothing new arrived and the order changed anyway, because the indexers had not finished agreeing.
 
-From that pointer it chases autobase's checkpoint back-pointers, and asks the old room's indexers which legacy system core is current, taking the majority answer. This is the one place a majority still decides anything, and it exists only to read rooms that predate autobee.
+Weights are the one thing a writer cannot decide for itself. A writer's weight only counts once a writer already standing at that weight or above has signed off on it, and that sign-off is not a side channel: it is an ordinary entry in an ordinary log, replicated like everything else. So even the input that ranks writers against each other is settled by the same append-only machinery as the messages.
 
-#### 3. Resolve the old views
+## Why any peer can rebuild the view alone
 
-Autobee hands back pointers, not data. Keet opens those cores itself, read-only, and points the new engine at them rather than rebuilding anything.
+An autobase view was a multi-signature Hypercore, and its signers were the current indexer set. Every indexer embedded its per-view signatures into its own log, and every peer collected those signatures and assembled them before it could trust a given length of the view. That is a real dependency: the signatures have to exist, and you have to be able to reach the logs carrying them.
 
-#### 4. Keep them reachable
+Autobee drops the quorum signature from the view entirely. There is no signed length to wait for and no signatures to gather from anyone. Any peer holding the room key derives the view itself, from the entries, by the same fixed rule everyone else runs. The view stops being a thing you are handed and becomes a thing you compute.
 
-The old views and the legacy system head are mirrored rather than dropped, because remote readers resolve into them. That is what keeps old history rendering for someone who arrives later.
+The tradeoff is worth naming. Because the view carries no quorum signature, a peer that skips the computation and adopts someone else's view is trusting that peer, not a signature set. That is exactly what the fast-open path above does — and why it leans on Keet's own view of who the admins are, rather than on anything the view itself proves.
 
-#### 5. Publish the reference points
+## Why quiet rooms stay quiet
 
-Once a moderator who ran the migration opens the room, their client dispatches those heads into the room. People who join afterwards can read the old history without ever running a migration themselves.
+Under autobase, an idle room was not idle on disk. Every indexer ran its own timer, checked in every ten to twenty seconds, and wrote a block with no message in it whenever that would help the group agree. Those empty blocks were also how an indexer published its view signatures, so they were not optional bookkeeping — they were how consensus and trust got carried. The cost scaled the wrong way: the more indexers a room had, the more of them ended up in the log, whether or not anyone was talking.
 
-This step has a gap worth naming: in a room where you are not a moderator — a DM, for instance — it is never dispatched, and your device keeps those pointers to itself.
+Autobee has no timer. There is nothing to check in about, because ordering isn't a group decision, and there are no view signatures to publish. What the protocol needs rides along on entries you were already writing.
 
-## What you'll notice when you upgrade
+The shipped version isn't perfectly free of empty blocks: Keet's build still writes the occasional one around membership changes, and to acknowledge another peer's optimistic write. The difference is that these are events, not a clock. A room where nobody writes produces nothing.
 
-### Rooms need to upgrade
+## Why promoting a writer no longer moves the room
 
-The first time you open a room you'd already used is in the new release, Keet upgrades that room's local data in place — once per room, on each of your devices.
-That can happen when you open the room, or on its own in the background as the app catches up on rooms with pending changes.
-Rooms your device never opened on the old release skip the upgrade entirely and just sync.
+Changing autobase's indexer set was structural. The indexers were the view's signers, so adding or removing one changed the view's key, and changing the key migrated the whole base. A membership change was, mechanically, a new base.
 
-Above your room list, the app shows a dismissible notice headed "Keet is upgrading for a smoother experience". There's no progress bar for it yet: rooms that need to catch up convert in the background. A room you open yourself converts as part of opening it, so that room takes a moment longer the first time.
+In autobee, standing is a number a writer carries, and raising it is an ordinary in-contract operation. Nothing gets re-keyed and nothing migrates. What the operation needs is a grant from a writer already standing at that weight or above — the same rule that keeps weight from being self-assigned.
 
-### Room IDs don't change
+There is one piece of timing worth knowing. The new standing does not take effect the moment the grant lands. It counts from the promoted writer's next entry, the one that cites the grant. Promotion is something a writer claims by writing, not something that happens to it in the background.
 
-You can still invite people to it, and they join the same room.
-Your old data isn't rewritten or discarded either.
-The previous autobase cores are kept read-only and stay readable, so history keeps rendering.
-That has a cost worth stating plainly: a migrated room is stored twice on your device. The old copy is never rewritten, but it isn't reclaimed either.
+## What happens to rooms you already have
 
-### Everyone in a room should update
+Rooms you had before the upgrade convert once per device, the first time that device opens them. Rooms your device never opened just sync, with nothing to convert.
 
-How far a room is allowed to upgrade is a moderator action driven by remote config, not something the migration decides on its own.
-When a room does move past what an old client supports, that client stops applying the room rather than silently failing.
-The room freezes where it is while the rest of the app keeps working, and the client raises an update countdown — "Some groups might not work with your current version of Keet. Please update the app to access all your groups." — then restarts into the update when the timer runs out.
+The room ID does not change, so old invites and old links still land in the same room. Your old data is not rewritten or discarded: the previous autobase cores are kept read-only so history keeps rendering, for you and for people who join later. That has a cost worth stating plainly — a migrated room is stored twice on your device, and the old copy is never reclaimed.
 
-The migration doesn't run backwards, and downgrading Keet won't undo it. If a room doesn't come up after you upgrade, see [Slow groups after updating](https://support.keet.io/technical-support-and-troubleshooting/slow-groups-after-updating).
+Above your room list, the app shows a dismissible notice headed "Keet is upgrading for a smoother experience". There is no progress bar: rooms convert in the background as the app catches up, and a room you open yourself converts as part of opening it, so that one takes a moment longer the first time.
+
+Everyone in a room should update. How far a room may upgrade is a moderator action driven by remote config. When a room moves past what an old client supports, that client stops applying the room rather than failing silently — the room freezes where it is, the rest of the app keeps working, and the client raises an update countdown — "Some groups might not work with your current version of Keet. Please update the app to access all your groups." — then restarts into the update when the timer runs out.
+
+The move is one-way. Downgrading Keet won't undo it. If a room doesn't come up after you upgrade, see [Slow groups after updating](https://support.keet.io/technical-support-and-troubleshooting/slow-groups-after-updating).
 
 ## Why this matters past this release
 
 The point of the rewrite isn't one number going down.
 It's that Keet is simpler: three stacked views became one, blob storage was folded into the main database, and Keet no longer runs a linearizer at all.
-Autobase is still in the build, but keet-core's only remaining call into it now reads the boot record of a pre-migration room.
 Room updates now run through a queue that survives a restart, instead of running inline while the room finishes syncing.
 
 Two diagnostics went with the old machinery: the tip-size readout now reports zero, and room repair (automatic and manual alike) has no implementation on the new engine yet.

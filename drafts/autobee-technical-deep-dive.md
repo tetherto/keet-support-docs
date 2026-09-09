@@ -4,15 +4,11 @@ Keet 4.22.0 ships a new engine underneath its rooms. Your rooms move onto it the
 
 For years, Keet's rooms ran on [**autobase**](https://github.com/holepunchto/autobase): multiple peers each appending to their own signed, append-only log, with a deterministic `apply` function merging those logs into one shared view. Ordering was eventually consistent: once a quorum of the room's indexers confirmed a prefix, it was frozen and identical everywhere, while the unconfirmed tip could still be reordered and reapplied on each device.
 No central server owned that state: a quorum of the room's own indexing writers settled it, not an outside authority.
-It worked, it shipped, and it taught us where the seams were. It's still in the build: the old-room migration path still loads autobase to read a room's boot record, and our push service still depends on it — but the new work is happening elsewhere, [**autobee**](https://github.com/holepunchto/autobee).
+It worked, it shipped, and it taught us where the seams were. Autobase is still bundled with Keet, as it is used to migrate old room data. But all new room data will use [**autobee**](https://github.com/holepunchto/autobee).
 
 [**autobee**](https://github.com/holepunchto/autobee) is a rebuilt open source peer-to-peer collaboration engine shipping in Keet 4.22.0.
 
 ## The engine is a rewrite
-
-Autobee isn't autobase with extras bolted on — the engine is new code. The main piece carried over is the decoder for autobase's old records, so autobee can still read them: the operations, the writer list, the old system snapshot that points at the existing data, and the pointer to the last known state. Even the decoder didn't arrive untouched — it was pruned and partly rewritten — and the boot path came across from autobase too.
-
-Autobase's wakeup and ordering state isn't carried over at all. Autobee can read autobase's checkpoints well enough to find the newest state of an old room, but it never writes one — its own records use a different scheme entirely.
 
 The idea stays the same: your own log and everyone's logs merged deterministically into one view. What changed is how peers arrive at the order.
 
@@ -156,4 +152,4 @@ Room updates now run through a queue that survives a restart, instead of running
 
 Two diagnostics went with the old machinery: the tip-size readout now reports zero, and room repair (automatic and manual alike) has no implementation on the new engine yet.
 
-None of it is Keet-only. Autobee is a general multiwriter Hyperbee, an engine any peer-to-peer app with many writers could build on. It's [open source](https://github.com/holepunchto/autobee); come argue with us about it in the Keet development rooms.
+None of it is Keet-only. Autobee is a general multiwriter Hyperbee, an engine any peer-to-peer app with many writers could build on. It's [open source](https://github.com/holepunchto/autobee); come discuss with us about it in the Keet development rooms.

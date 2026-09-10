@@ -40,7 +40,6 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Group Moderation ⚖️', url: '/keet-groups/group-moderation' },
       { type: 'page', name: 'Admin Responsibilities 👑', url: '/keet-groups/admin-responsibilities' },
       { type: 'page', name: 'Leave Group🚪', url: '/keet-groups/leave-group' },
-      { type: 'page', name: 'Groups to Join 🧩', url: '/keet-groups/groups-to-join' },
     ],
   },
   {

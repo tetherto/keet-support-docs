@@ -1,16 +1,17 @@
 # Autobee: Keet's new collaboration engine
 
-Keet 4.22.0 ships a new engine underneath its rooms. Your rooms move onto it the first time you open them.
+Keet 4.22.0 ships a new engine underneath its rooms. Each room moves onto it the first time your device opens it.
 
-For years, Keet's rooms ran on [**autobase**](https://github.com/holepunchto/autobase): multiple peers each appending to their own signed, append-only log, with a deterministic `apply` function merging those logs into one shared view. Ordering was eventually consistent: once a quorum of the room's indexers confirmed a prefix, it was frozen and identical everywhere, while the unconfirmed tip could still be reordered and reapplied on each device.
-No central server owned that state: a quorum of the room's own indexing writers settled it, not an outside authority.
-It worked, it shipped, and it taught us where the seams were. Autobase is still bundled with Keet, as it is used to migrate old room data. But all new room data will use [**autobee**](https://github.com/holepunchto/autobee).
+[**Autobee**](https://github.com/holepunchto/autobee) is Keet's new multiwriter engine, built on everything we learned running [**autobase**](https://github.com/holepunchto/autobase) for years.
+The core shape hasn't changed:
 
-[**autobee**](https://github.com/holepunchto/autobee) is a rebuilt open source peer-to-peer collaboration engine shipping in Keet 4.22.0.
+* Every peer appends to their own signed, append-only log.
+* A deterministic `apply` function merges those logs into one shared view.
+* No central server owns any of it. Each peer can read and apply all operations independently.
 
-## The shape that stayed the same
+Autobase is still bundled with Keet — it's what migrates a room's old data the first time a device opens that room — but all new room activity runs on autobee.
 
-The idea stays the same: your own log and everyone's logs merged deterministically into one view. What changed is how peers arrive at the order.
+What autobee actually changes is how a room settles on an order, and, as a direct consequence, how few peers it takes to catch a new device up.
 
 ```mermaid
 flowchart LR
@@ -25,127 +26,63 @@ flowchart LR
     AP --> V[("shared view<br/>Hyperbee")]
 ```
 
-*The shape autobase and autobee both share: each peer's own log feeds a deterministic `apply`, and every peer ends up building the same view. What changed between them is the machinery under the hood, how the order going into `apply` gets decided.*
+*The shape autobase and autobee both share: each peer's own log feeds a deterministic `apply`, and every peer that has seen the same entries ends up building the same view. What changed is the machinery in the box — how the order going into `apply` gets decided, and what it costs to catch a device up.*
 
-## Differences between autobase and autobee
+## Why a majority used to stand between you and a fast join
 
-| | Autobase | Autobee |
-|---|---|---|
-| **[Deciding final order](#why-order-no-longer-waits-on-a-vote)** | Consensus over a designated indexer set. A node is locked in once a majority of indexers have referenced it and a majority have then referenced those references — autobase's code calls this double confirming. | One fixed rule, the same on every peer. Order comes from a writer's weight — which has to be granted, not claimed — under the causal links each entry carries, with the writer's own clock stamp, then its key, breaking ties. Every input to that decision — the links, the stamp, the grant citation the weight resolves from — is written into the entry at the moment it is appended. |
-| **[Waiting on other peers](#why-order-no-longer-waits-on-a-vote)** | Messages show up immediately, but their order only locks in once a majority of indexers keep confirming it — until then, messages are still ordered and shown; they can just get reshuffled. | Nothing about the ordering is put to a vote. A writer does need one writer already standing at that weight or above to sign off before its weight counts — and that sign-off is just another entry in the log. |
-| **[Trusting the view](#why-any-peer-can-rebuild-the-view-alone)** | Each view is a multi-signature Hypercore whose signers are the current indexer set. Indexers embed per-view signatures in their own logs; every peer collects and assembles them. | No quorum signature on the view — no signed length to wait for and no signatures to collect from anyone. Any peer with the room key rebuilds the view itself. A peer that instead adopts someone else's view leans on knowing who that peer is. |
-| **[Background traffic](#why-quiet-rooms-stay-quiet)** | Every indexer runs its own timer: it checks in every ten to twenty seconds and writes a block with no message in it whenever that would help the group agree. Those blocks are also how an indexer publishes its signatures. So the more indexers, the more of them in the log. | No timer. What the protocol needs rides along on entries you were already writing — though a writer the room trusts (in Keet, an active admin's device) still appends an empty block once it has fallen 32 flushes behind its own last one. |
-| **[Changing the writer set](#why-promoting-a-writer-no-longer-moves-the-room)** | Adding or removing an indexer changes a view's signers, which changes its key — and migrates the whole base. | Writers carry a weight. A raise is a normal in-contract operation, nothing gets re-keyed, but it needs a grant from a writer already standing at that weight or above. The new standing counts from the writer's next entry, when it cites the grant, not the moment the grant lands.|
-| **[Joining a room with history](#why-we-think-big-rooms-will-open-faster)** | Jump to the last checkpoint the indexers signed, if the joiner can reach one — otherwise download every writer's log and re-run `apply` over the whole history. | Boot straight onto the head the invite names. If catching up later, adopt a head that a trusted peer already vouched for, stamped into that peer's own log. |
+Autobase orders a room's entries as they arrive: every peer runs the same deterministic sort over the causal links between them, so a new message gets a place right away. What autobase adds on top is a committee that locks that order in. A majority of the room's indexers has to reference an entry, and then a majority has to reference *those* references. Autobase calls that a double quorum. Until an entry clears it, its place is provisional: shown, ordered, but still movable. Once it clears, that's it — permanently. Nothing in autobase's undo or reorder logic ever reaches back into confirmed history; only the unconfirmed tip can still move.
 
-## Why we think big rooms will open faster
+That's real, durable finality. But the same majority requirement is exactly what a joining device has to wait on to skip ahead. Autobase can fast-forward a joiner straight to a checkpoint — but only one a majority of indexers have actually signed. Picture a room where enough of the current admins have been offline for a while — on a trip, off the network for whatever reason — that the ones still online can no longer reach a majority. Everyone can still write and read normally; the tip just never confirms. No amount of activity moves that stuck point until enough of those admins reconnect. And a device trying to join or catch up during that stretch has nothing signed-enough to jump to: it has to download every writer's full log and replay `apply` over the whole thing, from genesis. For an old, busy room, that's slow.
 
-Autobase could already jump a joiner forward to a system checkpoint a majority of the indexers had signed, once the joiner was at least sixteen system versions behind that checkpoint.
-Under sixteen, it didn't try. Each read on the way (the system tip, each view's tip, each indexer's tip) got five seconds to land.
-Missing one abandoned the attempt, though not permanently: it waited out a five-minute cooldown and tried again.
-In the meantime it fell back to the slow path: pulling down every writer's log and replaying the whole thing locally.
+## What autobee trades for a faster join
 
-Autobee moves that forward-jump into the log itself.
-Every time a writer flushes, it stamps the head it vouches for into its own log.
-This means a joiner can pick up a trustworthy head from any log it wakes up on, not only the one its invite named.
-Keet supplies the judgement: a head is trusted when our own view says it belongs to the device an active admin most recently wrote from, and among those, the most recently active admin wins.
-The joiner adopts that head, moves onto the indexed view, and pulls view pages as it reads them.
+Autobee keeps the ordering and drops the committee. Its sort is adapted more or less directly from autobase's, so every peer still lands on the same order from the same entries — but there's no majority step afterwards, and no round of confirmations to wait on.
+
+That costs something. Autobase's confirmed order was permanent. Autobee's isn't — every entry stays re-sortable for as long as the log exists: if an entry turns up later that belongs earlier in the order, everything after it quietly resorts around it. Autobee never confirms anything; it recomputes instead.
+
+The same trade happens to the view. An autobase view only ever replicated to the network once a majority of indexers had signed it — a real, protocol-level trust anchor: a multisig core, typically the room's admins. Autobee's view lives in an ordinary, single-key Hypercore per peer, so it replicates exactly like anything else, with no signature gating it. Structurally, one peer's view is exactly as shareable as any other's — the protocol itself no longer distinguishes an admin's view from a stranger's. What used to be a guarantee the protocol gave you for free becomes a judgment call the application has to make instead. Keet makes that call itself, in two ways: it only mirrors admins' views, and it only trusts a fast-forward head when its own view says that head belongs to the device an admin it already knows about last wrote from. Trust moved out of the protocol and into Keet — arguably a better place for it to live, since Keet already owns the concept of who's an admin.
+
+What that buys back: fast-forwarding no longer needs a majority. It needs one. Any single peer whose head Keet already trusts is enough to hand a joining device a shortcut straight to the indexed view, pulling view pages as it reads rather than replicating every writer's raw log. In a room where most admins have been away, a single admin's device coming back online is enough to get new devices caught up quickly again — where autobase needed a majority of them.
 
 ```mermaid
 flowchart TD
-    subgraph AB["Autobase"]
+    subgraph AB["Autobase: M-of-N"]
         direction TB
-        ab0(["Joiner has the room key"]) --> ab1{"Signed checkpoint<br/>reachable?"}
+        ab0(["Joiner has the room key"]) --> ab1{"Checkpoint signed by<br/>a majority of indexers?"}
         ab1 -- yes --> ab2["Fast-forward to it"]
-        ab1 -- no --> ab3["Download every writer's<br/>full log"]
-        ab3 --> ab4["Replay apply from genesis"]
-        ab2 --> ab5(["View ready"])
-        ab4 --> ab5
+        ab1 -- no --> ab3["Download every writer's<br/>full log, replay from genesis"]
+        ab2 --> ab4(["View ready"])
+        ab3 --> ab4
     end
-    subgraph AE["Autobee"]
+    subgraph AE["Autobee: 1-of-N"]
         direction TB
-        ae0(["Joiner arrives"]) --> ae1{"First join,<br/>via invite?"}
-        ae1 -- yes --> ae2["Boot straight onto<br/>the head the invite names"]
-        ae1 -- no, catching up --> ae3{"A trusted head<br/>advertised nearby?"}
-        ae3 -- yes --> ae4["Adopt it, jump to<br/>the indexed view"]
-        ae3 -- no --> ae5["Fall back to<br/>incremental sync"]
-        ae2 --> ae6(["View ready"])
-        ae4 --> ae6
-        ae5 --> ae6
+        ae0(["Joiner arrives"]) --> ae1{"One trusted peer's<br/>head reachable?"}
+        ae1 -- yes --> ae2["Adopt it, jump to<br/>the indexed view"]
+        ae1 -- no --> ae3["Download every writer's<br/>full log, replay from genesis"]
+        ae2 --> ae4(["View ready"])
+        ae3 --> ae4
     end
 ```
 
-*Autobase's fast-forward needs a reachable, indexer-signed checkpoint or it falls back to downloading and replaying every writer's log.
-Autobee has no such fallback cliff: a fresh invite boots straight onto a head, and catching up later means adopting a head some other peer's own log already vouches for, stamped there the same way any other entry is.*
+*Autobase's fast-forward only unlocks once a majority of indexers have signed a checkpoint. Autobee's unlocks the moment a single trusted peer's head is reachable — the fallback cliff is still there if nobody trusted has ever been reachable, it's just far less likely to hit.*
 
-### Limitations
+Two limitations.
 
-Two honest limits. This helps most when a device first picks a room up, joining, pairing, or restoring.
-Those take the shortcut whenever it is available to them.
-Reopening a room you already have usually doesn't. In this case the engine only jumps if it is more than 32 flushed batches behind. A device that is roughly caught up just carries on reading.
-That 32 counts batches where autobase's sixteen counted system versions — different units, so the two thresholds are not a like-for-like comparison.
-And either way it needs another device online to hand the state over; with nobody there, it does nothing.
+First: there's no longer one canonical state.
+Autobase produced exactly one canonical signed state for a given history — if the indexers couldn't agree, nothing new got signed at all.
+Autobee has no such requirement: each peer computes its own view from whatever entries it currently has and has chosen to include, so two peers can genuinely be looking at different, both individually valid views of the same room at the same moment.
+They converge once they've seen the same entries, but nothing forces that to happen first.
+
+Second: the fast-forward shortcut only helps a device arriving cold — joining, pairing, or restoring.
+A device reopening a room it already mostly has doesn't get the same jump: it only kicks in once a peer advertises a head 32 or more flushed batches ahead of the device's own view, so a device that's roughly caught up just keeps reading normally. And either way it needs one other device online to hand the state over; with nobody there, it does nothing.
 
 Messages can still shuffle when a device catches up on something it hadn't seen. That hasn't changed, and the new engine counts those reorders as a first-class statistic.
 
-## Why order no longer waits on a vote
-
-Under autobase, an entry's place in the room was not settled by the entry itself. It was settled afterwards, by other people: a majority of the indexer set had to reference it, and then a majority had to reference those references. Autobase calls that a double quorum, and its design rules require the winning quorum to lead any rival by two degrees — one degree isn't enough, because two quorums that close could still swap places. Until that lead exists, the tip is provisional. It is shown, it is ordered, and it can still be reshuffled.
-
-Autobee settles order from the entry alone. Every input to the decision is already inside the entry when it is appended: the causal links back to what its writer had seen, the writer's own clock stamp, and the citation for the grant its weight resolves from. Ordering is then one fixed rule, run identically on every peer — weight first, then the clock stamp, then the writer's key, with the entry's own position in that writer's log settling anything still tied. There is no round of confirmations to wait for, because there is nothing left to confirm.
-
-```mermaid
-flowchart TD
-    subgraph ABO["Autobase: order decided after the fact"]
-        direction TB
-        b1["Entry appended"] --> b2["Indexers reference it"]
-        b2 --> b3{"Majority referenced it,<br/>then majority referenced<br/>those references?"}
-        b3 -- not yet --> b4["Shown, but still<br/>reorderable"]
-        b4 --> b2
-        b3 -- yes --> b5["Frozen"]
-    end
-    subgraph AEO["Autobee: order carried by the entry"]
-        direction TB
-        e1["Entry appended, carrying<br/>causal links, clock stamp,<br/>grant citation"] --> e2["Every peer runs the same rule:<br/>weight, then stamp, then key"]
-        e2 --> e3["Same order on every peer"]
-    end
-```
-
-*Autobase's order is a fact about the room's indexers; autobee's is a fact about the entry.*
-
-One thing this does not buy: an entry you have never seen still slots in when it arrives, and everything after it moves down. Rules can be evaluated the moment an entry lands, but they cannot be evaluated on an entry that hasn't arrived yet. What goes away is the second source of movement — the one where nothing new arrived and the order changed anyway, because the indexers had not finished agreeing.
-
-Weights are the one thing a writer cannot decide for itself. A writer's weight only counts once a writer already standing at that weight or above has signed off on it, and that sign-off is not a side channel: it is an ordinary entry in an ordinary log, replicated like everything else. So even the input that ranks writers against each other is settled by the same append-only machinery as the messages.
-
-## Why any peer can rebuild the view alone
-
-An autobase view was a multi-signature Hypercore, and its signers were the current indexer set. Every indexer embedded its per-view signatures into its own log, and every peer collected those signatures and assembled them before it could trust a given length of the view. That is a real dependency: the signatures have to exist, and you have to be able to reach the logs carrying them.
-
-Autobee drops the quorum signature from the view entirely. There is no signed length to wait for and no signatures to gather from anyone. Any peer holding the room key derives the view itself, from the entries, by the same fixed rule everyone else runs. The view stops being a thing you are handed and becomes a thing you compute.
-
-The tradeoff is worth naming. Because the view carries no quorum signature, a peer that skips the computation and adopts someone else's view is trusting that peer, not a signature set. That is exactly what the fast-open path above does — and why it leans on Keet's own view of who the admins are, rather than on anything the view itself proves.
-
-## Why quiet rooms stay quiet
-
-Under autobase, an idle room was not idle on disk. Every indexer ran its own timer, checked in every ten to twenty seconds, and wrote a block with no message in it whenever that would help the group agree. Those empty blocks were also how an indexer published its view signatures, so they were not optional bookkeeping — they were how consensus and trust got carried. The cost scaled the wrong way: the more indexers a room had, the more of them ended up in the log, whether or not anyone was talking.
-
-Autobee has no timer. There is nothing to check in about, because ordering isn't a group decision, and there are no view signatures to publish. What the protocol needs rides along on entries you were already writing.
-
-Autobee isn't perfectly free of empty blocks. A writer the room trusts — in Keet, a device belonging to an active admin — appends one once it has fallen 32 flushes behind its own last one, which keeps the room's current state anchored in a log other peers already follow. Ordinary members never write them. The difference from autobase is what drives it: how far the room has actually moved, not a clock. A room nobody writes to doesn't move, so nothing gets written.
-
-## Why promoting a writer no longer moves the room
-
-Changing autobase's indexer set was structural. The indexers were the view's signers, so adding or removing one changed the view's key, and changing the key migrated the whole base. A membership change was, mechanically, a new base.
-
-In autobee, standing is a number a writer carries, and raising it is an ordinary in-contract operation. Nothing gets re-keyed and nothing migrates. What the operation needs is a grant from a writer already standing at that weight or above — the same rule that keeps weight from being self-assigned.
-
-There is one piece of timing worth knowing. The new standing does not take effect the moment the grant lands. It counts from the promoted writer's next entry, the one that cites the grant. Promotion is something a writer claims by writing, not something that happens to it in the background.
-
 ## What happens to rooms you already have
 
-Rooms you had before the upgrade convert once per device, the first time that device opens them. Rooms your device never opened just sync, with nothing to convert.
+Rooms you had before the upgrade convert once per device, the first time that device opens them — either because you opened the room, or because the app opened it in the background to sync new activity. Rooms your device never opened just sync, with nothing to convert.
 
-The room ID does not change, so old invites and old links still land in the same room. Your old data is not rewritten or discarded: the previous autobase cores are kept read-only so history keeps rendering, for you and for people who join later. That has a cost worth stating plainly — a migrated room is stored twice on your device, and the old copy is never reclaimed.
+The room ID does not change, so old invites and old links still land in the same room. Your old data is not rewritten or discarded: the previous autobase cores are kept read-only so history keeps rendering, for you and for people who join later. The cost: a migrated room is stored twice on your device, and the old copy is never reclaimed.
 
 Above your room list, the app shows a dismissible notice headed "Keet is upgrading for a smoother experience". There is no progress bar: rooms convert in the background as the app catches up, and a room you open yourself converts as part of opening it, so that one takes a moment longer the first time.
 
@@ -155,10 +92,13 @@ If a room doesn't come up after you upgrade, see [Slow groups after updating](ht
 
 ## Why this matters past this release
 
-The point of the rewrite isn't one number going down.
-It's that Keet is simpler: three stacked views became one, blob storage was folded into the main database, and Keet no longer runs a linearizer at all.
-Room updates now run through a queue that survives a restart, instead of running inline while the room finishes syncing.
+The point of the rewrite isn't one number going down. It's a deliberate trade: swapping a heavyweight, majority-vote consensus model — overkill for a chat app — for a lighter one where a single trusted peer is enough to catch a device up. That trade has a price: it gives up the permanent finality and the protocol-level trust guarantee autobase provided. Keet rebuilds the trust side itself, through its admin checks; the finality is simply gone, which a chat app can live with.
 
-Two diagnostics went with the old machinery: the tip-size readout now reports zero, and room repair (automatic and manual alike) has no implementation on the new engine yet.
+It also made Keet simpler:
 
-None of it is Keet-only. Autobee is a general multiwriter Hyperbee, an engine any peer-to-peer app with many writers could build on. It's [open source](https://github.com/holepunchto/autobee); come discuss with us about it in the Keet development rooms.
+* **Three views became one.** A room used to carry up to three separate views: the original room view, the newer room database that replaced it, and a separate store for small binary data. On autobee, a room has a single view — its database — so there is one core to replicate, mirror, and fast-forward instead of three.
+* **Blob storage was folded into the main database.** Avatars and image previews — small images of up to 512 KB — used to live in their own Hyperblobs core next to the room database. They are now ordinary records inside the database, keyed by a hash of their content, so an image that is already stored isn't written again, and they arrive with the rest of the room's data instead of from a second core. File attachments aren't affected: they are still shared separately from the room's view. Rooms migrated from autobase keep their old blobs core read-only, so older avatars and previews still load.
+
+Room updates now run through a queue that survives a restart, instead of running inline while the room finishes syncing. Two diagnostics went with the old machinery: the tip-size readout now reports zero, and room repair — automatic and manual alike — has no implementation on the new engine yet.
+
+None of it is Keet-only. Autobee is a general multiwriter Hyperbee, an engine any peer-to-peer app with many writers could build on. It's [open source](https://github.com/holepunchto/autobee); come discuss it with us in the Keet development rooms.

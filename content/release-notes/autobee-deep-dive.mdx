@@ -35,19 +35,20 @@ flowchart LR
 
 ## Why a majority used to stand between you and a fast join
 
-Autobase orders a room's entries as they arrive: every peer runs the same deterministic sort over the causal links between them, so a new message gets a place right away. What autobase adds on top is a committee that locks that order in. A majority of the room's indexers has to reference an entry, and then a majority has to reference *those* references. Autobase calls that a double quorum. Until an entry clears it, its place is provisional: shown, ordered, but still movable. Once it clears, that's it — permanently. Nothing in autobase's undo or reorder logic ever reaches back into confirmed history; only the unconfirmed tip can still move.
+In a Keet room, every peer materializes the room's chat view by processing entries as they arrive and running the same deterministic sort over them. That's expensive, and wasteful: every peer is doing the same work. It would be much more efficient if one peer could do the work and share the result with everyone else.
 
-That's real, durable finality. But the same majority requirement is exactly what a joining device has to wait on to skip ahead. Autobase can fast-forward a joiner straight to a checkpoint — but only one a majority of indexers have actually signed. Picture a room where enough of the current admins have been offline for a while — on a trip, off the network for whatever reason — that the ones still online can no longer reach a majority. Everyone can still write and read normally; the tip just never confirms. No amount of activity moves that stuck point until enough of those admins reconnect. And a device trying to join or catch up during that stretch has nothing signed-enough to jump to: it has to download every writer's full log and replay `apply` over the whole thing, from genesis. For an old, busy room, that's slow.
+In Autobase, this work sharing was handled by a process called indexing. When joining a room, Autobase can fast-forward a joiner straight to the tip — but only to the indexed tip; the unindexed portion of the room still has to be computed by each peer independently. In short, the more unindexed state a room has, the slower the join.
 
-## What autobee trades for a faster join
+> [!TIP]
+> To illustrate the difference between indexed and unindexed: imagine that instead of going to a supermarket and finding the shelves fully stocked, you first have to call in the deliveries yourself, stock the shelves yourself, and only then do your shopping.
 
-Autobee keeps the ordering and drops the committee. Its sort is adapted more or less directly from autobase's, so every peer still lands on the same order from the same entries — but there's no majority step afterwards, and no round of confirmations to wait on.
+In practice, we found that many rooms weren't being indexed effectively, so they couldn't benefit from fast joins. The issue is that, in Autobase, indexing is an interactive process that requires a majority of indexers to agree on the ordering. That not only takes time, it's also sensitive to peer availability. Picture a room where enough of the current admins have been offline for a while — on a trip, off the network for whatever reason — that the ones still online can no longer reach a majority. Everyone can still write and read normally; the tip just never gets indexed. For an old, busy room, that's slow.
 
-That costs something. Autobase's confirmed order was permanent. Autobee's isn't — every entry stays re-sortable for as long as the log exists: if an entry turns up later that belongs earlier in the order, everything after it quietly resorts around it. Autobee never confirms anything; it recomputes instead.
+## How Autobee fixes this
 
-The same trade happens to the view. An autobase view only ever replicated to the network once a majority of indexers had signed it — a real, protocol-level trust anchor: a multisig core, typically the room's admins. Autobee's view lives in an ordinary, single-key Hypercore per peer, so it replicates exactly like anything else, with no signature gating it. Structurally, one peer's view is exactly as shareable as any other's — the protocol itself no longer distinguishes an admin's view from a stranger's. What used to be a guarantee the protocol gave you for free becomes a judgment call the application has to make instead. Keet makes that call itself, in two ways: it only mirrors admins' views, and it only trusts a fast-forward head when its own view says that head belongs to the device an admin it already knows about last wrote from. Trust moved out of the protocol and into Keet — arguably a better place for it to live, since Keet already owns the concept of who's an admin.
+Autobee was designed with a simple principle in mind: every peer should be able to share their work.
 
-What that buys back: fast-forwarding no longer needs a majority. It needs one. Any single peer whose head Keet already trusts is enough to hand a joining device a shortcut straight to the indexed view, pulling view pages as it reads rather than replicating every writer's raw log. In a room where most admins have been away, a single admin's device coming back online is enough to get new devices caught up quickly again — where autobase needed a majority of them.
+In Keet, this means that as soon as any admin writes a message, any new joiner can fast-forward straight to that last message. Since it only takes 1 admin, rather than a majority of admins, joiners can fast-forward much closer to the tip than with Autobase — which translates to much faster joins!
 
 ```mermaid
 flowchart TD
@@ -71,17 +72,32 @@ flowchart TD
 
 *Autobase's fast-forward only unlocks once a majority of indexers have signed a checkpoint. Autobee's unlocks the moment a single trusted peer's head is reachable — the fallback cliff is still there if nobody trusted has ever been reachable, it's just far less likely to hit.*
 
-Two limitations.
+## What tradeoffs does Autobee make
 
-First: there's no longer one canonical state.
-Autobase produced exactly one canonical signed state for a given history — if the indexers couldn't agree, nothing new got signed at all.
-Autobee has no such requirement: each peer computes its own view from whatever entries it currently has and has chosen to include, so two peers can genuinely be looking at different, both individually valid views of the same room at the same moment.
-They converge once they've seen the same entries, but nothing forces that to happen first.
+### Adjusted trust model
 
-Second: the fast-forward shortcut only helps a device arriving cold — joining, pairing, or restoring.
-A device reopening a room it already mostly has doesn't get the same jump: it only kicks in once a peer advertises a head 32 or more flushed batches ahead of the device's own view, so a device that's roughly caught up just keeps reading normally. And either way it needs one other device online to hand the state over; with nobody there, it does nothing.
+We kept the ordering and dropped the majority. Its sort is adapted more or less directly from autobase's, so every peer still lands on the same order from the same entries — but there's no majority step afterwards, and no round of confirmations to wait on.
 
-Messages can still shuffle when a device catches up on something it hadn't seen. That hasn't changed, and the new engine counts those reorders as a first-class statistic.
+Autobee drops the quorum step entirely, and that costs something in its trust model. An autobase view only ever replicated to the network once a majority of indexers had signed it — a real, protocol-level trust anchor: a multisig core, typically the room's admins as signers. In Autobee, each peer has their own view, and it's equally as shareable as any other peer's — the protocol itself no longer distinguishes an admin's view from a stranger's. What used to be a guarantee the protocol gave you for free becomes a judgment call the application has to make instead.
+
+### A single Autobee has many possible histories
+
+Autobase was a one-to-one data structure: given any key, there was only one possible set of views that could arise from it. Autobee drops that property — each peer is free to write their own view, and since there's no quorum, that view is perfectly valid.
+
+In practice, this is only a tradeoff in the academic sense, and the flexibility it offers opens the door to some features we're excited to work on next.
+
+### Keet's security is unchanged
+
+That's not to say Keet is any less secure — it's just that now Keet's own code enforces the security policy itself, rather than relying on the underlying engine. It does this by maintaining an index of admins per room, and a fast-forward checkpoint is only trusted when it came from a device of one of the room's admins. Trust moved out of the protocol and into Keet — which is a better place for it to live, since Keet itself already owned the concept of who's an admin.
+
+> [!NOTE]
+> If you're a developer used to working with Autobase and looking to transition to Autobee, you'll need to update the trust model in your applications. Enforcing trust is now the application's responsibility, not the engine's.
+
+### Why the tradeoff is worth it
+
+The wins are significant: no more waiting on room joins, no more spinning fans or phones heating up — just fast, reliable room joins.
+
+Autobee was designed with Keet in mind. Autobase remains the right tool when strong consensus is required — the username registry, for instance, will continue to run on Autobase, since it's a public service where reliability and trust are paramount and the system should only ever assign a single username. For Keet, we're dealing with chat rooms, where the priority is performance and privacy. Since the tradeoffs above don't compromise our security or privacy model, we'll happily take the performance gains.
 
 ## What happens to rooms you already have
 

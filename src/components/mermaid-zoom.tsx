@@ -29,7 +29,7 @@ export function MermaidZoom({
     <div className={cn('not-prose my-6 overflow-x-auto', className)}>
       <Zoom zoomMargin={20}>
         <div
-          className="[&_svg]:mx-auto [&_svg]:block [&_svg]:h-auto [&_svg]:max-w-full"
+          className="[&_svg]:mx-auto [&_svg]:block [&_svg]:h-auto [&_svg]:w-full [&_svg]:max-w-full"
           dangerouslySetInnerHTML={{ __html: svg }}
         />
       </Zoom>

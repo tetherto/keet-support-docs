@@ -66,10 +66,9 @@ flowchart TD
 
 *Autobase's fast-forward only unlocks once a majority of indexers have signed a checkpoint. Autobee's unlocks the moment a single trusted peer's head is reachable — the fallback cliff is still there if nobody trusted has ever been reachable, it's just far less likely to hit.*
 
-Two limitations.
+## Limitations
 
-First: there's no longer one canonical state.
-Autobase produced exactly one canonical signed state for a given history — if the indexers couldn't agree, nothing new got signed at all.
+First: there's no longer one canonical state. Autobase produced exactly one canonical signed state for a given history — if the indexers couldn't agree, nothing new got signed at all.
 Autobee has no such requirement: each peer computes its own view from whatever entries it currently has and has chosen to include, so two peers can genuinely be looking at different, both individually valid views of the same room at the same moment.
 They converge once they've seen the same entries, but nothing forces that to happen first.
 

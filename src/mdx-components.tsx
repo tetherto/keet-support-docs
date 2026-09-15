@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import { ImageGrid } from '@/components/ImageGrid';
 import { Image } from '@/components/Image';
 import { DocsImage } from '@/components/docs-image';
+import { Mermaid } from '@/components/mermaid';
 
 function normalizeHeading(text: string): string {
   return text.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -32,6 +33,7 @@ export function getMDXComponents(
     img: DocsImage,
     ImageGrid,
     Image,
+    Mermaid,
     h1: (props) => {
       if (
         pageTitle &&

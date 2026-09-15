@@ -142,4 +142,17 @@ export const customTree: Node[] = [
     url: '/community-and-support',
     icon: sectionIcons.community,
   },
+  {
+    type: 'folder',
+    name: 'Release Notes',
+    icon: sectionIcons.releaseNotes,
+    index: {
+      type: 'page',
+      name: 'Release Notes',
+      url: '/release-notes',
+    },
+    children: [
+      { type: 'page', name: 'Autobee Deep Dive', url: '/release-notes/autobee-deep-dive' },
+    ],
+  },
 ];

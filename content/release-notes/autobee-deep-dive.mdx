@@ -39,8 +39,9 @@ In a Keet room, every peer materializes the room's chat view by processing entri
 
 In Autobase, this work sharing was handled by a process called indexing. When joining a room, Autobase can fast-forward a joiner straight to the tip — but only to the indexed tip; the unindexed portion of the room still has to be computed by each peer independently. In short, the more unindexed state a room has, the slower the join.
 
-> [!TIP]
-> To illustrate the difference between indexed and unindexed: imagine that instead of going to a supermarket and finding the shelves fully stocked, you first have to call in the deliveries yourself, stock the shelves yourself, and only then do your shopping.
+<Callout type="info">
+To illustrate the difference between indexed and unindexed: imagine that instead of going to a supermarket and finding the shelves fully stocked, you first have to call in the deliveries yourself, stock the shelves yourself, and only then do your shopping.
+</Callout>
 
 In practice, we found that many rooms weren't being indexed effectively, so they couldn't benefit from fast joins. The issue is that, in Autobase, indexing is an interactive process that requires a majority of indexers to agree on the ordering. That not only takes time, it's also sensitive to peer availability. Picture a room where enough of the current admins have been offline for a while — on a trip, off the network for whatever reason — that the ones still online can no longer reach a majority. Everyone can still write and read normally; the tip just never gets indexed. For an old, busy room, that's slow.
 
@@ -90,8 +91,9 @@ In practice, this is only a tradeoff in the academic sense, and the flexibility 
 
 That's not to say Keet is any less secure — it's just that now Keet's own code enforces the security policy itself, rather than relying on the underlying engine. It does this by maintaining an index of admins per room, and a fast-forward checkpoint is only trusted when it came from a device of one of the room's admins. Trust moved out of the protocol and into Keet — which is a better place for it to live, since Keet itself already owned the concept of who's an admin.
 
-> [!NOTE]
-> If you're a developer used to working with Autobase and looking to transition to Autobee, you'll need to update the trust model in your applications. Enforcing trust is now the application's responsibility, not the engine's.
+<Callout type="info">
+If you're a developer used to working with Autobase and looking to transition to Autobee, you'll need to update the trust model in your applications. Enforcing trust is now the application's responsibility, not the engine's.
+</Callout>
 
 ### Why the tradeoff is worth it
 

@@ -26,7 +26,13 @@ export function MermaidZoom({
   className?: string;
 }) {
   return (
-    <div className={cn('not-prose my-6 overflow-x-auto', className)}>
+    <div
+      className={cn(
+        'not-prose my-6 overflow-x-auto',
+        '[&_[data-rmiz]]:!w-full [&_[data-rmiz-content]]:!w-full',
+        className,
+      )}
+    >
       <Zoom zoomMargin={20}>
         <div
           className="[&_svg]:mx-auto [&_svg]:block [&_svg]:h-auto [&_svg]:w-full [&_svg]:max-w-full"

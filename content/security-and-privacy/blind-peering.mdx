@@ -47,9 +47,11 @@ Once you hit send, your message becomes **part of the room** — and the room ex
 
 A room isn't tied to a single blind peer. Any member who happens to be online helps others catch up, and a room can use several blind peers at once. More copies simply mean more chances to sync — no single copy is a point of failure.
 
+This matters most exactly when you'd otherwise have no one to sync with: joining a room for the first time, or catching up after a device has been away a long while. Picking up a room's full history needs *someone* online to hand it over — and a blind peer reliably is, even when no other member happens to be around.
+
 ### What a blind peer can and can't do
 
-It **can** store a room's encrypted data, stay online, and serve it to members who come to sync.
+It **can** store a room's encrypted data, stay online, and serve it to members who come to sync — including a room's full history, even older parts kept around from before a Keet update, so members who join later can still catch up on it.
 
 It **can't** decrypt any of it — and it can't add or change messages either: only the members of a room can write to it.
 

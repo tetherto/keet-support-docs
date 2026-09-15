@@ -1,0 +1,32 @@
+---
+title: "Slow Groups After Updating"
+description: "Why a group can take a moment longer to open the first time after a Keet update — and why that's expected, not stuck."
+docType: faq
+schemaType: TechArticle
+---
+
+## Why does a group take longer to open right after I update?
+
+Every so often, Keet upgrades how it stores a group's data behind the scenes, to make things faster and more reliable going forward. The first time you open a group you'd already used — on a Keet version that includes this upgrade — Keet needs a moment to convert that group's local data before it can show it to you.
+
+<Callout type="info">
+If you see a banner saying **"Keet is upgrading for a smoother experience"** and asking for a little patience as you open your groups, this is what it's about. 🔄
+</Callout>
+
+* It runs **once per group, per device** — open that same group again and it's back to normal speed.
+* It only affects groups **you'd already used on that device**. A group you're opening for the first time, or on a new device, just syncs normally — nothing to convert.
+* There's currently **no progress bar** for it, so the group can look like it's stuck loading for a few seconds while this happens. That's expected.
+
+## Is my data safe?
+
+Yes. The group keeps the same ID, so existing invites keep working, and none of your message history is deleted or rewritten — your messages stay exactly as they were.
+
+## What if a group still won't load?
+
+* Check your network connectivity.
+* Restart the app and try opening the group again.
+* Make sure you're on the [latest version of Keet](/technical-support-and-troubleshooting/keet-app-issues). If a group has moved further ahead than your version supports, Keet will show: "**Some groups might not work with your current version of Keet. Please update the app to access all your groups.**" Updating fixes it.
+
+<Callout type="info">
+Still stuck after that? Please [submit a bug report](/technical-support-and-troubleshooting/submit-a-report) to the '**Bug Bandits**' group and our team will look into it.
+</Callout>

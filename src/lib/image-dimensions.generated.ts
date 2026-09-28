@@ -1108,15 +1108,11 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
-  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/call-records-list.png": {
+  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/audio-delivered-transcript-preparing.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/group-info-call-records-entry.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/processing-toast.png": {
+  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/recording-transcribing-active.png": {
     "width": 1224,
     "height": 810
   },
@@ -1128,7 +1124,15 @@ export const imageDimensions = {
     "width": 1224,
     "height": 810
   },
-  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-detail-view.png": {
+  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-full-file.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-preparing-toast.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-summary-message.png": {
     "width": 1224,
     "height": 810
   },

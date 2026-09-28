@@ -17,38 +17,38 @@ Select the record control in the call toolbar. In the dialog that opens, tick '*
 🔒 The recording is processed locally on your device to generate the transcript and summary - it isn't uploaded to a cloud transcription service. The transcription option only appears on devices that support local transcription.
 </Callout>
 
-While it's running, a small recording indicator shows in the call header, with a brief '**Transcribing…**' status if transcription is on. The call stays fully usable the whole time.
+While it's running, the call header shows '**Recording…**' and '**Transcribing…**' - the call stays fully usable the whole time:
 
-## How do I stop, and where does the recording go?
+![While it's running, the call header shows 'Recording…' and 'Transcribing…' - the call stays fully usable the….](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/recording-transcribing-active.png "Call Transcripts & Summaries 📝")
+
+## How do I stop, and where does it go?
 
 Select the record control again. Choose whether to send the result to the room's chat or download it - if you started transcription too, it stops and saves alongside the recording automatically:
 
 ![Choose whether to send the result to the room's chat or download it.](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/stop-recording-confirmation.png "Call Transcripts & Summaries 📝")
 
-If you sent it to chat, Keet shows a processing state while the transcript and summary are generated:
+If you send it to chat, the recording itself lands right away as a normal audio message. The transcript and summary take a little longer, so Keet shows a brief preparing notice first, then lets you know once only the transcript is left to finish:
 
-![Keet shows a processing state while the transcript and summary are generated.](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/processing-toast.png "Call Transcripts & Summaries 📝")
+![Keet shows a brief preparing notice, then lets you know once only the transcript is left to finish.](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/audio-delivered-transcript-preparing.png "Call Transcripts & Summaries 📝")
+
+![Keet shows a brief preparing notice, then lets you know once only the transcript is left to finish.](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-preparing-toast.png "Call Transcripts & Summaries 📝")
 
 <Callout type="warn">
 If transcript or summary generation fails, your audio recording is unaffected - it stays available to play or download, and Keet offers to recover it if processing was interrupted.
 </Callout>
 
-## Where do I find the transcript and summary?
+Once ready, the transcript arrives as its own message with an AI-generated summary shown inline, and a '**Show all**' link to expand it:
 
-Open a group's '**Group info**' panel and select '**Call records**' to see every recording and transcript for that room:
-
-![Open a group's 'Group info' panel and select 'Call records' to see every recording and transcript for that….](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/group-info-call-records-entry.png "Call Transcripts & Summaries 📝")
-
-![See every recording and transcript for that room.](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/call-records-list.png "Call Transcripts & Summaries 📝")
-
-Selecting a transcript entry opens the full record, with a summary, action items, and the full transcript. You can select any of the transcript text, and open or download the full transcript from here:
-
-![Selecting a transcript entry opens the full record, with a summary, action items, and the full transcript.](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-detail-view.png "Call Transcripts & Summaries 📝")
+![The transcript arrives as its own message with an AI-generated summary shown inline, and a 'Show all' link….](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-summary-message.png "Call Transcripts & Summaries 📝")
 
 <Callout type="info">
 If a speaker can't be identified in the recording, Keet won't guess a name or attribute an action item to the wrong person. If a call has no usable speech, you'll see a clear message that there wasn't enough audio to transcribe or summarize instead of an empty result.
 </Callout>
 
+Opening the attached file shows the full record - a summary, key decisions, action items, and the complete timestamped, speaker-labeled transcript - and its text is selectable:
+
+![Opening the attached file shows the full record - a summary, key decisions, action items, and the complete….](/images/voice-and-video-calls/call-transcripts-and-summaries/desktop/transcript-full-file.png "Call Transcripts & Summaries 📝")
+
 ## Can I view a transcript on Mobile?
 
-Not yet as a dedicated transcript view. If a transcript and summary are shared to a room's chat, Mobile currently shows them using its standard file/message display rather than the rich summary-and-transcript view described above - that dedicated Mobile viewer isn't available in this release. Starting or processing a recording/transcription is Desktop-only either way.
+Starting or processing a recording/transcription is Desktop-only. But since the result is delivered as ordinary chat messages - an audio file, then a transcript file with its summary - Mobile can already open, play, and download them like any other shared file. Mobile doesn't yet render the AI summary card the same way Desktop does.

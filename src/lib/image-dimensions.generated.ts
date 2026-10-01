@@ -388,6 +388,10 @@ export const imageDimensions = {
     "width": 786,
     "height": 1704
   },
+  "/images/installation-and-setup/android-apk-migration/share-keet-offline-share-button.png": {
+    "width": 786,
+    "height": 1704
+  },
   "/images/installation-and-setup/back-up-your-profile/backup-file-exported-desktop.png": {
     "width": 1224,
     "height": 810

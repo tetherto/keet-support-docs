@@ -57,6 +57,8 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Contact Book 📓', url: '/file-sharing-and-messages/contact-book' },
       { type: 'page', name: 'Contact Indicators 🛡️', url: '/file-sharing-and-messages/contact-indicators' },
       { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
+      { type: 'page', name: 'Mute a Chat 🔇', url: '/file-sharing-and-messages/mute-a-chat' },
+      { type: 'page', name: 'Chat over Bluetooth 📡', url: '/file-sharing-and-messages/chat-over-bluetooth' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',
@@ -95,6 +97,13 @@ export const customTree: Node[] = [
         name: 'Video Calls & Share Screen 🎬',
         url: '/voice-and-video-calls/video-calls-and-share-screen',
       },
+      {
+        type: 'page',
+        name: 'Call Transcripts & Summaries 📝',
+        url: '/voice-and-video-calls/call-transcripts-and-summaries',
+      },
+      { type: 'page', name: 'Call Reactions 🎉', url: '/voice-and-video-calls/call-reactions' },
+      { type: 'page', name: 'Minimize Self View 🔲', url: '/voice-and-video-calls/minimize-self-view' },
     ],
   },
   {

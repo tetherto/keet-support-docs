@@ -376,6 +376,22 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
+  "/images/installation-and-setup/android-apk-migration/android-share-sheet-keet-apk.png": {
+    "width": 1080,
+    "height": 2400
+  },
+  "/images/installation-and-setup/android-apk-migration/settings-share-keet-offline.png": {
+    "width": 1080,
+    "height": 2010
+  },
+  "/images/installation-and-setup/android-apk-migration/share-keet-offline-copy-ready.png": {
+    "width": 1080,
+    "height": 2400
+  },
+  "/images/installation-and-setup/android-apk-migration/share-keet-offline-download-a-copy.png": {
+    "width": 786,
+    "height": 1704
+  },
   "/images/installation-and-setup/back-up-your-profile/backup-file-exported-desktop.png": {
     "width": 1224,
     "height": 810

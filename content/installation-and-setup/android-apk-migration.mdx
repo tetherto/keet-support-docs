@@ -1,0 +1,75 @@
+---
+title: "Moving to the New Android APK Build"
+description: "From Keet 4.23, the Android APK from GitHub installs as a separate app. Here's how to move your profile over and share Keet with someone nearby."
+docType: faq
+schemaType: TechArticle
+---
+
+## What changed in Keet 4.23?
+
+Starting with Keet 4.23, the Android APK published on our [GitHub](https://github.com/holepunchto/keet-mobile-releases/releases) is a separate app from the one on the Google Play Store. It has its own app ID, which lets it include features that can't be offered through the Play Store, such as [sharing Keet with someone nearby](#how-do-i-share-keet-with-someone-nearby) without an internet connection.
+
+Because the app ID is new, Android treats the 4.23 APK as a **new app**, not as an update. It installs next to your existing Keet app and starts without a profile, so you need to [move your profile over](#how-do-i-move-my-profile-to-the-new-app) once.
+
+<Callout type="info">
+This only affects people who install Keet on Android from the GitHub APK. If you use Keet from the Google Play Store, nothing changes and there is nothing you need to do.
+</Callout>
+
+## How do I move my profile to the new app?
+
+<Callout type="warn">
+Uninstalling the old app deletes the data it stored on your device. Don't uninstall it until everything has synced to the new app, and make sure you have [backed up your profile](/installation-and-setup/back-up-your-profile) first.
+</Callout>
+
+1. Download and install the latest APK from our [GitHub](https://github.com/holepunchto/keet-mobile-releases/releases). You'll now have two Keet apps on your device.
+2. Link the new app to your profile, using the old app as your current device. Follow the steps in [Link Devices](/installation-and-setup/link-devices).
+3. Wait until your groups and messages have appeared in the new app.
+4. Uninstall the old app.
+
+Both apps are on the same phone, so you can't scan the QR code. Choose '**Use account link**' instead and paste the profile link copied from the old app.
+
+## How do I share Keet with someone nearby?
+
+The new APK build can keep a copy of the Keet installer on your phone, so you can hand Keet straight to another Android user who has no internet connection or app store access.
+
+### Save a copy
+
+Do this while you're still connected. You can't download a copy once you're offline.
+
+Go to '**Profile**' / '**Settings**' / '**Share Keet offline**'.
+
+![Keet Settings screen on Android with the Share Keet offline option.](/images/installation-and-setup/android-apk-migration/settings-share-keet-offline.png "Moving to the New Android APK Build · Save a copy")
+
+Select '**Download a copy**'. The download runs over Wi-Fi, so it won't use your mobile data.
+
+![Share Keet offline screen with the Download a copy option.](/images/installation-and-setup/android-apk-migration/share-keet-offline-download-a-copy.png "Moving to the New Android APK Build · Save a copy")
+
+You can keep using Keet while it downloads. If your connection drops, the download picks up where it stopped.
+
+When the copy is ready, the screen shows its version and file size, and confirms it's the '**Latest version**'.
+
+![Share Keet offline screen showing a saved copy of Keet marked as the latest version.](/images/installation-and-setup/android-apk-migration/share-keet-offline-copy-ready.png "Moving to the New Android APK Build · Save a copy")
+
+<Callout type="info">
+The copy is stored inside Keet, not in your Downloads folder. When Keet updates, it asks you to download the new version before you can share it again. You can also select '**Check for a newer version**' at any time.
+</Callout>
+
+### Share the copy
+
+1. Go to '**Profile**' / '**Settings**' / '**Share Keet offline**' and select '**Share Keet app**'.
+2. Android's share sheet opens with the Keet installer attached. Choose how to send it. If both phones support it, '**Quick Share**' sends it directly to a phone next to you, with no internet connection needed.
+3. On the other phone, accept the file and open it to install Keet. If Android asks for permission to install apps from this source, allow it to continue.
+
+![Android share sheet with the Keet installer attached and Quick Share as an option.](/images/installation-and-setup/android-apk-migration/android-share-sheet-keet-apk.png "Moving to the New Android APK Build · Share the copy")
+
+Once Keet is installed, the other person can [set up their profile](/installation-and-setup/setup).
+
+## What if I already uninstalled the old app?
+
+If Keet is still linked on another of your devices, link the new app from that device instead. Otherwise, you can restore your profile with your recovery phrase by following [Recover a Profile](/technical-support-and-troubleshooting/recover-a-profile).
+
+## Can I switch back to the Google Play Store version?
+
+Yes. The two apps are independent, so switching in either direction works the same way: install the other app, link it to your profile, wait for it to sync, then uninstall the one you no longer want.
+
+If you're having issues moving your profile to the new app, please email us at `support@holepunch.to`

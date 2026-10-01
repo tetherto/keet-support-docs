@@ -25,6 +25,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'App Permissions', url: '/installation-and-setup/app-permissions' },
       { type: 'page', name: 'Link Devices', url: '/installation-and-setup/link-devices' },
       { type: 'page', name: 'Keet Username', url: '/installation-and-setup/keet-username' },
+      { type: 'page', name: 'Moving to the New Android APK Build', url: '/installation-and-setup/android-apk-migration' },
     ],
   },
   {

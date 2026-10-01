@@ -376,10 +376,6 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
-  "/images/installation-and-setup/android-apk-migration/android-share-sheet-keet-apk.png": {
-    "width": 1080,
-    "height": 2400
-  },
   "/images/installation-and-setup/android-apk-migration/settings-share-keet-offline.png": {
     "width": 1080,
     "height": 2010

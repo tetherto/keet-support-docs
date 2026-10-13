@@ -60,6 +60,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
       { type: 'page', name: 'Mute a Chat 🔇', url: '/file-sharing-and-messages/mute-a-chat' },
       { type: 'page', name: 'Chat over Bluetooth 📡', url: '/file-sharing-and-messages/chat-over-bluetooth' },
+      { type: 'page', name: 'Link Previews 🔗', url: '/file-sharing-and-messages/link-previews' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',
@@ -143,6 +144,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'FAQs 💬', url: '/security-and-privacy/faq' },
       { type: 'page', name: 'Blind Peering 🔒', url: '/security-and-privacy/blind-peering' },
       { type: 'page', name: 'Private Mode 🙈', url: '/security-and-privacy/private-mode' },
+      { type: 'page', name: 'Blocked Members 🚫', url: '/security-and-privacy/blocked-members' },
     ],
   },
   {

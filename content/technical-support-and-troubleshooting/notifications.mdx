@@ -1,6 +1,6 @@
 ---
 title: "Notifications"
-description: "Go to 'Profile' / 'Notifications' to specify how and when you receive notifications and customize sound and ringtone."
+description: "Go to 'Profile' / 'Notifications' to choose which messages notify you, pick a sound for each type, hide message previews, and set your call ringtone."
 docType: faq
 schemaType: TechArticle
 ---
@@ -10,24 +10,99 @@ schemaType: TechArticle
 <Tabs items={["Desktop", "Mobile"]}>
 <Tab value="Desktop">
 
-Go to '**Profile'** / '**Notifications'** to specify how and when you receive notifications and customize sound and ringtone.
+Click your avatar to open '**Profile**' and select '**Notifications and sounds**':
 
-![Go to 'Profile' / 'Notifications' to specify how and when you receive notifications and customize sound and….](/images/technical-support-and-troubleshooting/notifications/desktop/profile-notifications-specify-how-receive.png "Notifications · Desktop")
+![Notifications and sounds has separate settings for direct and group messages, your call ringtone, and in-app banners.](/images/technical-support-and-troubleshooting/notifications/desktop/notifications-and-sounds.png "Notifications · Desktop")
 
 </Tab>
 <Tab value="Mobile">
 
-Go to '**Profile'** / '**Settings'** / '**Notifications and Sounds**' to customize notification sound and call ringtone.
+Go to '**Profile**' and tap '**Notifications**':
 
-Here you can also toggle in-app sounds for sending and receiving messages when Keet is open.
+![Notifications has separate settings for direct and group messages, your call ringtone, and in-app notifications.](/images/technical-support-and-troubleshooting/notifications/mobile/notifications.png "Notifications · Mobile")
 
-![Here you can also toggle in-app sounds for sending and receiving messages when Keet is open.](/images/technical-support-and-troubleshooting/notifications/mobile/here-toggle-app-sounds-sending-2.jpg "Notifications · Mobile")
+</Tab>
+</Tabs>
+
+The screen is split into these sections:
+
+* '**Snooze all notifications**' - pause every alert for a set time. See [Snooze Notifications](/file-sharing-and-messages/snooze-notifications).
+* '**Message notifications**' - separate settings for '**Direct messages**' and '**Group messages**'. Each row shows whether it's '**On**' or '**Off**'. On desktop, '**Group messages**' can also show '**Mentions only**'.
+* '**Calls**' - choose your call '**Ringtone**'.
+* '**In-app notifications**' - control what happens while Keet is open. On desktop, you can turn '**In-app banners**' on or off. On mobile, you can turn '**In-app banners**', '**In-app vibrate**', and '**In-app sounds**' (sounds when you send and receive messages in chats) on or off independently.
+
+## How do I choose what I'm notified about?
+
+Select '**Direct messages**' or '**Group messages**'. Each has its own page, so you can set them independently:
+
+* '**Show notifications**' - turn notifications for that type on or off.
+* '**Notify me about**' (Group messages, desktop only) - choose '**All messages**' or '**Mentions only**'. With '**Mentions only**', you're notified about a group message only when someone mentions you. This option isn't available on mobile in Keet 4.24.
+* '**Notification sound**' - pick the sound for that type. Select a sound to hear it, or choose '**Silent**' for none.
+* '**Message preview**' - when off, notifications don't show the content of the message.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Direct messages has its own notification sound and message preview settings.](/images/technical-support-and-troubleshooting/notifications/desktop/direct-messages-settings.png "Notifications · Desktop")
+
+![On Group messages, 'Notify me about' lets you choose All messages or Mentions only.](/images/technical-support-and-troubleshooting/notifications/desktop/group-messages-notify-me-about-menu.png "Notifications · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![Direct messages has its own notification sound and message preview settings.](/images/technical-support-and-troubleshooting/notifications/mobile/direct-messages-settings.png "Notifications · Mobile")
+
+![Group messages has its own notification sound and message preview settings.](/images/technical-support-and-troubleshooting/notifications/mobile/group-messages-settings.png "Notifications · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="info">
+Reactions and new requests don't have their own notification settings yet.
+</Callout>
+
+### How do these settings affect push notifications on mobile?
+
+Your choices apply to the push notifications your phone shows, too:
+
+* Turning off '**Direct messages**' or '**Group messages**' stops the push notifications for that type.
+* Turning off '**Message preview**' keeps the message content out of the notification.
+* Your chosen '**Notification sound**' plays for push notifications where your phone supports it.
+
+If a setting doesn't behave as expected, check your phone's own notification settings, which take priority. See [How do I allow notifications for Keet on my phone?](#how-do-i-allow-notifications-for-keet-on-my-phone)
+
+## How do I change my call ringtone?
+
+Under '**Calls**', select '**Ringtone**' and choose a ringtone. Select one to hear it. On desktop, you can also choose '**Silent**' for no ringtone. Keet saves your choice and uses it for incoming calls.
+
+## What happens to these settings while notifications are snoozed?
+
+While '**Snooze all notifications**' is on, everything below it is dimmed and can't be changed. On desktop, hovering over it shows 'All notifications are currently snoozed. Turn snooze off to change these.' On mobile, the snooze row shows when it ends, for example 'muted until 16:22'. Your settings become available again once you turn snooze off or it ends.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![While snoozed, the settings below Snooze all notifications can't be changed.](/images/technical-support-and-troubleshooting/notifications/desktop/notifications-snoozed.png "Notifications · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![While snoozed, the settings below Snooze all notifications can't be changed.](/images/technical-support-and-troubleshooting/notifications/mobile/notifications-snoozed.png "Notifications · Mobile")
+
+</Tab>
+</Tabs>
+
+## How do I allow notifications for Keet on my phone?
 
 <Callout type="warn">
 🔊 Ensure push notifications are enabled in your mobile device settings for the Keet app.
 </Callout>
 
-Open your device '**Settings'** / '**Apps'** / '**Keet' /** '**Notifications**'.
+If they're turned off, '**Notifications**' in Keet shows a '**Notifications are disabled**' card. Tap '**Enable in phone settings**' to open your phone's settings.
+
+![The Notifications screen on mobile shows a Notifications are disabled card with an Enable in phone settings button.](/images/technical-support-and-troubleshooting/notifications/mobile/notifications-disabled-card.png "Notifications · Mobile")
+
+You can also open your device '**Settings**' / '**Apps**' / '**Keet**' / '**Notifications**'.
 
 Android:
 
@@ -43,13 +118,37 @@ Make sure all the necessary categories are enabled; otherwise, you may miss push
 The exact location of the **Notifications** menu may vary depending on your device and OS version.
 </Callout>
 
-</Tab>
-</Tabs>
+## Will my notification settings change when I update Keet?
+
+No. When you update, Keet keeps your notifications on or off, your notification sound, your call ringtone, and your in-app notification choices.
+
+There's one exception. If you previously chose to be notified only when you're mentioned, '**Group messages**' stays on '**Mentions only**', but '**Direct messages**' goes back to notifying you about every message, because direct messages have no mentions.
+
+New installs start with '**Direct messages**' and '**Group messages**' on, '**Group messages**' set to '**All messages**', '**Keet**' as the notification sound, and '**Message preview**' on.
+
+## Are notifications cleared when I read a message on another device?
+
+On mobile, yes, for direct messages. If you use the same profile on [linked devices](/installation-and-setup/link-devices) and read a DM on one of them, Keet removes that DM's notification from your phone. Reading it doesn't trigger a new notification.
+
+Only the notification for that chat is cleared. Notifications from your other chats stay until you read them.
+
+## What does the unread badge count?
+
+The badge on the Keet app icon counts your chats with unread messages. Once you read a chat, it stops counting.
+
+A chat doesn't count while:
+
+* it's [muted](/file-sharing-and-messages/mute-a-chat), until the mute ends if you chose a time
+* you've turned on '**Snooze all notifications**', which keeps all of your chats out of the count
+
+When you unmute a chat, or a snooze ends or is turned off, a chat that's still unread counts again.
 
 ## Why am I not receiving notifications?
 
+* Check that '**Show notifications**' is on for '**Direct messages**' and '**Group messages**', and that '**Group messages**' isn't set to '**Mentions only**' if you want every message.
+* Check that '**Snooze all notifications**' is off and that the chat isn't [muted](/file-sharing-and-messages/mute-a-chat).
 * Check that notifications from Keet are enabled on your device and that your internet connection is stable.
-* Re-enable the notification for Keet in '**System'** / '**Settings'** / '**Apps'** / '**Keet'** / '**Notifications'** by toggling '**Allow notifications**' off and on again.
+* Re-enable the notification for Keet in '**System**' / '**Settings**' / '**Apps**' / '**Keet**' / '**Notifications**' by toggling '**Allow notifications**' off and on again.
 * Make sure your device isn’t in **Silent, Focus, Do Not Disturb, Reduce Interruptions or Sleep mode**, etc, or add Keet to the exceptions for these modes.
 
 ![Make sure your device isn’t in Silent, Focus, Do Not Disturb, Reduce Interruptions or Sleep mode, etc, or a….](/images/technical-support-and-troubleshooting/notifications/make-sure-device-isn-silent-6.jpg "Notifications")

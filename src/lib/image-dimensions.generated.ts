@@ -476,10 +476,6 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/notifications/not-yet-but-feature-may-8.webp": {
-    "width": 426,
-    "height": 240
-  },
   "/images/file-sharing-and-messages/personal-group/add-details-new-chat-screenshot-3.png": {
     "width": 585,
     "height": 841

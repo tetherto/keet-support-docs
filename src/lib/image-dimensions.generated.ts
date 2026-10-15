@@ -420,6 +420,66 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
+  "/images/file-sharing-and-messages/notifications/desktop/direct-messages-settings.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/notifications/desktop/group-messages-notify-me-about-menu.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/notifications/desktop/notifications-and-sounds.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/notifications/desktop/notifications-snoozed.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/file-sharing-and-messages/notifications/ensure-keet-isn-restricted-device-7.png": {
+    "width": 540,
+    "height": 211
+  },
+  "/images/file-sharing-and-messages/notifications/make-sure-device-isn-silent-6.jpg": {
+    "height": 561,
+    "width": 540
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/device-settings-apps-keet-notifications-3.jpg": {
+    "height": 1107,
+    "width": 540
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/device-settings-apps-keet-notifications-4.jpg": {
+    "height": 1107,
+    "width": 540
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/device-settings-apps-keet-notifications-5.png": {
+    "width": 702,
+    "height": 1450
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/direct-messages-settings.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/group-messages-settings.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/notifications-disabled-card.png": {
+    "width": 393,
+    "height": 247
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/notifications-snoozed.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/notifications/mobile/notifications.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/notifications/not-yet-but-feature-may-8.webp": {
+    "width": 426,
+    "height": 240
+  },
   "/images/file-sharing-and-messages/personal-group/add-details-new-chat-screenshot-3.png": {
     "width": 585,
     "height": 841
@@ -963,66 +1023,6 @@ export const imageDimensions = {
   "/images/technical-support-and-troubleshooting/keet-app-issues/verify-online-checking-status-profile.jpg": {
     "height": 490,
     "width": 1080
-  },
-  "/images/technical-support-and-troubleshooting/notifications/desktop/direct-messages-settings.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/technical-support-and-troubleshooting/notifications/desktop/group-messages-notify-me-about-menu.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/technical-support-and-troubleshooting/notifications/desktop/notifications-and-sounds.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/technical-support-and-troubleshooting/notifications/desktop/notifications-snoozed.png": {
-    "width": 1224,
-    "height": 810
-  },
-  "/images/technical-support-and-troubleshooting/notifications/ensure-keet-isn-restricted-device-7.png": {
-    "width": 540,
-    "height": 211
-  },
-  "/images/technical-support-and-troubleshooting/notifications/make-sure-device-isn-silent-6.jpg": {
-    "height": 561,
-    "width": 540
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/device-settings-apps-keet-notifications-3.jpg": {
-    "height": 1107,
-    "width": 540
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/device-settings-apps-keet-notifications-4.jpg": {
-    "height": 1107,
-    "width": 540
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/device-settings-apps-keet-notifications-5.png": {
-    "width": 702,
-    "height": 1450
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/direct-messages-settings.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/group-messages-settings.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/notifications-disabled-card.png": {
-    "width": 393,
-    "height": 247
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/notifications-snoozed.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/technical-support-and-troubleshooting/notifications/mobile/notifications.png": {
-    "width": 393,
-    "height": 852
-  },
-  "/images/technical-support-and-troubleshooting/notifications/not-yet-but-feature-may-8.webp": {
-    "width": 426,
-    "height": 240
   },
   "/images/technical-support-and-troubleshooting/recover-a-profile/add-file-and-input-password-desktop.png": {
     "width": 1224,

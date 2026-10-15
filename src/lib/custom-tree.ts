@@ -57,9 +57,11 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Personal Group 📂', url: '/file-sharing-and-messages/personal-group' },
       { type: 'page', name: 'Contact Book 📓', url: '/file-sharing-and-messages/contact-book' },
       { type: 'page', name: 'Contact Indicators 🛡️', url: '/file-sharing-and-messages/contact-indicators' },
+      { type: 'page', name: 'Notifications 🔔', url: '/file-sharing-and-messages/notifications' },
       { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
       { type: 'page', name: 'Mute a Chat 🔇', url: '/file-sharing-and-messages/mute-a-chat' },
       { type: 'page', name: 'Chat over Bluetooth 📡', url: '/file-sharing-and-messages/chat-over-bluetooth' },
+      { type: 'page', name: 'Link Previews 🔗', url: '/file-sharing-and-messages/link-previews' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',
@@ -117,7 +119,6 @@ export const customTree: Node[] = [
       url: '/technical-support-and-troubleshooting',
     },
     children: [
-      { type: 'page', name: 'Notifications', url: '/technical-support-and-troubleshooting/notifications' },
       { type: 'page', name: 'Recover a Profile', url: '/technical-support-and-troubleshooting/recover-a-profile' },
       { type: 'page', name: 'Delete Profile', url: '/technical-support-and-troubleshooting/delete-profile' },
       { type: 'page', name: 'Keet App issues', url: '/technical-support-and-troubleshooting/keet-app-issues' },
@@ -143,6 +144,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'FAQs 💬', url: '/security-and-privacy/faq' },
       { type: 'page', name: 'Blind Peering 🔒', url: '/security-and-privacy/blind-peering' },
       { type: 'page', name: 'Private Mode 🙈', url: '/security-and-privacy/private-mode' },
+      { type: 'page', name: 'Blocked Members 🚫', url: '/security-and-privacy/blocked-members' },
     ],
   },
   {

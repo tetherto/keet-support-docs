@@ -19,11 +19,13 @@ export const customTree: Node[] = [
     },
     children: [
       { type: 'page', name: 'Installation', url: '/installation-and-setup/installation' },
+      { type: 'page', name: 'Invite Links', url: '/installation-and-setup/invite-links' },
       { type: 'page', name: 'Setup', url: '/installation-and-setup/setup' },
       { type: 'page', name: 'Back Up Your Profile', url: '/installation-and-setup/back-up-your-profile' },
       { type: 'page', name: 'App Permissions', url: '/installation-and-setup/app-permissions' },
       { type: 'page', name: 'Link Devices', url: '/installation-and-setup/link-devices' },
       { type: 'page', name: 'Keet Username', url: '/installation-and-setup/keet-username' },
+      { type: 'page', name: 'Moving to the New Android APK Build', url: '/installation-and-setup/android-apk-migration' },
     ],
   },
   {
@@ -39,7 +41,6 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Group Moderation ⚖️', url: '/keet-groups/group-moderation' },
       { type: 'page', name: 'Admin Responsibilities 👑', url: '/keet-groups/admin-responsibilities' },
       { type: 'page', name: 'Leave Group🚪', url: '/keet-groups/leave-group' },
-      { type: 'page', name: 'Groups to Join 🧩', url: '/keet-groups/groups-to-join' },
     ],
   },
   {
@@ -57,6 +58,8 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Contact Book 📓', url: '/file-sharing-and-messages/contact-book' },
       { type: 'page', name: 'Contact Indicators 🛡️', url: '/file-sharing-and-messages/contact-indicators' },
       { type: 'page', name: 'Snooze Notifications 🔕', url: '/file-sharing-and-messages/snooze-notifications' },
+      { type: 'page', name: 'Mute a Chat 🔇', url: '/file-sharing-and-messages/mute-a-chat' },
+      { type: 'page', name: 'Chat over Bluetooth 📡', url: '/file-sharing-and-messages/chat-over-bluetooth' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',
@@ -95,6 +98,13 @@ export const customTree: Node[] = [
         name: 'Video Calls & Share Screen 🎬',
         url: '/voice-and-video-calls/video-calls-and-share-screen',
       },
+      {
+        type: 'page',
+        name: 'Call Transcripts & Summaries 📝',
+        url: '/voice-and-video-calls/call-transcripts-and-summaries',
+      },
+      { type: 'page', name: 'Call Reactions 🎉', url: '/voice-and-video-calls/call-reactions' },
+      { type: 'page', name: 'Minimize Self View 🔲', url: '/voice-and-video-calls/minimize-self-view' },
     ],
   },
   {
@@ -111,6 +121,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Recover a Profile', url: '/technical-support-and-troubleshooting/recover-a-profile' },
       { type: 'page', name: 'Delete Profile', url: '/technical-support-and-troubleshooting/delete-profile' },
       { type: 'page', name: 'Keet App issues', url: '/technical-support-and-troubleshooting/keet-app-issues' },
+      { type: 'page', name: 'Slow Groups After Updating', url: '/technical-support-and-troubleshooting/slow-groups-after-updating' },
       { type: 'page', name: 'Auto-Updates on macOS', url: '/technical-support-and-troubleshooting/auto-updates-macos' },
       { type: 'page', name: 'Sound issues', url: '/technical-support-and-troubleshooting/sound-issues' },
       { type: 'page', name: 'Video issues', url: '/technical-support-and-troubleshooting/video-issues' },
@@ -139,5 +150,18 @@ export const customTree: Node[] = [
     name: 'Community & Support',
     url: '/community-and-support',
     icon: sectionIcons.community,
+  },
+  {
+    type: 'folder',
+    name: 'Release Notes',
+    icon: sectionIcons.releaseNotes,
+    index: {
+      type: 'page',
+      name: 'Release Notes',
+      url: '/release-notes',
+    },
+    children: [
+      { type: 'page', name: 'Autobee Deep Dive', url: '/release-notes/autobee-deep-dive' },
+    ],
   },
 ];

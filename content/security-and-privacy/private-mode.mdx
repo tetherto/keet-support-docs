@@ -65,14 +65,21 @@ With Private Mode on, Keet hides anything that could identify who you're talking
 * Sender names and avatars are hidden, so messages can't be tied to a person at a glance.
 * Message text is replaced with a generic placeholder, like '**You received a message**' or '**Message sent**'.
 * Media thumbnails are replaced with a placeholder too, instead of showing the original image or video.
-* A '**Turn off private mode**' banner sits at the top of the chat the whole time, so you're never more than one tap away from normal view — see [Turn off Private Mode from inside a chat](#turn-off-private-mode-from-inside-a-chat) below.
+* A '**Turn off private mode**' banner sits at the top of the chat the whole time, so you're never more than one tap or click away from normal view — see [Turn off Private Mode from inside a chat](#turn-off-private-mode-from-inside-a-chat) below.
 * On mobile, a hint under the banner — '**Tap a message to view original content**' — reminds you how to check any message.
 
-<Callout type="warn">
-This masked view is currently available on mobile only — desktop support is coming soon.
-</Callout>
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Inside a chat, sender names, avatars, and message text are all masked, with a banner to turn Private Mode off at the top.](/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png "Private Mode 🙈 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
 
 ![Inside a chat, sender names, avatars, and message text are all masked, with a banner to turn Private Mode off at the top.](/images/security-and-privacy/private-mode/mobile/masked-room.png "Private Mode 🙈 · Mobile")
+
+</Tab>
+</Tabs>
 
 ## Reveal one message at a time
 
@@ -81,12 +88,10 @@ Need to actually read a message without leaving Private Mode? You can reveal it 
 <Tabs items={["Desktop", "Mobile"]}>
 <Tab value="Desktop">
 
-1. Hover (or, using a keyboard, focus) a masked message to show a '**Reveal**' link:
+1. Hover a masked message to show a '**Reveal**' link next to it:
 
    ![Hovering a masked message shows a Reveal link next to it.](/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png "Private Mode 🙈 · Desktop")
-2. Click '**Reveal**' to show that message's real sender and text inline. A '**Hide**' link appears in its place to mask it again:
-
-   ![A revealed message shows its real sender, avatar, and text inline, with a Hide link to mask it again.](/images/security-and-privacy/private-mode/desktop/message-revealed-inline.png "Private Mode 🙈 · Desktop")
+2. Click '**Reveal**' to show that message's real sender and text inline. The link changes to '**Hide**' — click it to mask the message again.
 
 </Tab>
 <Tab value="Mobile">
@@ -113,9 +118,7 @@ Revealing a message only affects that message — the rest of the chat, and the 
 1. Click '**Turn off private mode**' at the top of any chat:
 
    ![The Turn off private mode banner sits at the top of the chat while Private Mode is on.](/images/security-and-privacy/private-mode/desktop/masked-chat-list-and-room.png "Private Mode 🙈 · Desktop")
-2. Confirm in the '**Turn off private mode?**' dialog. '**Cancel**' keeps Private Mode on; '**Turn off**' restores normal view everywhere:
-
-   ![A confirmation dialog asks you to confirm before turning Private Mode off.](/images/security-and-privacy/private-mode/desktop/turn-off-confirmation-modal.png "Private Mode 🙈 · Desktop")
+2. Confirm in the '**Turn off private mode?**' dialog. '**Cancel**' keeps Private Mode on; '**Turn off**' restores normal view everywhere.
 
 </Tab>
 <Tab value="Mobile">
@@ -134,7 +137,9 @@ You can also turn Private Mode off from '**Profile**' at any time, the same way 
 
 ## Keyboard and screen reader support
 
-Every Private Mode control works without a mouse: '**Tab**' (or '**Shift+Tab**' to go back) moves focus between the toggle, the '**Reveal**' and '**Hide**' links, and the '**Cancel**' / '**Turn off**' buttons in the confirmation dialog — then '**Enter**' or '**Space**' activates whichever one is focused.
+The '**Private Mode**' toggle in Profile works without a mouse: '**Tab**' (or '**Shift+Tab**' to go back) moves focus to it, and '**Enter**' or '**Space**' turns it on or off. The same keys work for '**Turn off private mode**' at the top of a chat and for the '**Cancel**' / '**Turn off**' buttons in its confirmation dialog.
+
+On desktop, the '**Reveal**' link only appears when you hover a message, so revealing a message needs a mouse.
 
 <Callout type="info">
 Screen readers don't announce a hidden message's real content — they read the same placeholder text sighted users see, until that message is revealed.

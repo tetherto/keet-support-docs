@@ -33,6 +33,11 @@ const config = {
         destination: '/technical-support-and-troubleshooting/recover-a-profile',
         permanent: true,
       },
+      {
+        source: '/technical-support-and-troubleshooting/notifications',
+        destination: '/file-sharing-and-messages/notifications',
+        permanent: true,
+      },
     ];
   },
 };

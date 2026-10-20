@@ -19,6 +19,10 @@ export function buildRedirects(): Redirect[] {
       from: withSlash('/technical-support-and-troubleshooting/profile-recovery'),
       to: withSlash('/technical-support-and-troubleshooting/recover-a-profile'),
     },
+    {
+      from: withSlash('/technical-support-and-troubleshooting/notifications'),
+      to: withSlash('/file-sharing-and-messages/notifications'),
+    },
   ];
 }
 

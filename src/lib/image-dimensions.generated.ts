@@ -1116,21 +1116,61 @@ export const imageDimensions = {
     "width": 536,
     "height": 805
   },
-  "/images/technical-support-and-troubleshooting/submit-a-report/copy-details-send-report-any-3.png": {
-    "width": 663,
-    "height": 893
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac-menu.png": {
+    "width": 329,
+    "height": 52
   },
-  "/images/technical-support-and-troubleshooting/submit-a-report/copy-details-send-report-any-4.png": {
-    "width": 527,
-    "height": 876
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac.png": {
+    "width": 351,
+    "height": 382
   },
-  "/images/technical-support-and-troubleshooting/submit-a-report/encounter-error-send-report-immediately-2.png": {
-    "width": 1048,
-    "height": 318
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/console-error-example-1.png": {
+    "width": 624,
+    "height": 222
   },
-  "/images/technical-support-and-troubleshooting/submit-a-report/tell-us-ideas-improving-app.png": {
-    "width": 658,
-    "height": 888
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/console-error-example-2.png": {
+    "width": 624,
+    "height": 376
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/console-error-example-3.png": {
+    "width": 624,
+    "height": 47
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/dev-mode-menu.png": {
+    "width": 352,
+    "height": 324
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/developer-tools-console.png": {
+    "width": 397,
+    "height": 465
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/developer-tools-menu.png": {
+    "width": 624,
+    "height": 165
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-details.png": {
+    "width": 624,
+    "height": 419
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-log-list.png": {
+    "width": 215,
+    "height": 391
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-avatar.png": {
+    "width": 470,
+    "height": 380
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-sidebar-error-log.png": {
+    "width": 212,
+    "height": 394
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-sidebar-software.png": {
+    "width": 480,
+    "height": 258
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/software-version.png": {
+    "width": 461,
+    "height": 416
   },
   "/images/technical-support-and-troubleshooting/video-issues/adjust-video-quality-settings-during-3.png": {
     "width": 1279,

@@ -127,7 +127,7 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Sound issues', url: '/technical-support-and-troubleshooting/sound-issues' },
       { type: 'page', name: 'Video issues', url: '/technical-support-and-troubleshooting/video-issues' },
       { type: 'page', name: 'Other Issues', url: '/technical-support-and-troubleshooting/other-issues' },
-      { type: 'page', name: 'Submit a Report', url: '/technical-support-and-troubleshooting/submit-a-report' },
+      { type: 'page', name: 'How to Report Bugs', url: '/technical-support-and-troubleshooting/submit-a-report' },
       { type: 'page', name: 'Languages', url: '/technical-support-and-troubleshooting/languages' },
     ],
   },

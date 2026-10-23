@@ -125,7 +125,15 @@ The developer console shows more technical logs than the error log. Use it when 
 
 5. Copy any errors you see and paste them into your bug report.
 
-**3. Keet version**
+**3. System log (optional)**
+
+The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
+
+![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
+
+The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
+
+**4. Keet version**
 
 1. Click your profile icon, scroll down the sidebar and click **Software**. The version number is shown next to it.
 
@@ -137,7 +145,7 @@ The developer console shows more technical logs than the error log. Use it when 
 
 3. Paste both into your bug report.
 
-**4. Mac details**
+**5. Mac details**
 
 Click the Apple icon in the top-left corner of your menu bar, then select **About This Mac**.
 
@@ -154,9 +162,9 @@ Copy your **Chip** (or **Processor**), **Memory** and **macOS** version. The mod
 
 If Keet shows an error, click **View details** in the error message. You can also open any earlier error from the error log:
 
-1. Click your profile icon in Keet's title bar.
+1. Click your profile icon in the top-left corner of Keet.
 
-   ![The profile icon in Keet.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-avatar.png "How to Report Bugs · Desktop")
+   ![The profile icon in the top-left corner of Keet, with the profile sidebar open.](/images/technical-support-and-troubleshooting/submit-a-report/windows/profile-avatar.png "How to Report Bugs · Windows")
 
 2. Scroll down the sidebar and click **Error log**.
 
@@ -166,17 +174,47 @@ If Keet shows an error, click **View details** in the error message. You can als
 
    ![The Error log list showing one error.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-log-list.png "How to Report Bugs · Desktop")
 
-4. The **Error details** screen shows what failed, in which group and when.
+4. The **Error details** screen shows what failed and when, and the group if the error happened in one.
 
    ![The Error details screen.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-details.png "How to Report Bugs · Desktop")
 
    Click **Copy details** and paste the text into your bug report. Or click **Report bug**, which copies the details and joins the **Bug Bandits** group so you can paste them straight into your message.
 
-To save every error in one file, click **Download Errors** at the bottom of the **Error log** screen. It saves a file named `keet-errors-<date>.json` that you can attach to your report.
+To save every error in one file, click **Download Errors** at the bottom of the **Error log** screen. In the **Save as** window that opens, choose where to save the file. It suggests your **Downloads** folder and a name like `keet-errors-<date>.json`, and you can attach the file to your report.
 
 If Keet shows **Sorry! An error has occurred**, click **Problem details** > **Copy** and paste the text into your bug report.
 
-**2. Keet version**
+**2. Console errors (optional)**
+
+The developer console shows more technical logs than the error log. Use it when the error log is empty or doesn't match the problem.
+
+1. Click anywhere in Keet, then press **Ctrl + Shift + U**. A **Developer Tools** window opens. Keet's title bar has no menu, so you don't need Dev Mode.
+
+2. In the window that opens, select the **Console** tab.
+
+   ![The Console tab in Developer Tools.](/images/technical-support-and-troubleshooting/submit-a-report/windows/developer-tools-console.png "How to Report Bugs · Windows")
+
+3. Repeat the actions that trigger the issue. Errors appear in the console, usually as red lines. Many include a stack trace, which lists the steps the code took before the error and lets us follow the exact path that causes your issue.
+
+   Errors can look like any of these:
+
+   ![A console error with a stack trace.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/console-error-example-1.png "How to Report Bugs · Desktop")
+
+   ![A console error with a stack trace.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/console-error-example-2.png "How to Report Bugs · Desktop")
+
+   ![A short console error.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/console-error-example-3.png "How to Report Bugs · Desktop")
+
+4. Copy any errors you see and paste them into your bug report.
+
+**3. System log (optional)**
+
+The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
+
+![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
+
+The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
+
+**4. Keet version**
 
 1. Click your profile icon, scroll down the sidebar and click **Software**. The version number is shown next to it.
 
@@ -188,9 +226,14 @@ If Keet shows **Sorry! An error has occurred**, click **Problem details** > **Co
 
 3. Paste both into your bug report.
 
-**3. System details**
+**5. System details**
 
-* **Windows:** open **Settings** > **System** > **About**. Copy the **Device specifications** (processor and installed RAM) and the **Windows specifications** (edition, version and OS build).
+* **Windows:** open **Settings** > **System** > **About**. Click **Copy** in the **Device specifications** section (processor, installed RAM and graphics card) and again in the **Windows specifications** section (edition, version and OS build), and paste both into your bug report. The copied text also includes your **Device name**, **Device ID** and **Product ID**. Delete those lines before you post, because Bug Bandits is public.
+
+  ![The Device specifications section of the About page, with the device name, Device ID and Product ID hidden.](/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-device-specifications.png "How to Report Bugs · Windows")
+
+  ![The Windows specifications section of the About page.](/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-specifications.png "How to Report Bugs · Windows")
+
 * **Linux:** open **Settings** > **About**, or run `cat /etc/os-release` in a terminal, and copy your distribution name and version. Also tell us your desktop environment and how you installed Keet (Snap, AppImage or `tar.gz`).
 
 </Tab>

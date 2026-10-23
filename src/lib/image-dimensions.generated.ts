@@ -1172,6 +1172,26 @@ export const imageDimensions = {
     "width": 461,
     "height": 416
   },
+  "/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png": {
+    "width": 415,
+    "height": 764
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-device-specifications.png": {
+    "width": 654,
+    "height": 358
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-specifications.png": {
+    "width": 654,
+    "height": 240
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/windows/developer-tools-console.png": {
+    "width": 784,
+    "height": 210
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/windows/profile-avatar.png": {
+    "width": 1224,
+    "height": 808
+  },
   "/images/technical-support-and-troubleshooting/video-issues/adjust-video-quality-settings-during-3.png": {
     "width": 1279,
     "height": 757

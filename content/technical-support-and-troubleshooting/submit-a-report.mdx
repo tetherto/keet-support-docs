@@ -62,12 +62,12 @@ Bug Bandits is a public group, so anyone in it can read your report. Before you 
 
 ## Gather supporting information
 
-The steps depend on your system, so choose yours:
+Each step below has tabs for macOS, Windows / Linux and iOS / Android. Pick your system in each one. The screenshots in the iOS / Android tabs are from Android.
+
+### Error details
 
 <Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
 <Tab value="macOS">
-
-**1. Error details**
 
 If Keet shows an error, click **View details** in the error message. You can also open any earlier error from the error log:
 
@@ -93,9 +93,64 @@ To save every error in one file, click **Download Errors** at the bottom of the 
 
 If Keet shows **Sorry! An error has occurred**, click **Problem details** > **Copy** and paste the text into your bug report.
 
-**2. Console errors (optional)**
+</Tab>
+<Tab value="Windows / Linux">
 
-The developer console shows more technical logs than the error log. Use it when the error log is empty or doesn't match the problem.
+If Keet shows an error, click **View details** in the error message. You can also open any earlier error from the error log:
+
+1. Click your profile icon in the top-left corner of Keet.
+
+   ![The profile icon in the top-left corner of Keet, with the profile sidebar open.](/images/technical-support-and-troubleshooting/submit-a-report/windows/profile-avatar.png "How to Report Bugs · Windows")
+
+2. Scroll down the sidebar and click **Error log**.
+
+   ![The Error log option at the bottom of the profile sidebar.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-sidebar-error-log.png "How to Report Bugs · Desktop")
+
+3. Click the error you want to report. The newest error is at the top.
+
+   ![The Error log list showing one error.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-log-list.png "How to Report Bugs · Desktop")
+
+4. The **Error details** screen shows what failed and when, and the group if the error happened in one.
+
+   ![The Error details screen.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-details.png "How to Report Bugs · Desktop")
+
+   Click **Copy details** and paste the text into your bug report. Or click **Report bug**, which copies the details and joins the **Bug Bandits** group so you can paste them straight into your message.
+
+To save every error in one file, click **Download Errors** at the bottom of the **Error log** screen. A **Save as** window opens with a suggested name like `keet-errors-<date>.json`. Choose where to save the file, then attach it to your report.
+
+If Keet shows **Sorry! An error has occurred**, click **Problem details** > **Copy** and paste the text into your bug report.
+
+</Tab>
+<Tab value="iOS / Android">
+
+Open the error log:
+
+1. Tap **Profile** at the bottom of the screen.
+2. Scroll down and tap **Error Log**. If it says **No error logs found**, Keet hasn't recorded an error yet.
+
+   ![The About us, Software and Error Log rows in the Profile tab.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/profile-software-error-log.png "How to Report Bugs · Android")
+
+3. Tap the error you want to report. The newest error is at the top.
+
+   ![The Error Log list showing two errors and the Show system log button.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/error-log-list.png "How to Report Bugs · Android")
+
+4. The **Error details** screen shows what failed and when. Tap **Copy details** and paste the text into your bug report.
+
+   ![The Error details screen with the Copy details button.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/error-details.png "How to Report Bugs · Android")
+
+Some error messages that appear in Keet also show a **View file details** link, which opens the same screen.
+
+If Keet shows **Sorry! An error has occurred**, tap **Problem details** > **Copy** and paste the text into your bug report. This copy also includes your device, OS version and app version. You can then tap **Export error logs**, choose **Core Logs** or **UI Logs**, and share the file. If the file is empty or the share menu fails, send the copied problem details instead.
+
+</Tab>
+</Tabs>
+
+### Console errors (optional)
+
+The developer console shows more technical logs than the error log. Use it when the error log is empty or doesn't match the problem. It is only available on desktop.
+
+<Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
+<Tab value="macOS">
 
 1. Click **Keet** in the menu bar and select **Dev Mode**.
 
@@ -125,68 +180,8 @@ The developer console shows more technical logs than the error log. Use it when 
 
 5. Copy any errors you see and paste them into your bug report.
 
-**3. System log (optional)**
-
-The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
-
-![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
-
-The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
-
-**4. Keet version**
-
-1. Click your profile icon, scroll down the sidebar and click **Software**. The version number is shown next to it.
-
-   ![The Software option in the profile sidebar.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-sidebar-software.png "How to Report Bugs · macOS")
-
-2. The **Software Version** screen has two sections: your Keet version (**keet**) and **Packages**. Hover over each section and click it to copy its contents.
-
-   ![The Software Version screen showing the Keet version and the Packages list.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/software-version.png "How to Report Bugs · macOS")
-
-3. Paste both into your bug report.
-
-**5. Mac details**
-
-Click the Apple icon in the top-left corner of your menu bar, then select **About This Mac**.
-
-![The About This Mac option in the Apple menu.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac-menu.png "How to Report Bugs · macOS")
-
-Copy your **Chip** (or **Processor**), **Memory** and **macOS** version. The model name, such as MacBook Pro, helps too. We don't need your serial number.
-
-![The About This Mac window with the serial number hidden.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac.png "How to Report Bugs · macOS")
-
 </Tab>
 <Tab value="Windows / Linux">
-
-**1. Error details**
-
-If Keet shows an error, click **View details** in the error message. You can also open any earlier error from the error log:
-
-1. Click your profile icon in the top-left corner of Keet.
-
-   ![The profile icon in the top-left corner of Keet, with the profile sidebar open.](/images/technical-support-and-troubleshooting/submit-a-report/windows/profile-avatar.png "How to Report Bugs · Windows")
-
-2. Scroll down the sidebar and click **Error log**.
-
-   ![The Error log option at the bottom of the profile sidebar.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-sidebar-error-log.png "How to Report Bugs · Desktop")
-
-3. Click the error you want to report. The newest error is at the top.
-
-   ![The Error log list showing one error.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-log-list.png "How to Report Bugs · Desktop")
-
-4. The **Error details** screen shows what failed and when, and the group if the error happened in one.
-
-   ![The Error details screen.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/error-details.png "How to Report Bugs · Desktop")
-
-   Click **Copy details** and paste the text into your bug report. Or click **Report bug**, which copies the details and joins the **Bug Bandits** group so you can paste them straight into your message.
-
-To save every error in one file, click **Download Errors** at the bottom of the **Error log** screen. A **Save as** window opens with a suggested name like `keet-errors-<date>.json`. Choose where to save the file, then attach it to your report.
-
-If Keet shows **Sorry! An error has occurred**, click **Problem details** > **Copy** and paste the text into your bug report.
-
-**2. Console errors (optional)**
-
-The developer console shows more technical logs than the error log. Use it when the error log is empty or doesn't match the problem.
 
 1. Click anywhere in Keet, then press **Ctrl + Shift + U**. A **Developer Tools** window opens. Keet's title bar has no menu, so you don't need Dev Mode.
 
@@ -206,7 +201,18 @@ The developer console shows more technical logs than the error log. Use it when 
 
 4. Copy any errors you see and paste them into your bug report.
 
-**3. System log (optional)**
+</Tab>
+<Tab value="iOS / Android">
+
+Keet on iOS and Android has no developer console. Use the system log in the next step instead.
+
+</Tab>
+</Tabs>
+
+### System log (optional)
+
+<Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
+<Tab value="macOS">
 
 The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
 
@@ -214,7 +220,42 @@ The system log lists what Keet was doing before the problem. At the bottom of th
 
 The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
 
-**4. Keet version**
+</Tab>
+<Tab value="Windows / Linux">
+
+The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
+
+![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
+
+The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
+
+</Tab>
+<Tab value="iOS / Android">
+
+For more technical detail, tap **Show system log** at the bottom of the **Error Log** screen. Tap **copy** and paste the text into your bug report. Use **refresh** to load the latest entries.
+
+![The System Log screen with the copy, console, refresh and clear buttons.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/system-log.png "How to Report Bugs · Android")
+
+</Tab>
+</Tabs>
+
+### Keet version
+
+<Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
+<Tab value="macOS">
+
+1. Click your profile icon, scroll down the sidebar and click **Software**. The version number is shown next to it.
+
+   ![The Software option in the profile sidebar.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/profile-sidebar-software.png "How to Report Bugs · macOS")
+
+2. The **Software Version** screen has two sections: your Keet version (**keet**) and **Packages**. Hover over each section and click it to copy its contents.
+
+   ![The Software Version screen showing the Keet version and the Packages list.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/software-version.png "How to Report Bugs · macOS")
+
+3. Paste both into your bug report.
+
+</Tab>
+<Tab value="Windows / Linux">
 
 1. Click your profile icon, scroll down the sidebar and click **Software**. The version number is shown next to it.
 
@@ -226,49 +267,8 @@ The log records each action Keet performed, so read it before you post and remov
 
 3. Paste both into your bug report.
 
-**5. System details**
-
-* **Windows:** open **Settings** > **System** > **About**. Click **Copy** in the **Device specifications** section (processor, installed RAM and graphics card) and again in the **Windows specifications** section (edition, version and OS build), and paste both into your bug report. The copied text also includes your **Device name**, **Device ID** and **Product ID**. Delete those lines before you post, because Bug Bandits is public.
-
-  ![The Device specifications section of the About page, with the device name, Device ID and Product ID hidden.](/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-device-specifications.png "How to Report Bugs · Windows")
-
-  ![The Windows specifications section of the About page.](/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-specifications.png "How to Report Bugs · Windows")
-
-* **Linux:** open **Settings** > **About**, or run `cat /etc/os-release` in a terminal, and copy your distribution name and version. Also tell us your desktop environment and how you installed Keet (Snap, AppImage or `tar.gz`).
-
 </Tab>
 <Tab value="iOS / Android">
-
-The screenshots in this tab are from Android.
-
-**1. Error details**
-
-Open the error log:
-
-1. Tap **Profile** at the bottom of the screen.
-2. Scroll down and tap **Error Log**. If it says **No error logs found**, Keet hasn't recorded an error yet.
-
-   ![The About us, Software and Error Log rows in the Profile tab.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/profile-software-error-log.png "How to Report Bugs · Android")
-
-3. Tap the error you want to report. The newest error is at the top.
-
-   ![The Error Log list showing two errors and the Show system log button.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/error-log-list.png "How to Report Bugs · Android")
-
-4. The **Error details** screen shows what failed and when. Tap **Copy details** and paste the text into your bug report.
-
-   ![The Error details screen with the Copy details button.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/error-details.png "How to Report Bugs · Android")
-
-Some error messages that appear in Keet also show a **View file details** link, which opens the same screen.
-
-**2. System log**
-
-For more technical detail, tap **Show system log** at the bottom of the **Error Log** screen. Tap **copy** and paste the text into your bug report. Use **refresh** to load the latest entries.
-
-![The System Log screen with the copy, console, refresh and clear buttons.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/system-log.png "How to Report Bugs · Android")
-
-If Keet shows **Sorry! An error has occurred**, tap **Problem details** > **Copy** and paste the text into your bug report. This copy also includes your device, OS version and app version. You can then tap **Export error logs**, choose **Core Logs** or **UI Logs**, and share the file. If the file is empty or the share menu fails, send the copied problem details instead.
-
-**3. Keet version**
 
 1. Tap **Profile**, then **Software**. The version number is shown next to it.
 2. The **Versions** screen shows your Keet version, followed by a build number (for example `4.24.0_424035`), and the runtimes and packages.
@@ -281,15 +281,43 @@ If Keet shows **Sorry! An error has occurred**, tap **Problem details** > **Copy
 
 4. Paste them into your bug report and add the Keet version line yourself, because **Copy info** doesn't include it.
 
-**4. Device details**
+</Tab>
+</Tabs>
+
+### Device details
+
+<Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
+<Tab value="macOS">
+
+Click the Apple icon in the top-left corner of your menu bar, then select **About This Mac**.
+
+![The About This Mac option in the Apple menu.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac-menu.png "How to Report Bugs · macOS")
+
+Copy your **Chip** (or **Processor**), **Memory** and **macOS** version. The model name, such as MacBook Pro, helps too. We don't need your serial number.
+
+![The About This Mac window with the serial number hidden.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac.png "How to Report Bugs · macOS")
+
+</Tab>
+<Tab value="Windows / Linux">
+
+* **Windows:** open **Settings** > **System** > **About**. Click **Copy** in the **Device specifications** section (processor, installed RAM and graphics card) and again in the **Windows specifications** section (edition, version and OS build), and paste both into your bug report. The copied text also includes your **Device name**, **Device ID** and **Product ID**. Delete those lines before you post, because Bug Bandits is public.
+
+  ![The Device specifications section of the About page, with the device name, Device ID and Product ID hidden.](/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-device-specifications.png "How to Report Bugs · Windows")
+
+  ![The Windows specifications section of the About page.](/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-specifications.png "How to Report Bugs · Windows")
+
+* **Linux:** open **Settings** > **About**, or run `cat /etc/os-release` in a terminal, and copy your distribution name and version. Also tell us your desktop environment and how you installed Keet (Snap, AppImage or `tar.gz`).
+
+</Tab>
+<Tab value="iOS / Android">
 
 * **iPhone / iPad:** open **Settings** > **General** > **About** and note the **Model Name** and **iOS Version** (or **iPadOS Version**).
 * **Android:** open **Settings** > **About phone** and note the device model and **Android version**. Menu names vary slightly between manufacturers.
 
-If more than one device is affected, include the details for each of them.
-
 </Tab>
 </Tabs>
+
+If more than one device is affected, include the details for each of them.
 
 ## Put it all together
 

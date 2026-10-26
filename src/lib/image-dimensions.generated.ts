@@ -1176,6 +1176,30 @@ export const imageDimensions = {
     "width": 415,
     "height": 764
   },
+  "/images/technical-support-and-troubleshooting/submit-a-report/mobile/error-details.png": {
+    "width": 540,
+    "height": 383
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/mobile/error-log-list.png": {
+    "width": 540,
+    "height": 329
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/mobile/profile-software-error-log.png": {
+    "width": 540,
+    "height": 235
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/mobile/system-log.png": {
+    "width": 540,
+    "height": 444
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/mobile/versions-copy-info.png": {
+    "width": 540,
+    "height": 269
+  },
+  "/images/technical-support-and-troubleshooting/submit-a-report/mobile/versions.png": {
+    "width": 540,
+    "height": 310
+  },
   "/images/technical-support-and-troubleshooting/submit-a-report/windows/about-windows-device-specifications.png": {
     "width": 654,
     "height": 358

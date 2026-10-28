@@ -23,6 +23,10 @@ export function buildRedirects(): Redirect[] {
       from: withSlash('/technical-support-and-troubleshooting/notifications'),
       to: withSlash('/file-sharing-and-messages/notifications'),
     },
+    {
+      from: withSlash('/technical-support-and-troubleshooting/slow-groups-after-updating'),
+      to: withSlash('/technical-support-and-troubleshooting/keet-app-issues'),
+    },
   ];
 }
 

@@ -26,6 +26,8 @@ That’s why your detailed report is essential in helping us understand and reso
 
 Post your report in the **Bug Bandits** 🐞 group: search for **Bug Bandits** in Keet and join directly. For general questions, you can also ask in the **Keet Welcome** group.
 
+If you can't open Keet or join groups, please email us at `support@holepunch.to`.
+
 The more accurately you describe the problem, the more likely we can reproduce it ourselves, and a bug we can reproduce is much easier to find and fix.
 
 ### One message, one bug
@@ -144,12 +146,44 @@ If Keet shows **Sorry! An error has occurred**, tap **Problem details** > **Copy
 </Tab>
 </Tabs>
 
+### System log (optional)
+
+<Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
+<Tab value="macOS">
+
+The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
+
+![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
+
+The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
+
+</Tab>
+<Tab value="Windows / Linux">
+
+The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
+
+![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
+
+The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
+
+</Tab>
+<Tab value="iOS / Android">
+
+For more technical detail, tap **Show system log** at the bottom of the **Error Log** screen. Tap **copy** and paste the text into your bug report. Use **refresh** to load the latest entries.
+
+![The System Log screen with the copy, console, refresh and clear buttons.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/system-log.png "How to Report Bugs · Android")
+
+</Tab>
+</Tabs>
+
 ### Console errors (optional)
 
 The developer console shows more technical logs than the error log. Use it when the error log is empty or doesn't match the problem. It is only available on desktop.
 
 <Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
 <Tab value="macOS">
+
+If the **Keet** menu isn't available, click anywhere in Keet and press **Option + Command + U** to open the **Developer Tools** window, then continue from step 3.
 
 1. Click **Keet** in the menu bar and select **Dev Mode**.
 
@@ -182,7 +216,7 @@ The developer console shows more technical logs than the error log. Use it when 
 </Tab>
 <Tab value="Windows / Linux">
 
-1. Click anywhere in Keet, then press **Ctrl + Shift + U**. A **Developer Tools** window opens. Keet's title bar has no menu, so you don't need Dev Mode.
+1. Keet has no menu on Windows and Linux, so use the shortcut instead: click anywhere in Keet, then press **Ctrl + Shift + U**. A **Developer Tools** window opens. You don't need Dev Mode.
 
 2. In the window that opens, select the **Console** tab.
 
@@ -203,37 +237,7 @@ The developer console shows more technical logs than the error log. Use it when 
 </Tab>
 <Tab value="iOS / Android">
 
-Keet on iOS and Android has no developer console. Use the system log in the next step instead.
-
-</Tab>
-</Tabs>
-
-### System log (optional)
-
-<Tabs items={["macOS", "Windows / Linux", "iOS / Android"]}>
-<Tab value="macOS">
-
-The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
-
-![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
-
-The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
-
-</Tab>
-<Tab value="Windows / Linux">
-
-The system log lists what Keet was doing before the problem. At the bottom of the **Error log** screen, click **Show system log**, then click **Copy** and paste the text into your bug report. Click **Refresh** to load the latest entries.
-
-![The System log screen with the Copy, Clear, Refresh and To console buttons.](/images/technical-support-and-troubleshooting/submit-a-report/desktop/system-log.png "How to Report Bugs · Desktop")
-
-The log records each action Keet performed, so read it before you post and remove anything you don't want to share.
-
-</Tab>
-<Tab value="iOS / Android">
-
-For more technical detail, tap **Show system log** at the bottom of the **Error Log** screen. Tap **copy** and paste the text into your bug report. Use **refresh** to load the latest entries.
-
-![The System Log screen with the copy, console, refresh and clear buttons.](/images/technical-support-and-troubleshooting/submit-a-report/mobile/system-log.png "How to Report Bugs · Android")
+Keet on iOS and Android has no developer console. Use the system log above instead.
 
 </Tab>
 </Tabs>
@@ -334,4 +338,4 @@ Error details:
 
 Then add your screenshots or a screen recording.
 
-If you can't open Keet or join groups, please email us at `support@holepunch.to`
+If you can't open Keet or join groups, please email us at `support@holepunch.to`.

@@ -48,7 +48,7 @@ The group creator is automatically assigned the role of Administrator 👑
 * Can mute/unmute[^1] other peers.
 * Can enable/disable calls in the group.
 * Can enable/disable room activity events [^2]
-* Can promote members to Moderators.
+* Can change the role of any member, including promoting members to Moderator or Admin.
 * Can invite others to join as group Administrators.
 * Can report inappropriate content.
 * Can see reported content and take appropriate actions.
@@ -62,42 +62,110 @@ Learn more about [Administrator responsibilities](/keet-groups/admin-responsibil
 
 ## How to change the roles of group members?
 
-You get assigned a particular role upon joining via the invitation link, but it can be changed later by the administrator.
+You get a role when you join a group, based on the invite you used. An Admin or Moderator can change it later from the group's info. You don't need a new invite, and the member doesn't need to leave and rejoin.
 
-To change role, as an admin or moderator, go to a '**Group Options**' / '**Members permissions**' to see the list of members:
+Open the group's info, scroll to the list of members, and select a member. Their '**Permissions**' page shows their current role (marked '**Current**') and the roles you can give them under '**Assign role**':
 
-![To change role, as an admin or moderator, go to a 'Group Options' / 'Members permissions' to see the list o….](/images/keet-groups/group-member-roles/change-role-as-admin-moderator-2.png "Group Member Roles 🥷")
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+Click the group name at the top of the chat to open '**Group info**', then select a member from the members list:
+
+![Select a member from the members list in Group info.](/images/keet-groups/group-member-roles/desktop/members-list.png "Group Member Roles 🥷 · Desktop")
+
+On the '**Permissions**' page, select a role to see what it allows. The button at the bottom of the card ('**Make Peer**', '**Make Moderator**' or '**Make Admin**') applies the change:
+
+![On the Permissions page, expand a role and select its Make button to change the member's role.](/images/keet-groups/group-member-roles/desktop/permissions-peer.png "Group Member Roles 🥷 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+Open the group, tap its name to open '**Group info**', and tap a member in the members list. On the '**Permissions**' screen, tap a role to see what it allows, then tap the button at the bottom of its card ('**Make Peer**', '**Make Moderator**' or '**Make Admin**'):
+
+![On the Permissions screen, expand a role and tap its Make button to change the member's role.](/images/keet-groups/group-member-roles/mobile/permissions-make-admin.png "Group Member Roles 🥷 · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="info">
+Only Admins and Moderators see '**Assign role**'. Moderators can make a Peer a Moderator and downgrade a Moderator to Peer. Only Admins can make someone an Admin or change an Admin's role.
+</Callout>
 
 ### Upgrade Peer to Moderator
 
-* Select a Peer member from the list
-* Choose 'Moderator'; review and if agreeable, acknowledge the moderator capabilities; click 'Make group moderator'
+* Open the member's '**Permissions**' page.
+* Expand '**Moderator**' and select '**Make Moderator**'. The change applies right away.
 
 ### Downgrade Moderator to Peer
 
-* Select a Moderator member from the list
-* Choose 'Peer', and click 'Downgrade'. It will remove all the moderator's capabilities from the member.
+* Open the member's '**Permissions**' page.
+* Expand '**Peer**', select '**Make Peer**', and confirm with '**Downgrade**'. It removes the moderator's capabilities from the member.
 * Moderators can also downgrade themselves in the same way if they decide not to moderate the group anymore.
 
 ### Downgrade Admin to Peer or Moderator
 
-* Select an Admin member from the list
-* Ensure that there is more than one Admin in a group
-* Choose 'Peer', and click 'Downgrade'. It will remove all the moderator's capabilities from the member.
+* Open the Admin's '**Permissions**' page.
+* Expand '**Peer**' or '**Moderator**' and select '**Make Peer**' or '**Make Moderator**'. Keet may ask you to confirm with '**Downgrade**'.
+* A group always needs an Admin. If you're the only Admin, Keet shows '**You are the only admin in the group. To change your role, assign another admin first.**'
 * Administrators can also downgrade themselves in the same way if they decide not to be an admin and not to moderate the group anymore.
+
+![Keet asks you to confirm before it downgrades a member to Peer.](/images/keet-groups/group-member-roles/desktop/downgrade-to-peer-modal.png "Group Member Roles 🥷 · Downgrade Admin to Peer or Moderator")
 
 ### Upgrade a member to an Admin
 
-Unlike Peers and Moderators, the Administrator role can only be assigned through a dedicated group admin invite.
+An Admin can promote any existing member to Admin from their '**Permissions**' page. The member doesn't need a new invite, and they don't need to leave and rejoin the group.
 
-If a user is already a member of the group, they need to leave and rejoin using an admin invitation link.
+1. Open the member's '**Permissions**' page.
+2. Expand '**Admin**'. The card lists what Admins can do and reminds you that Admins must be frequently online.
+3. Select '**Make Admin**'.
 
-![Administrators can also downgrade themselves in the same way if they decide not to be an admin and not to m….](/images/keet-groups/group-member-roles/upgrade-member-admin-administrators-downgrade-themselves-same-way-3.png "Group Member Roles 🥷 · Upgrade a member to an Admin")
+The change applies right away, and Keet doesn't ask you to confirm it. Make sure it's the right person before you select the button.
 
-* As an Administrator, open the group where you want to add another Admin.
-* Click the **'Create Invite Link'** button in the top-right corner.
-* Select **'Admin'** as the invite type; review and if agreeable accept the Admin rules; then click **'Generate new link'**.
-* [Share the invite link with](/keet-groups/joining-groups) the user or let them scan the generated QR code to join or be upgraded to Administartor.
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Expand Admin on a member's Permissions page and select Make Admin.](/images/keet-groups/group-member-roles/desktop/permissions-make-admin.png "Group Member Roles 🥷 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![Expand Admin on a member's Permissions screen and tap Make Admin.](/images/keet-groups/group-member-roles/mobile/permissions-make-admin.png "Group Member Roles 🥷 · Mobile")
+
+</Tab>
+</Tabs>
+
+The member's role updates immediately, and you see a notification that they're now an Admin. The new Admin gets a notification too, with a button to read about their new responsibilities:
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![The new Admin sees "You were upgraded to Admin" with a View responsibilities button.](/images/keet-groups/group-member-roles/desktop/you-were-upgraded-notification.png "Group Member Roles 🥷 · Desktop")
+
+![View responsibilities explains what an Admin can do.](/images/keet-groups/group-member-roles/desktop/what-is-admin-role-modal.png "Group Member Roles 🥷 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![The new Admin sees "You were upgraded to Admin" with a View capabilities button.](/images/keet-groups/group-member-roles/mobile/upgraded-notification.png "Group Member Roles 🥷 · Mobile")
+
+![View capabilities explains what an Admin can do.](/images/keet-groups/group-member-roles/mobile/what-is-admin-role.png "Group Member Roles 🥷 · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="info">
+Learn more about [Administrator responsibilities](/keet-groups/admin-responsibilities).
+</Callout>
+
+#### Invite someone to a group as an Admin
+
+If the person isn't in the group yet, you can still invite them directly as an Admin:
+
+* As an Administrator, open the group's info and select '**Share invite link**'.
+* Set the invite type to **'Admin'**; review and if agreeable accept the Admin rules; then select **'Generate new link'**.
+* [Share the invite link with](/keet-groups/joining-groups) the user or let them scan the generated QR code to join as an Administrator.
+
+![The Admin invite type asks you to accept the Admin rules before you generate the link.](/images/keet-groups/group-member-roles/upgrade-member-admin-administrators-downgrade-themselves-same-way-3.png "Group Member Roles 🥷 · Invite someone to a group as an Admin")
 
 <Callout type="info">
 Keep in mind that an Admin invite link is **single-use** and expires after the set duration

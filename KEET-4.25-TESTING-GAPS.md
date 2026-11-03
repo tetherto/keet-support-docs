@@ -27,10 +27,13 @@ Not tested at all: iOS, Windows, Linux.
 - **Article wording still from source only:** "Keet only plays video for the people you can see", "Keet lowers the video quality you send", and the mobile "you and the most active people first" layout.
 
 ### Speaking-while-muted warning
-- **Existing screenshot:** taken while the call was still ringing (popup shows correctly, but it is not a connected call).
-- **Timing not verified:** the article says about 2 seconds of speech to trigger and about a minute of quiet to auto-dismiss. These come from source (`use-speaking-while-muted.ts`). The fake mic only beeps, and speech played through the Mac speakers into the built-in mic was not detected (the app removes its own playback), so the timings could not be measured. Needs a person speaking into the mic.
-- **Confirmed:** with the real mic the popup appeared on room sound while muted; closing it with the X, then speaking, did not bring it back until the next mute.
-- **Not tested:** Esc and clicking outside to dismiss, the 60 s auto-dismiss, a group call (it did not show in a group call with the beeping mic), microphone denied, ignoring typing and clicks, Windows and Linux.
+- **Checked with a person speaking into the real mic (desktop, 1:1 call):**
+  - Appears about 2 s after speech starts (measured 1.9 s). Matches the article.
+  - Auto-dismisses about 60 s after the last sound (measured about 60 s). Matches the article.
+  - Dismisses with the close button, Esc, and clicking outside. Does not come back until you unmute and mute again.
+  - Joining a call already muted shows it when there is speech or noise.
+- **Existing screenshot:** taken while the call was still ringing and the hover tooltip overlaps the text. A clean connected-call shot would be nicer.
+- **Not tested:** a group call (it did not show in a group call with the beeping fake mic, so retest with real speech), microphone denied, ignoring typing and clicks, Windows and Linux.
 - **Mobile:** not in 4.25.x. Re-check the article and add a Mobile tab when 4.26 ships (source: tag `4.26.0-426019`, text "Tap to unmute yourself so that they can hear you.", 2 s on iOS, 3 s on Android, 10 s auto-dismiss, 30 s cooldown).
 
 ### Private notes

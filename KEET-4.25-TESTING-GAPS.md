@@ -15,20 +15,22 @@ Not tested at all: iOS, Windows, Linux.
 
 ## 2. Still unverified: needs a person or a device
 
-### Video and the "heavy load" messages (no screenshots at all)
-- **Why blocked:** Keet-Internal has no macOS camera permission, so the camera never starts. Nothing here was reproduced.
-- **To do on desktop:** grant Camera in System Settings > Privacy & Security, join a call with 2+ people, and raise renderer CPU with the snippet in `keet-desktop/scripts/burn-cpu-console.md` (`__burn(1)` in DevTools). Capture:
-  - the popup `Your device is under heavy load` next to the camera button, both variants (camera only, camera plus hidden videos)
-  - a remote tile showing `Video is off because your device is under heavy load` with `Show video`
-- **To do on mobile (real device):** capture the same popup under the video button, the tile with `Show video`, and the `View all Participants` button once 5 other people are in a call.
-- **Behaviours to confirm:** 6 or more cameras on at once with nobody dropped, audio unaffected, no refusal at toggle time, what happens on a thin uplink (quality drops silently).
-- **Wording in the article that comes from source only:** "Keet only plays video for the people you can see", "Keet lowers the video quality you send", and the mobile "you and the most active people first" layout.
+### Video and the "heavy load" messages
+- **Camera permission:** the earlier block was an artefact of how I started the test copies. macOS credited the camera permission to the launching shell. Started with `open -n -a /Applications/Keet-Internal.app --args --storage <dir> --remote-debug <port> --use-fake-device-for-media-stream --use-fake-ui-for-media-stream`, the camera works.
+- **Checked on desktop (1:1 call, fake cameras, CPU burned from the renderer console):** your camera turns off with `Your device is under heavy load` and the camera-only message; a later window changes the message to `...and some videos were hidden...`. Both are screenshotted and in the article. Note that burning 3 cores did nothing on this 10-core Mac: it took about 10 busy workers, so the thresholds are a share of the whole machine, not of one core (the desktop repo note says one core).
+- **Not reproduced:** the paused remote tile (`Video is off because your device is under heavy load` with `Show video`). After the second message Carol's video froze on its last frame, but no overlay text appeared in a 1:1 call. Needs a group call, or ask the desktop team when the overlay shows. The article describes the overlay from source only.
+- **Not tested at all:**
+  - 6 or more cameras on at once, and that nobody is dropped (needs 6 participants).
+  - Nothing is refused at toggle time (observed for one camera only).
+  - Bandwidth-based quality drop.
+  - Mobile: the popup, the tile and `View all Participants` need a real phone with a camera.
+- **Article wording still from source only:** "Keet only plays video for the people you can see", "Keet lowers the video quality you send", and the mobile "you and the most active people first" layout.
 
 ### Speaking-while-muted warning
-- **Existing screenshot:** taken while the call was still ringing (popup shows correctly, but it is not a connected call). A connected-call shot is nicer.
-- **Timing not verified:** the article says about 2 seconds of speech to trigger and about a minute of quiet to auto-dismiss. These come from source (`use-speaking-while-muted.ts`). The test machine's fake microphone only beeps, so the exact timings could not be measured. Needs real speech: speak while muted, time the popup; stop talking, time the dismissal.
-- **Seen in the 1:1 test:** the popup appeared with the fake beeping mic (about 6 s into one call, about 44 s in another). It did not appear in a group call within 25 s, but that mic is too unreliable to conclude anything. Needs a retest with real speech in a group call.
-- **Not tested:** dismissing with the close button, clicking outside, and Esc; the popup not returning until you unmute and mute again; microphone denied; ignoring typing and clicks; Windows and Linux.
+- **Existing screenshot:** taken while the call was still ringing (popup shows correctly, but it is not a connected call).
+- **Timing not verified:** the article says about 2 seconds of speech to trigger and about a minute of quiet to auto-dismiss. These come from source (`use-speaking-while-muted.ts`). The fake mic only beeps, and speech played through the Mac speakers into the built-in mic was not detected (the app removes its own playback), so the timings could not be measured. Needs a person speaking into the mic.
+- **Confirmed:** with the real mic the popup appeared on room sound while muted; closing it with the X, then speaking, did not bring it back until the next mute.
+- **Not tested:** Esc and clicking outside to dismiss, the 60 s auto-dismiss, a group call (it did not show in a group call with the beeping mic), microphone denied, ignoring typing and clicks, Windows and Linux.
 - **Mobile:** not in 4.25.x. Re-check the article and add a Mobile tab when 4.26 ships (source: tag `4.26.0-426019`, text "Tap to unmute yourself so that they can hear you.", 2 s on iOS, 3 s on Android, 10 s auto-dismiss, 30 s cooldown).
 
 ### Private notes

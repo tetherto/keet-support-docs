@@ -508,10 +508,6 @@ export const imageDimensions = {
     "width": 1224,
     "height": 808
   },
-  "/images/file-sharing-and-messages/private-notes/desktop/profile-with-note.png": {
-    "width": 1224,
-    "height": 808
-  },
   "/images/file-sharing-and-messages/private-notes/mobile/add-remarks-sheet-with-note.png": {
     "width": 393,
     "height": 852
@@ -967,10 +963,6 @@ export const imageDimensions = {
   "/images/keet-groups/group-member-roles/mobile/what-is-admin-role.png": {
     "width": 393,
     "height": 852
-  },
-  "/images/keet-groups/group-member-roles/upgrade-member-admin-administrators-downgrade-themselves-same-way-3.png": {
-    "width": 576,
-    "height": 863
   },
   "/images/keet-groups/group-moderation/as-group-moderator-administrator-have-2.png": {
     "width": 525,

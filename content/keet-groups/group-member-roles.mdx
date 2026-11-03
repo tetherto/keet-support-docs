@@ -88,8 +88,25 @@ Open the group, tap its name to open '**Group info**', and tap a member in the m
 </Tabs>
 
 <Callout type="info">
-Only Admins and Moderators see '**Assign role**'. Moderators can make a Peer a Moderator and downgrade a Moderator to Peer. Only Admins can make someone an Admin or change an Admin's role.
+Only Admins and Moderators see '**Assign role**'. Moderators can make a Peer a Moderator and downgrade a Moderator to Peer. Only Admins can make someone an Admin or change an Admin's role. When you can't make a change, its button is greyed out (desktop) or the role isn't offered (mobile).
 </Callout>
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+A Moderator sees '**Make Admin**' greyed out:
+
+![As a Moderator, Make Admin is greyed out.](/images/keet-groups/group-member-roles/desktop/permissions-moderator-view.png "Group Member Roles 🥷 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+A Moderator sees only the '**Peer**' and '**Moderator**' roles:
+
+![As a Moderator, only Peer and Moderator are offered.](/images/keet-groups/group-member-roles/mobile/moderator-permissions.png "Group Member Roles 🥷 · Mobile")
+
+</Tab>
+</Tabs>
 
 ### Upgrade Peer to Moderator
 
@@ -105,11 +122,24 @@ Only Admins and Moderators see '**Assign role**'. Moderators can make a Peer a M
 ### Downgrade Admin to Peer or Moderator
 
 * Open the Admin's '**Permissions**' page.
-* Expand '**Peer**' or '**Moderator**' and select '**Make Peer**' or '**Make Moderator**'. Keet may ask you to confirm with '**Downgrade**'.
-* A group always needs an Admin. If you're the only Admin, Keet shows '**You are the only admin in the group. To change your role, assign another admin first.**'
+* Expand '**Peer**' or '**Moderator**' and select '**Make Peer**' or '**Make Moderator**'. On desktop, Keet asks you to confirm with '**Downgrade**'. On mobile, it asks only when you downgrade to Peer.
+* A group always needs an Admin. If you're the only Admin, Keet shows '**You are the only admin in the group. To change your role, assign another admin first.**' and you can't change your own role until you make someone else an Admin.
+
+  ![If you're the only Admin, Keet asks you to assign another Admin first.](/images/keet-groups/group-member-roles/desktop/only-admin-notice.png "Group Member Roles 🥷 · Downgrade Admin to Peer or Moderator")
 * Administrators can also downgrade themselves in the same way if they decide not to be an admin and not to moderate the group anymore.
 
-![Keet asks you to confirm before it downgrades a member to Peer.](/images/keet-groups/group-member-roles/desktop/downgrade-to-peer-modal.png "Group Member Roles 🥷 · Downgrade Admin to Peer or Moderator")
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![Keet asks you to confirm before it downgrades a member.](/images/keet-groups/group-member-roles/desktop/downgrade-to-moderator-modal.png "Group Member Roles 🥷 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![Keet asks you to confirm before it downgrades a member to Peer.](/images/keet-groups/group-member-roles/mobile/downgrade-to-peer-sheet.png "Group Member Roles 🥷 · Mobile")
+
+</Tab>
+</Tabs>
 
 ### Upgrade a member to an Admin
 
@@ -134,7 +164,22 @@ The change applies right away, and Keet doesn't ask you to confirm it. Make sure
 </Tab>
 </Tabs>
 
-The member's role updates immediately, and you see a notification that they're now an Admin. The new Admin gets a notification too, with a button to read about their new responsibilities:
+The member's role updates immediately, and you see a notification such as '**Dave is now an admin in Design squad**':
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![After you promote a member, Keet confirms that they're now an admin.](/images/keet-groups/group-member-roles/desktop/admin-promoted-notification.png "Group Member Roles 🥷 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![After you promote a member, Keet confirms that they're now an admin.](/images/keet-groups/group-member-roles/mobile/promoted-notification.png "Group Member Roles 🥷 · Mobile")
+
+</Tab>
+</Tabs>
+
+The new Admin gets a notification too, with a button to read about their new responsibilities:
 
 <Tabs items={["Desktop", "Mobile"]}>
 <Tab value="Desktop">

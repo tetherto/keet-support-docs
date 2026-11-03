@@ -78,19 +78,19 @@ export const imageDimensions = {
   },
   "/images/file-sharing-and-messages/contact-book/alias/desktop/alias-field.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/contact-book/alias/desktop/chat-with-alias.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/alias/desktop/contacts-menu-add-alias.png": {
+  "/images/file-sharing-and-messages/contact-book/alias/desktop/contacts-menu-add-remarks.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/contact-book/alias/desktop/profile-with-alias.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/contact-book/alias/mobile/alias-field.png": {
     "width": 393,
@@ -100,7 +100,7 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/contact-book/alias/mobile/contact-options-add-alias.png": {
+  "/images/file-sharing-and-messages/contact-book/alias/mobile/contact-options-add-remarks.png": {
     "width": 393,
     "height": 852
   },
@@ -516,15 +516,23 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/private-notes/mobile/add-remarks-sheet.png": {
-    "width": 393,
-    "height": 852
-  },
   "/images/file-sharing-and-messages/private-notes/mobile/contact-options-add-remarks.png": {
     "width": 393,
     "height": 852
   },
+  "/images/file-sharing-and-messages/private-notes/mobile/contact-remarks.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/private-notes/mobile/contacts-list-with-note.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/note-over-limit.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/profile-note-row.png": {
     "width": 393,
     "height": 852
   },
@@ -549,6 +557,10 @@ export const imageDimensions = {
     "height": 808
   },
   "/images/file-sharing-and-messages/share-contacts/desktop/contact-card-sent.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/contact-cards-multiple.png": {
     "width": 1224,
     "height": 808
   },
@@ -896,15 +908,11 @@ export const imageDimensions = {
     "width": 576,
     "height": 590
   },
-  "/images/keet-groups/group-member-roles/change-role-as-admin-moderator-2.png": {
-    "width": 411,
-    "height": 823
-  },
   "/images/keet-groups/group-member-roles/desktop/admin-promoted-notification.png": {
     "width": 1224,
     "height": 808
   },
-  "/images/keet-groups/group-member-roles/desktop/downgrade-to-peer-modal.png": {
+  "/images/keet-groups/group-member-roles/desktop/downgrade-to-moderator-modal.png": {
     "width": 1224,
     "height": 808
   },
@@ -912,7 +920,15 @@ export const imageDimensions = {
     "width": 1224,
     "height": 808
   },
+  "/images/keet-groups/group-member-roles/desktop/only-admin-notice.png": {
+    "width": 1224,
+    "height": 808
+  },
   "/images/keet-groups/group-member-roles/desktop/permissions-make-admin.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/permissions-moderator-view.png": {
     "width": 1224,
     "height": 808
   },
@@ -928,7 +944,19 @@ export const imageDimensions = {
     "width": 1224,
     "height": 808
   },
+  "/images/keet-groups/group-member-roles/mobile/downgrade-to-peer-sheet.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/moderator-permissions.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/keet-groups/group-member-roles/mobile/permissions-make-admin.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/promoted-notification.png": {
     "width": 393,
     "height": 852
   },

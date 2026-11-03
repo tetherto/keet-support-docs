@@ -1116,6 +1116,10 @@ export const imageDimensions = {
     "width": 536,
     "height": 805
   },
+  "/images/technical-support-and-troubleshooting/submit-a-report/bug-report-best-practice.webp": {
+    "width": 1642,
+    "height": 878
+  },
   "/images/technical-support-and-troubleshooting/submit-a-report/desktop/about-this-mac-menu.png": {
     "width": 329,
     "height": 52

@@ -1412,11 +1412,11 @@ export const imageDimensions = {
     "width": 1224,
     "height": 808
   },
-  "/images/voice-and-video-calls/video-calls-and-share-screen/desktop-heavy-load-popup-hidden-videos.png": {
+  "/images/voice-and-video-calls/video-calls-and-share-screen/desktop/heavy-load-popup-hidden-videos.png": {
     "width": 1224,
     "height": 808
   },
-  "/images/voice-and-video-calls/video-calls-and-share-screen/desktop-heavy-load-popup.png": {
+  "/images/voice-and-video-calls/video-calls-and-share-screen/desktop/heavy-load-popup.png": {
     "width": 1224,
     "height": 808
   },

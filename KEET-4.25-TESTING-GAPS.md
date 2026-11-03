@@ -32,7 +32,7 @@ Not tested at all: iOS, Windows, Linux.
   - Auto-dismisses about 60 s after the last sound (measured about 60 s). Matches the article.
   - Dismisses with the close button, Esc, and clicking outside. Does not come back until you unmute and mute again.
   - Joining a call already muted shows it when there is speech or noise.
-- **Existing screenshot:** taken while the call was still ringing and the hover tooltip overlaps the text. A clean connected-call shot would be nicer.
+- **Screenshot:** now a clean one from a connected call.
 - **Not tested:** a group call (it did not show in a group call with the beeping fake mic, so retest with real speech), microphone denied, ignoring typing and clicks, Windows and Linux.
 - **Mobile:** not in 4.25.x. Re-check the article and add a Mobile tab when 4.26 ships (source: tag `4.26.0-426019`, text "Tap to unmute yourself so that they can hear you.", 2 s on iOS, 3 s on Android, 10 s auto-dismiss, 30 s cooldown).
 

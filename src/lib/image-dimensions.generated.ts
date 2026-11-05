@@ -78,19 +78,19 @@ export const imageDimensions = {
   },
   "/images/file-sharing-and-messages/contact-book/alias/desktop/alias-field.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/contact-book/alias/desktop/chat-with-alias.png": {
     "width": 1224,
     "height": 810
   },
-  "/images/file-sharing-and-messages/contact-book/alias/desktop/contacts-menu-add-alias.png": {
+  "/images/file-sharing-and-messages/contact-book/alias/desktop/contacts-menu-add-remarks.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/contact-book/alias/desktop/profile-with-alias.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/contact-book/alias/mobile/alias-field.png": {
     "width": 393,
@@ -100,7 +100,7 @@ export const imageDimensions = {
     "width": 393,
     "height": 852
   },
-  "/images/file-sharing-and-messages/contact-book/alias/mobile/contact-options-add-alias.png": {
+  "/images/file-sharing-and-messages/contact-book/alias/mobile/contact-options-add-remarks.png": {
     "width": 393,
     "height": 852
   },
@@ -492,6 +492,46 @@ export const imageDimensions = {
     "width": 644,
     "height": 534
   },
+  "/images/file-sharing-and-messages/private-notes/desktop/add-remarks-modal.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/private-notes/desktop/contacts-list-with-note.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/private-notes/desktop/note-field.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/private-notes/desktop/profile-note-tile.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/add-remarks-sheet-with-note.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/contact-options-add-remarks.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/contact-remarks.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/contacts-list-with-note.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/note-over-limit.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/private-notes/mobile/profile-note-row.png": {
+    "width": 393,
+    "height": 852
+  },
   "/images/file-sharing-and-messages/search-messages/find-specific-message-icon-enter.png": {
     "width": 596,
     "height": 252
@@ -499,6 +539,58 @@ export const imageDimensions = {
   "/images/file-sharing-and-messages/search-messages/once-match-found-jump-straight-2.png": {
     "width": 918,
     "height": 617
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/attach-menu-contact.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/contact-card-added.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/contact-card-received.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/contact-card-sent.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/contact-cards-multiple.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/share-contacts-picker.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/desktop/share-contacts-selected.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/share-contacts/mobile/attach-menu-contact.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/share-contacts/mobile/contact-card-added.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/share-contacts/mobile/contact-card-received.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/share-contacts/mobile/contact-card-sent.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/share-contacts/mobile/share-contacts-selected.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/share-contacts/mobile/share-contacts-sheet.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/file-sharing-and-messages/sharing-files-and-media/chat-attach-file-button.png": {
     "width": 591,
@@ -812,13 +904,65 @@ export const imageDimensions = {
     "width": 576,
     "height": 590
   },
-  "/images/keet-groups/group-member-roles/change-role-as-admin-moderator-2.png": {
-    "width": 411,
-    "height": 823
+  "/images/keet-groups/group-member-roles/desktop/admin-promoted-notification.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/keet-groups/group-member-roles/upgrade-member-admin-administrators-downgrade-themselves-same-way-3.png": {
-    "width": 576,
-    "height": 863
+  "/images/keet-groups/group-member-roles/desktop/downgrade-to-moderator-modal.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/members-list.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/only-admin-notice.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/permissions-make-admin.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/permissions-moderator-view.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/permissions-peer.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/what-is-admin-role-modal.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/desktop/you-were-upgraded-notification.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/group-member-roles/mobile/downgrade-to-peer-sheet.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/moderator-permissions.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/permissions-make-admin.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/promoted-notification.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/upgraded-notification.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/group-member-roles/mobile/what-is-admin-role.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/keet-groups/group-moderation/as-group-moderator-administrator-have-2.png": {
     "width": 525,
@@ -1351,6 +1495,18 @@ export const imageDimensions = {
   "/images/voice-and-video-calls/minimize-self-view/mobile/dm-video-call-self-view-mobile.png": {
     "width": 393,
     "height": 852
+  },
+  "/images/voice-and-video-calls/speaking-while-muted/desktop/muted-popup.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/voice-and-video-calls/video-calls-and-share-screen/desktop/heavy-load-popup-hidden-videos.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/voice-and-video-calls/video-calls-and-share-screen/desktop/heavy-load-popup.png": {
+    "width": 1224,
+    "height": 808
   },
   "/images/voice-and-video-calls/video-calls-and-share-screen/screenshot.png": {
     "width": 1294,

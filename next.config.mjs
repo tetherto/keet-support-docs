@@ -38,6 +38,11 @@ const config = {
         destination: '/file-sharing-and-messages/notifications',
         permanent: true,
       },
+      {
+        source: '/technical-support-and-troubleshooting/slow-groups-after-updating',
+        destination: '/technical-support-and-troubleshooting/keet-app-issues',
+        permanent: true,
+      },
     ];
   },
 };

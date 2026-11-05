@@ -111,8 +111,6 @@ Above your room list, the app shows a dismissible notice headed "Keet is upgradi
 
 Everyone in a room should update. How far a room may upgrade is a moderator action driven by remote config. When a room moves past what an old client supports, that client stops applying the room rather than failing silently — the room freezes where it is, the rest of the app keeps working, and the client raises an update countdown — "Some groups might not work with your current version of Keet. Please update the app to access all your groups." — then restarts into the update when the timer runs out.
 
-If a room doesn't come up after you upgrade, see [Slow groups after updating](https://support.keet.io/technical-support-and-troubleshooting/slow-groups-after-updating).
-
 ## Why this matters past this release
 
 The point of the rewrite isn't one number going down. It's a deliberate trade: swapping a heavyweight, majority-vote consensus model — overkill for a chat app — for a lighter one where a single trusted peer is enough to catch a device up. That trade has a price: it gives up the permanent finality and the protocol-level trust guarantee autobase provided. Keet rebuilds the trust side itself, through its admin checks; the finality is simply gone, which a chat app can live with.

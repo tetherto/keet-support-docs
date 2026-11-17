@@ -1,0 +1,136 @@
+---
+title: "Transcribe Audio Messages 🎧"
+description: "Turn an audio message or recording that's already in a chat into a text transcript and a short summary, without listening to the whole thing."
+docType: faq
+schemaType: TechArticle
+---
+
+## What does Transcribe do?
+
+**Transcribe** turns an audio message that's already in a chat into text. It works on voice messages, call recordings, and audio files someone shared. Keet then posts the result in the same chat as a reply to the audio:
+
+* a **transcript** of everything that was said, as a downloadable `.txt` file
+* an AI-generated **summary** you can read in the chat, for recordings longer than 5 minutes
+
+<Callout type="info">
+🔒 Keet transcribes and summarizes the audio on your own device. The audio isn't uploaded to a cloud service. The first time you use it, Keet downloads the models it needs, which can take a few minutes.
+</Callout>
+
+<Callout type="warn">
+The result is posted **in the chat**, so everyone in that chat can see the transcript and summary, not just you.
+</Callout>
+
+## How do I transcribe an audio message?
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+1. Hover over the audio message, click the three dots '**[...]**', and select '**Transcribe**'. You can also right-click the message:
+
+   ![Open the message menu on an audio message and select Transcribe.](/images/file-sharing-and-messages/transcribe-audio-messages/desktop/transcribe-option.png "Transcribe Audio Messages 🎧 · Desktop")
+2. Keet tells you that '**Result will be sent to the chat.**' Select '**Continue**' to start, or '**Cancel**' to close the message without transcribing anything:
+
+   ![Keet asks you to confirm that the result will be sent to the chat.](/images/file-sharing-and-messages/transcribe-audio-messages/desktop/confirmation.png "Transcribe Audio Messages 🎧 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+1. Long-press the audio message and tap '**Transcribe**':
+
+   ![Long-press an audio message and tap Transcribe.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/transcribe-option.png "Transcribe Audio Messages 🎧 · Mobile")
+2. Keet tells you that '**Result will be sent to chat.**' Tap '**Continue**' to start, or '**Cancel**' to close the message without transcribing anything:
+
+   ![Keet asks you to confirm that the result will be sent to the chat.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/confirmation.png "Transcribe Audio Messages 🎧 · Mobile")
+
+</Tab>
+</Tabs>
+
+If you don't want to see this message every time, tick '**Don't remind me again**' before you continue. Keet then starts transcribing right away the next time you select '**Transcribe**' on that device.
+
+## What happens while Keet is working on it?
+
+Under the audio message, Keet shows what it's doing:
+
+* '**Downloading**', while it downloads the transcription or summary model (desktop shows the progress as a percentage)
+* '**Transcribing**', while it turns the speech into text
+* '**Summarizing**', while it writes the summary
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![The audio message shows Transcribing while Keet works on it.](/images/file-sharing-and-messages/transcribe-audio-messages/desktop/transcribing.png "Transcribe Audio Messages 🎧 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![The audio message shows Transcribing while Keet works on it.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/transcribing.png "Transcribe Audio Messages 🎧 · Mobile")
+
+</Tab>
+</Tabs>
+
+Keet transcribes one recording at a time. Until it finishes, '**Transcribe**' is greyed out on every audio message and shows that a transcription is already in progress:
+
+![While a transcription is running, Transcribe is greyed out and shows In progress.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/in-progress.png "Transcribe Audio Messages 🎧 · Mobile")
+
+You can keep chatting while Keet works.
+
+## Where do I find the result?
+
+When Keet is done, it sends a new message to the same chat. The message replies to the original audio, so you can see which recording it belongs to. It contains:
+
+* the transcript as a `.txt` file that you can open or save, like any other [shared file](/file-sharing-and-messages/sharing-files-and-media)
+* the summary, shown right in the message
+
+If the summary is long, select '**Show all**' to read the rest.
+
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![The result arrives as a reply to the audio, with the transcript file and a summary.](/images/file-sharing-and-messages/transcribe-audio-messages/desktop/result.png "Transcribe Audio Messages 🎧 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
+![The result arrives as a reply to the audio, with the transcript file and a summary.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/result.png "Transcribe Audio Messages 🎧 · Mobile")
+
+</Tab>
+</Tabs>
+
+<Callout type="info">
+The summary is written by AI. It can get names, numbers, or places wrong, so check anything important against the transcript or the recording.
+</Callout>
+
+## Does it work on any recording?
+
+* **Under 5 minutes:** Keet transcribes the audio but doesn't write a summary. You get the transcript file only.
+* **5 to 90 minutes:** you get both the transcript and the summary.
+* **Over 90 minutes:** Keet shows '**Couldn't summarize. This audio is too long**' and doesn't write a summary.
+
+On desktop, **Transcribe** is available on computers that support local transcription. It isn't available on Intel-based Macs.
+
+## What if transcription fails?
+
+If Keet can't finish, it shows an error message and the audio message goes back to normal, so you can try again.
+
+* '**Couldn't transcribe. No speech was detected**' means Keet couldn't hear anyone talking in the recording.
+
+  <Tabs items={["Desktop", "Mobile"]}>
+  <Tab value="Desktop">
+
+  ![Keet shows an error when no speech is detected.](/images/file-sharing-and-messages/transcribe-audio-messages/desktop/no-speech.png "Transcribe Audio Messages 🎧 · Desktop")
+
+  </Tab>
+  <Tab value="Mobile">
+
+  ![Keet shows an error when no speech is detected.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/no-speech.png "Transcribe Audio Messages 🎧 · Mobile")
+
+  </Tab>
+  </Tabs>
+* '**Transcription failed. There was an error while downloading the model**' or '**Summarization failed. There was an error while downloading the model**' usually means your connection dropped during the first download. Check your connection and try again.
+* For any other error, try again later. If it keeps failing, [submit a report](/technical-support-and-troubleshooting/submit-a-report).
+
+Your audio message is never changed or removed, whatever happens.
+
+<Callout type="info">
+Want a transcript of a call while it's happening? See [Call Transcripts & Summaries](/voice-and-video-calls/call-transcripts-and-summaries).
+</Callout>

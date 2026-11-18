@@ -64,6 +64,8 @@ export const customTree: Node[] = [
       { type: 'page', name: 'Mute a Chat 🔇', url: '/file-sharing-and-messages/mute-a-chat' },
       { type: 'page', name: 'Chat over Bluetooth 📡', url: '/file-sharing-and-messages/chat-over-bluetooth' },
       { type: 'page', name: 'Link Previews 🔗', url: '/file-sharing-and-messages/link-previews' },
+      { type: 'page', name: 'Format Messages ✍️', url: '/file-sharing-and-messages/format-messages' },
+      { type: 'page', name: 'Send GIFs 😹', url: '/file-sharing-and-messages/send-gifs' },
       {
         type: 'page',
         name: 'Sharing Files and Media 🗃️',
@@ -76,6 +78,11 @@ export const customTree: Node[] = [
       },
       { type: 'page', name: 'Search Messages 🔎', url: '/file-sharing-and-messages/search-messages' },
       { type: 'page', name: 'Translate Messages 🌐', url: '/file-sharing-and-messages/translate-messages' },
+      {
+        type: 'page',
+        name: 'Transcribe Audio Messages 🎧',
+        url: '/file-sharing-and-messages/transcribe-audio-messages',
+      },
       { type: 'page', name: 'Language Packs 📦', url: '/file-sharing-and-messages/language-packs' },
       { type: 'page', name: 'Clear Cache 🧹', url: '/file-sharing-and-messages/clear-cache' },
       {

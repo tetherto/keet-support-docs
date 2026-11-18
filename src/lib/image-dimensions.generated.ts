@@ -626,11 +626,11 @@ export const imageDimensions = {
   },
   "/images/file-sharing-and-messages/sharing-files-and-media/desktop/excel-preview.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/sharing-files-and-media/desktop/word-preview.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/sharing-files-and-media/desktop-download-process-status-bar-4.png": {
     "width": 462,
@@ -694,23 +694,27 @@ export const imageDimensions = {
   },
   "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/confirmation.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/in-progress.png": {
+    "width": 1224,
+    "height": 808
   },
   "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/no-speech.png": {
     "width": 1224,
-    "height": 864
+    "height": 808
   },
   "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/result.png": {
     "width": 1224,
-    "height": 831
+    "height": 1400
   },
   "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/transcribe-option.png": {
     "width": 1224,
-    "height": 810
+    "height": 808
   },
   "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/transcribing.png": {
     "width": 1224,
-    "height": 864
+    "height": 808
   },
   "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/confirmation.png": {
     "width": 393,
@@ -960,16 +964,16 @@ export const imageDimensions = {
     "height": 720,
     "width": 804
   },
+  "/images/keet-groups/create-a-group/desktop/broadcast-feed.png": {
+    "width": 1224,
+    "height": 808
+  },
   "/images/keet-groups/create-a-group/desktop/group-created.png": {
     "width": 1224,
     "height": 810
   },
   "/images/keet-groups/create-a-group/desktop/new-group-chat.png": {
     "width": 1224,
-    "height": 810
-  },
-  "/images/keet-groups/create-a-group/desktop/screenshot-11.png": {
-    "width": 581,
     "height": 808
   },
   "/images/keet-groups/create-a-group/desktop/start-chat-menu.png": {
@@ -984,17 +988,17 @@ export const imageDimensions = {
     "width": 525,
     "height": 708
   },
-  "/images/keet-groups/create-a-group/mobile/enter-group-chat-name-description-6.jpg": {
-    "height": 1179,
-    "width": 576
+  "/images/keet-groups/create-a-group/mobile/broadcast-feed.png": {
+    "width": 383,
+    "height": 852
   },
   "/images/keet-groups/create-a-group/mobile/group-created.png": {
     "width": 393,
     "height": 852
   },
-  "/images/keet-groups/create-a-group/mobile/screenshot-12.jpg": {
-    "height": 1179,
-    "width": 576
+  "/images/keet-groups/create-a-group/mobile/new-group-chat.png": {
+    "width": 383,
+    "height": 852
   },
   "/images/keet-groups/create-a-group/mobile/start-chat-menu.png": {
     "width": 393,
@@ -1145,7 +1149,7 @@ export const imageDimensions = {
     "width": 1080
   },
   "/images/keet-groups/joining-groups/mobile/discover-communities.png": {
-    "width": 393,
+    "width": 383,
     "height": 852
   },
   "/images/keet-groups/joining-groups/mobile-device-button-top-right-2.jpg": {

@@ -49,7 +49,7 @@ If you don't want to see this message every time, tick '**Don't remind me again*
 
 ## What happens while Keet is working on it?
 
-Under the audio message, Keet shows what it's doing:
+Keet confirms with '**Your audio transcription and summary are being prepared. Please wait a moment**'. Under the audio message, it then shows what it's doing:
 
 * '**Downloading**', while it downloads the transcription or summary model (desktop shows the progress as a percentage)
 * '**Transcribing**', while it turns the speech into text
@@ -70,7 +70,18 @@ Under the audio message, Keet shows what it's doing:
 
 Keet transcribes one recording at a time. Until it finishes, '**Transcribe**' is greyed out on every audio message and shows that a transcription is already in progress:
 
+<Tabs items={["Desktop", "Mobile"]}>
+<Tab value="Desktop">
+
+![While a transcription is running, Transcribe is greyed out and shows Transcribing in progress.](/images/file-sharing-and-messages/transcribe-audio-messages/desktop/in-progress.png "Transcribe Audio Messages 🎧 · Desktop")
+
+</Tab>
+<Tab value="Mobile">
+
 ![While a transcription is running, Transcribe is greyed out and shows In progress.](/images/file-sharing-and-messages/transcribe-audio-messages/mobile/in-progress.png "Transcribe Audio Messages 🎧 · Mobile")
+
+</Tab>
+</Tabs>
 
 You can keep chatting while Keet works.
 
@@ -104,7 +115,7 @@ The summary is written by AI. It can get names, numbers, or places wrong, so che
 
 * **Under 5 minutes:** Keet transcribes the audio but doesn't write a summary. You get the transcript file only.
 * **5 to 90 minutes:** you get both the transcript and the summary.
-* **Over 90 minutes:** Keet shows '**Couldn't summarize. This audio is too long**' and doesn't write a summary.
+* **Over 90 minutes:** Keet shows '**Couldn't summarize. This audio is too long**' and doesn't write a summary. It still transcribes the audio, so you get the transcript file.
 
 On desktop, **Transcribe** is available on computers that support local transcription. It isn't available on Intel-based Macs.
 

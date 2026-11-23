@@ -264,6 +264,14 @@ export const imageDimensions = {
     "height": 601,
     "width": 702
   },
+  "/images/file-sharing-and-messages/format-messages/desktop/formatting-toolbar.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/format-messages/desktop/lists-received.png": {
+    "width": 1224,
+    "height": 808
+  },
   "/images/file-sharing-and-messages/language-packs/desktop/delete-confirm.png": {
     "width": 1224,
     "height": 810
@@ -540,6 +548,26 @@ export const imageDimensions = {
     "width": 918,
     "height": 617
   },
+  "/images/file-sharing-and-messages/send-gifs/desktop/gif-caption.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/send-gifs/desktop/gif-picker.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/send-gifs/desktop/gif-preview.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/send-gifs/desktop/gif-received.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/send-gifs/desktop/gif-recent.png": {
+    "width": 1224,
+    "height": 808
+  },
   "/images/file-sharing-and-messages/share-contacts/desktop/attach-menu-contact.png": {
     "width": 1224,
     "height": 808
@@ -596,6 +624,14 @@ export const imageDimensions = {
     "width": 591,
     "height": 213
   },
+  "/images/file-sharing-and-messages/sharing-files-and-media/desktop/excel-preview.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/sharing-files-and-media/desktop/word-preview.png": {
+    "width": 1224,
+    "height": 808
+  },
   "/images/file-sharing-and-messages/sharing-files-and-media/desktop-download-process-status-bar-4.png": {
     "width": 462,
     "height": 193
@@ -611,6 +647,14 @@ export const imageDimensions = {
   "/images/file-sharing-and-messages/sharing-files-and-media/hover-mouse-over-shared-file-6.png": {
     "width": 510,
     "height": 361
+  },
+  "/images/file-sharing-and-messages/sharing-files-and-media/mobile/no-preview.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/sharing-files-and-media/mobile/word-preview.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/file-sharing-and-messages/sharing-files-and-media/shared-files-appear-chat-feed-3.png": {
     "width": 590,
@@ -645,6 +689,54 @@ export const imageDimensions = {
     "height": 852
   },
   "/images/file-sharing-and-messages/snooze-notifications/mobile/tap-snooze-all-notifications-menu-6.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/confirmation.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/in-progress.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/no-speech.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/result.png": {
+    "width": 1224,
+    "height": 1400
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/transcribe-option.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/desktop/transcribing.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/confirmation.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/in-progress.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/no-speech.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/result.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/transcribe-option.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/file-sharing-and-messages/transcribe-audio-messages/mobile/transcribing.png": {
     "width": 393,
     "height": 852
   },
@@ -808,37 +900,53 @@ export const imageDimensions = {
     "width": 648,
     "height": 618
   },
-  "/images/installation-and-setup/setup/choose-display-name-manual-setup-4.png": {
-    "width": 568,
-    "height": 475
+  "/images/installation-and-setup/setup/desktop/get-started.png": {
+    "width": 1224,
+    "height": 810
   },
-  "/images/installation-and-setup/setup/choose-username-optional-but-manual-setup-5.png": {
-    "width": 569,
-    "height": 621
+  "/images/installation-and-setup/setup/desktop/profile-qr.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/installation-and-setup/setup/choose-username-optional-but-manual-setup-6.png": {
-    "width": 656,
-    "height": 491
+  "/images/installation-and-setup/setup/desktop/set-up-profile.png": {
+    "width": 1224,
+    "height": 810
   },
-  "/images/installation-and-setup/setup/complete-setting-up-manual-setup-7.png": {
-    "width": 573,
-    "height": 952
+  "/images/installation-and-setup/setup/desktop/setting-up-profile.png": {
+    "width": 1224,
+    "height": 810
   },
-  "/images/installation-and-setup/setup/download-keet-launch-new-keet-set-up.png": {
-    "width": 568,
-    "height": 531
+  "/images/installation-and-setup/setup/desktop/username-requirements.png": {
+    "width": 1224,
+    "height": 810
   },
-  "/images/installation-and-setup/setup/feel-free-add-profile-manual-setup-8.jpg": {
-    "height": 1274,
-    "width": 928
+  "/images/installation-and-setup/setup/desktop/welcome.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/installation-and-setup/setup/manual-setup-3.png": {
-    "width": 1276,
-    "height": 1252
+  "/images/installation-and-setup/setup/mobile/get-started.png": {
+    "width": 393,
+    "height": 852
   },
-  "/images/installation-and-setup/setup/quick-setup-2.png": {
-    "width": 1151,
-    "height": 610
+  "/images/installation-and-setup/setup/mobile/profile-qr.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/setup/mobile/set-up-profile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/setup/mobile/setting-up-profile.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/setup/mobile/username-requirements.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/installation-and-setup/setup/mobile/welcome.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/keet-groups/admin-responsibilities/before-leaving-group-assign-another-3.png": {
     "width": 820,
@@ -856,21 +964,21 @@ export const imageDimensions = {
     "height": 720,
     "width": 804
   },
-  "/images/keet-groups/create-a-group/desktop/enter-group-name-optionally-add-3.jpg": {
-    "height": 808,
-    "width": 581
-  },
-  "/images/keet-groups/create-a-group/desktop/new-group-chat-2.png": {
-    "width": 644,
-    "height": 534
-  },
-  "/images/keet-groups/create-a-group/desktop/screenshot-11.png": {
-    "width": 581,
+  "/images/keet-groups/create-a-group/desktop/broadcast-feed.png": {
+    "width": 1224,
     "height": 808
   },
-  "/images/keet-groups/create-a-group/desktop/start-chat-button.png": {
-    "width": 530,
-    "height": 284
+  "/images/keet-groups/create-a-group/desktop/group-created.png": {
+    "width": 1224,
+    "height": 810
+  },
+  "/images/keet-groups/create-a-group/desktop/new-group-chat.png": {
+    "width": 1224,
+    "height": 808
+  },
+  "/images/keet-groups/create-a-group/desktop/start-chat-menu.png": {
+    "width": 1224,
+    "height": 810
   },
   "/images/keet-groups/create-a-group/enable-calls-8.png": {
     "width": 515,
@@ -880,25 +988,21 @@ export const imageDimensions = {
     "width": 525,
     "height": 708
   },
-  "/images/keet-groups/create-a-group/mobile/enter-group-chat-name-description-6.jpg": {
-    "height": 1179,
-    "width": 576
+  "/images/keet-groups/create-a-group/mobile/broadcast-feed.png": {
+    "width": 383,
+    "height": 852
   },
-  "/images/keet-groups/create-a-group/mobile/group-will-appear-chat-list-7.png": {
-    "width": 1170,
-    "height": 1651
+  "/images/keet-groups/create-a-group/mobile/group-created.png": {
+    "width": 393,
+    "height": 852
   },
-  "/images/keet-groups/create-a-group/mobile/new-group-chat-5.jpg": {
-    "height": 413,
-    "width": 576
+  "/images/keet-groups/create-a-group/mobile/new-group-chat.png": {
+    "width": 383,
+    "height": 852
   },
-  "/images/keet-groups/create-a-group/mobile/screenshot-12.jpg": {
-    "height": 1179,
-    "width": 576
-  },
-  "/images/keet-groups/create-a-group/mobile/start-chat-button-4.jpg": {
-    "height": 840,
-    "width": 1080
+  "/images/keet-groups/create-a-group/mobile/start-chat-menu.png": {
+    "width": 393,
+    "height": 852
   },
   "/images/keet-groups/group-member-roles/admins-moderators-restrict-users-access.png": {
     "width": 576,
@@ -1004,33 +1108,49 @@ export const imageDimensions = {
     "width": 659,
     "height": 886
   },
-  "/images/keet-groups/invite-peers/choose-expiration-period-how-long-invite-will-remain-2.png": {
-    "width": 458,
-    "height": 820
+  "/images/keet-groups/invite-peers/desktop/group-qr-code.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/keet-groups/invite-peers/generate-invite-group-add-member.png": {
-    "width": 801,
-    "height": 381
+  "/images/keet-groups/invite-peers/desktop/revoke-invite.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/keet-groups/invite-peers/share-group-invite-link-they-join-pasting-link-search-3.png": {
-    "width": 831,
-    "height": 290
+  "/images/keet-groups/invite-peers/desktop/share-group-link.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/keet-groups/invite-peers/share-group-qr-code-ask-contact-scan-qr-code-4.jpg": {
-    "height": 423,
-    "width": 713
+  "/images/keet-groups/invite-peers/desktop/share-link-menu.png": {
+    "width": 1224,
+    "height": 808
   },
-  "/images/keet-groups/joining-groups/created-profile-discover-communities-enter-4.png": {
-    "width": 1291,
-    "height": 960
+  "/images/keet-groups/invite-peers/mobile/group-info-create-link.png": {
+    "width": 393,
+    "height": 420
   },
-  "/images/keet-groups/joining-groups/groups-may-interest-join-5.png": {
-    "width": 634,
-    "height": 944
+  "/images/keet-groups/invite-peers/mobile/group-qr-code.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/invite-peers/mobile/revoke-invite.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/invite-peers/mobile/share-group-link.png": {
+    "width": 393,
+    "height": 852
+  },
+  "/images/keet-groups/joining-groups/desktop/discover-communities.png": {
+    "width": 1224,
+    "height": 808
   },
   "/images/keet-groups/joining-groups/keet-button-top-screen-button-3.jpg": {
     "height": 1419,
     "width": 1080
+  },
+  "/images/keet-groups/joining-groups/mobile/discover-communities.png": {
+    "width": 383,
+    "height": 852
   },
   "/images/keet-groups/joining-groups/mobile-device-button-top-right-2.jpg": {
     "height": 385,
